@@ -1,0 +1,76 @@
+.header {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 14.45px 2.55px rgba(0, 0, 2, 0.2);
+    position: absolute;
+    z-index: 10;
+    color: $color-white;
+    top: 0;
+    left: 0;
+    .hamburger {
+        display: none;
+    }
+    @include desktop {
+        padding: 0 15px;
+        box-sizing: border-box;
+        .button {
+            display: none;
+        }
+    }
+    @include tablet {
+        .hamburger {
+            display: block;
+        }
+    }
+    &_wrapper {
+        @include wrapper-pref;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+        height: 80px;
+    }
+    &_logo {
+        width: 165px;
+        height: 50px;
+        display: block;
+        font-size: 0;
+        .header__fixed & {
+            display: none;
+        }
+    }
+    &_logo-super {
+        display: none;
+        width: 60px;
+        height: 60px;
+        background: $color-green;
+        .header__fixed & {
+            display: block;
+        }
+    }
+    &__fixed {
+        position: fixed;
+        background: $color-white;
+        color: $color-black;
+        z-index: 10;
+        transition: color 0.5s linear;
+        .header_wrapper {
+            height: 60px;
+        }
+        .header-nav_item__dropdown .header-nav_link:after {
+            border-color: #222 transparent transparent;
+            @include tablet {
+                border-color: #fff transparent transparent;
+            }
+        }
+        .button__white {
+            color: $color-green;
+            box-shadow: inset 0 0 0 2px $color-green;
+            padding: 7px 32px;
+            &:hover {
+                color: $color-white;
+                background: $color-green;
+            }
+        }
+    }
+
+}

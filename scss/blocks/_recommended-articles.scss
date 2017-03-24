@@ -1,0 +1,55 @@
+.recommended-articles {
+    background: $color-almost-white;
+
+    &_wrapper {
+        @include wrapper-pref;
+        max-width: 950px;
+        align-items: flex-start;
+        background: $color-white;
+        padding: 40px 20px;
+    }
+    &_title {
+        font: 20px $font_ph_bold;
+        color: $color-black;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    &_small-title {
+        font: 24px $font_ph_bold;
+        color: $color-black;
+    }
+    &_list {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    &_item {
+        width: 390px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        @include small-phone {
+            width: 100%;
+        }
+    }
+    &_image {
+        height: auto;
+        width: 150px;
+        box-sizing: border-box;
+        display: block;
+        margin-right: 15px;
+    }
+    &_link {
+        display: flex;
+
+    }
+    &_link-holder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .blog_status {
+        border: 0;
+        justify-content: space-around;
+    }
+}

@@ -1,0 +1,40 @@
+.how-we-help {
+    width: 100%;
+    background: $color-almost-white;
+    padding: 40px 0;
+    &_wrapper {
+        @include wrapper-pref;
+    }
+    &_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include phone {
+            justify-content: space-around;
+        }
+    }
+    &_item {
+        flex: 0 1 23%;
+        width: 265px;
+        padding: 15px 0;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 75px;
+            background: $color-green;
+        }
+        @include phone {
+            flex-basis: 45%;
+        }
+    }
+    &_text {
+        font: 16px $font_light;
+        color: $color-black;
+    }
+}

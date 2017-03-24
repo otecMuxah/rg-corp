@@ -1,0 +1,108 @@
+.blog-post {
+    background: $color-almost-white;
+    display: block;
+    &_wrapper {
+        @include wrapper-pref;
+        max-width: 950px;
+        background: $color-white;
+        align-items: stretch;
+        padding: 40px 20px;
+    }
+    &_head-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    &_title {
+        font: 28px $font_ph_bold;
+        color: $color-black;
+        margin-bottom: 7px;
+    }
+    &_small-title,
+    p > strong {
+        font: 20px $font_ph_bold;
+        color: $color-black;
+        margin-bottom: 7px;
+    }
+    &_paragraph,
+    p {
+        font: 16px $font_light;
+        color: $color-black;
+        margin-bottom: 15px;
+    }
+    &_image {
+        float: left;
+        margin:  10px 10px 10px 0;
+    }
+    &_quote,
+    blockquote {
+        position: relative;
+        padding: 50px;
+        font: 700 22px $font_light;
+        color: #949494;
+        align-self: center;
+        box-sizing: border-box;
+        margin: 0 30px;
+        text-align: center;
+    }
+    blockquote p strong {
+        font: 700 22px $font_light;
+        color: #949494;
+    }
+    &_commas {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0,-100%) rotate(180deg);
+        &__reversed {
+            top: 50%;
+            left: auto;
+            right: 0;
+            transform: translate(0,-50%) rotate(0deg);
+        }
+        svg {
+            fill: $color-drk-blue;
+            width: 30px;
+            height: 23px;
+        }
+    }
+    blockquote {
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0,-100%) rotate(180deg);
+            width: 30px;
+            height: 23px;
+            background: url(../images/inverted-commas.svg) no-repeat;
+            display: block;
+        }
+        &:after {
+            top: 50%;
+            left: auto;
+            right: 0;
+            transform: translate(0,-50%) rotate(0deg);
+        }
+    }
+    &_tags-holder {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        .tag-list_item {
+            flex: 1 1 auto;
+        }
+        .blog-page_title {
+            margin: 0 10px 0 0;
+        }
+    }
+    .button {
+        align-self: center;
+    }
+    .blog_status {
+        border-top: 0;
+        border-bottom: 1px solid #949494;
+        margin-bottom: 30px;
+    }
+}

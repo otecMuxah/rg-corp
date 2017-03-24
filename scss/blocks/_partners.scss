@@ -1,0 +1,92 @@
+.partners {
+    background: #ebebeb;
+    padding: 25px 0;
+    width: 100%;
+    position: relative;
+    margin-bottom: 65px;
+    &_wrapper {
+        max-width: $site-width;
+        margin: 0 auto;
+
+    }
+    &_link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &_list {
+        padding: 0 25px;
+        box-sizing: border-box;
+    }
+    &_item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    //.owl-carousel {
+    //    .owl-stage-outer {
+    //        z-index: 1;
+    //    }
+    //    .owl-item {
+    //        img {
+    //            width: auto;
+    //        }
+    //    }
+    //    .owl-nav {
+    //        position: absolute;
+    //        top: 0;
+    //        left: 0;
+    //        width: 100%;
+    //        overflow: hidden;
+    //        display: flex;
+    //        justify-content: space-between;
+    //        z-index: 0;
+    //        .owl-next {
+    //            position: relative;
+    //            background: url(../images/arrow.png) no-repeat;
+    //            width: 13px;
+    //            height: 20px;
+    //            text-indent: 0;
+    //            font-size: 0;
+    //            &:hover {
+    //                opacity: 0.8;
+    //            }
+    //        }
+    //        .owl-prev {
+    //            width: 13px;
+    //            height: 20px;
+    //            text-indent: 0;
+    //            font-size: 0;
+    //            background: url(../images/arrow.png) no-repeat;
+    //            transform: rotate(180deg);
+    //            &:hover {
+    //                opacity: 0.8;
+    //            }
+    //        }
+    //    }
+    //    .disabled {
+    //        display: none;
+    //    }
+    //}
+    .slick-prev,
+    .slick-next {
+        left: 0;
+        transform: translate(0,-50%) rotate(180deg);
+        z-index: 2;
+        top: 50%;
+        background: url(../images/arrow.png) no-repeat 50% 50%;
+        width: 13px;
+        height: 20px;
+        text-indent: 0;
+        font-size: 0;
+        padding: 20px;
+        &:before {
+            content: '';
+        }
+    }
+    .slick-next {
+        left: auto;
+        right: 0;
+        transform: translate(0,-50%);
+    }
+}

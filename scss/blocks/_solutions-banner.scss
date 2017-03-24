@@ -1,0 +1,72 @@
+.solutions-banner {
+    background: $color-drk-blue;
+    padding-top: 90px;
+    min-height: 100vh;
+    height: auto;
+    .main-banner_header {
+        font-size: 3vw;
+        color: $color-white;
+        @include tablet {
+            font-size: 5vw;
+        }
+        @include phone {
+            font-size: 9vw;
+        }
+    }
+    .main-banner_paragraph {
+        font-size: 24px;
+        text-align: left;
+        &:after {
+            display: none;
+        }
+        @include tablet {
+            font-size: 16px;
+            line-height: 21px;
+        }
+    }
+    &_inner-holder {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        @include phone {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+    }
+    &_textholder {
+        display: flex;
+        flex-direction: column;
+
+    }
+    &_inner-wrapper {
+        padding-top: 40px;
+    }
+    &_image-wrapper {
+        padding: 60px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.2);
+        z-index: -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &_image {
+        max-width: 520px;
+        width: 100%;
+        display: block;
+        position: relative;
+        flex-shrink: 0;
+
+        @include width-1140 {
+            height: auto;
+            max-width: 320px;
+        }
+        @include phone {
+            margin: 0 0 20px;
+        }
+
+    }
+}

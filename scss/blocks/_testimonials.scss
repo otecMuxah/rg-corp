@@ -1,0 +1,230 @@
+.testimonials {
+    width: 100%;
+    background: url("../images/testimonials-bg.jpg") no-repeat 75% 0;
+    background-size: cover;
+    padding: 80px 0 20px;
+    &_wrapper {
+        @include wrapper-pref;
+    }
+    &_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        min-height: 220px;
+        &:focus {
+            outline: 0;
+        }
+    }
+    &_image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        transition: all 0.3s linear;
+        filter: grayscale(1);
+        border: 5px solid $color-white;
+        box-sizing: border-box;
+    }
+    &_link {
+        color: $color-gray;
+    }
+    &_list {
+        //display: flex;
+        //align-items: center;
+    }
+    &_text-holder {
+        position: absolute;
+        bottom: -13px;
+        width: 740px;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, 100%);
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.1s linear;
+        @include tablet {
+            padding: 0 20px;
+            box-sizing: border-box;
+            width: 550px;
+        }
+        @include phone {
+            width: 100%;
+        }
+    }
+    &_list-wrapper {
+        width: 100%;
+    }
+    &_title {
+        font: 22px/28px $font_ph_bold;
+        color:  $color-green;
+        text-transform: uppercase;
+    }
+    &_title-desc {
+        font: 16px/23px $font_light;
+        color: #949494;
+        margin-bottom: 30px;
+    }
+    &_text {
+        font: 18px/24px $font_light;
+        color: $color-black;
+        width: 100%;
+    }
+
+    //.owl-carousel {
+    //    .owl-item {
+    //        height: 220px;
+    //        display: flex;
+    //        align-items: center;
+    //        justify-content: center;
+    //        .testimonials_image {
+    //            width: 120px;
+    //        }
+    //    }
+    //    .owl-stage-outer {
+    //        min-height: 500px;
+    //        &:after {
+    //            content: '';
+    //            width: 22%;
+    //            height: 1px;
+    //            background: #72bb25;
+    //            position: absolute;
+    //            left: 170px;
+    //            top: 114px;
+    //            z-index: -1;
+    //            @include width-1140 {
+    //                display: none;
+    //            }
+    //        }
+    //        &:before {
+    //            content: '';
+    //            width: 22%;
+    //            height: 1px;
+    //            background: #72bb25;
+    //            position: absolute;
+    //            right: 170px;
+    //            top: 114px;
+    //            z-index: -1;
+    //            @include width-1140 {
+    //                display: none;
+    //            }
+    //        }
+    //    }
+    //    .center {
+    //        width: 220px;
+    //        height: 220px;
+    //        .testimonials_image {
+    //            width: 220px;
+    //            height: 220px;
+    //            filter: grayscale(0);
+    //        }
+    //        .testimonials_text-holder {
+    //            visibility: visible;
+    //            transition: visibility 0.1s linear 0.1s;
+    //        }
+    //    }
+    //    .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+    //        display: flex;
+    //    }
+    //    .owl-nav {
+    //        position: absolute;
+    //        top: 89px;
+    //        left: 50%;
+    //        transform: translateX(-50%);
+    //        width: 300px;
+    //        height: 0;
+    //        display: flex;
+    //        justify-content: space-between;
+    //        .owl-next,
+    //        .owl-prev {
+    //            position: relative;
+    //            background: url(../images/arrow.png) no-repeat 50% 50%;
+    //            width: 13px;
+    //            height: 20px;
+    //            text-indent: 0;
+    //            font-size: 0;
+    //            padding: 15px;
+    //            &:hover {
+    //                opacity: 0.8;
+    //            }
+    //        }
+    //        .owl-prev {
+    //            transform: rotate(180deg);
+    //            &:hover {
+    //                opacity: 0.8;
+    //            }
+    //        }
+    //    }
+    //}
+    .slick-center {
+        min-width: 220px;
+        height: 220px;
+        transition: all 0.3s linear;
+        .testimonials_image {
+            width: 220px;
+            height: 220px;
+            filter: grayscale(0);
+            transition: all 0.3s linear;
+        }
+        .testimonials_text-holder {
+            visibility: visible;
+            transition: all 0.1s linear 0.1s;
+        }
+    }
+    .slick-list {
+        min-height: 500px;
+        &:after {
+            content: '';
+            width: 22%;
+            height: 1px;
+            background: #72bb25;
+            position: absolute;
+            left: 170px;
+            top: 114px;
+            z-index: -1;
+            @include width-1140 {
+                display: none;
+            }
+        }
+        &:before {
+            content: '';
+            width: 22%;
+            height: 1px;
+            background: #72bb25;
+            position: absolute;
+            right: 170px;
+            top: 114px;
+            z-index: -1;
+            @include width-1140 {
+                display: none;
+            }
+        }
+    }
+    .slick-track {
+        display: flex;
+        align-items: center;
+        min-height: 220px;
+    }
+    .slick-prev,
+    .slick-next {
+        left: calc(50% - 140px);
+        transform: translate(-50%,0) rotate(180deg);
+        z-index: 2;
+        top: 94px;
+        background: url(../images/arrow.png) no-repeat 50% 50%;
+        width: 13px;
+        height: 20px;
+        text-indent: 0;
+        font-size: 0;
+        padding: 20px;
+        &:before {
+            content: '';
+        }
+    }
+    .slick-next {
+        left: calc(50% + 120px);
+        transform: translate(0,0);
+    }
+}

@@ -1,0 +1,129 @@
+.blog {
+    width: 100%;
+    background: $color-almost-white;
+    padding-bottom: 70px;
+    &_wrapper {
+        @include wrapper-pref;
+    }
+    &_list {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-bottom: 22px;
+        .blog-page_posts-holder & {
+            justify-content: space-around;
+        }
+        @include width-1140 {
+            justify-content: space-around;
+        }
+    }
+    &_item {
+        width: 365px;
+        margin-bottom: 20px;
+        @include small-phone {
+            width: 100%;
+        }
+    }
+    &_link {
+        display: flex;
+        flex-direction: column;
+        background: $color-white;
+        position: relative;
+        padding:  0 15px 15px;
+        box-sizing: border-box;
+        position: relative;
+        &:hover {
+            .blog_button-holder {
+                visibility: visible;
+                background: rgba(0,0,0,0.5);
+                transition: all 0.3s linear;
+            }
+
+        }
+    }
+    &_header {
+        font: 24px/30px $font_ph_bold;
+        color: $color-black;
+        padding: 0 15px;
+    }
+    &_text {
+        font: 18px/24px $font_light;
+        color: $color-gray;
+        padding: 0 15px;
+    }
+    &_image {
+        height: 255px;
+        margin: 0 -15px 15px;
+    }
+    &_button-holder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 255px;
+        display: flex;
+        visibility: hidden;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0,0,0,0);
+        transition: all 0.3s linear;
+        @include tablet {
+            visibility: visible;
+            background: rgba(0,0,0,0.5);
+            transition: all 0.3s linear;
+        }
+    }
+    &_status {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        font: 12px/17px $font_light;
+        color: $color-gray;
+        border-top: 1px solid $color-gray;
+        margin: 15px -15px 0;
+        padding: 10px 15px 0;
+    }
+    &_views-image {
+        width: 17px;
+        height: 12px;
+        fill: $color-drk-blue;
+    }
+    &_badge {
+        background-color: $color-white;
+        position: absolute;
+        padding: 3px 8px 1px 8px;
+        left: -10px;
+        top: 20px;
+        height: 24px;
+        font: 16px $font_ph_bold;
+        color: $color-black;
+        text-transform: uppercase;
+        box-shadow: 0 3px 2.91px 0.09px rgba(0, 0, 2, 0.46);
+        //width: 60px;
+        &:after{
+            content: '';
+            position: absolute;
+            transform: rotate(-45deg);
+            top: 24px;
+            left: 4px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7px 0 7px 7px;
+            border-color: transparent transparent transparent $color-black;
+        }
+        &:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 13px 0 15px 15px;
+            border-color: transparent transparent transparent #ffffff;
+            position: absolute;
+            top: 0;
+            right: -15px;
+            z-index: 2;
+        }
+    }
+}

@@ -1,0 +1,202 @@
+.pricing-form {
+    width: 100%;
+    background: $color-almost-white;
+    padding: 60px 0;
+    &_wrapper {
+        @include wrapper-pref;
+    }
+    &_list {
+        width: 100%;
+        max-width: 840px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+    &_item {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translate(0,-50%);
+            right: -76px;
+            height: 1px;
+            background: $color-drk-blue;
+            width: 52px;
+            z-index: 4;
+        }
+        &:last-child:before {
+            display: none;
+        }
+        @include width-1140 {
+            &:before {
+                display: none;
+            }
+        }
+        @include tablet {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+            &:first-child {
+                justify-content: flex-start;
+            }
+            &:last-child {
+                justify-content: flex-end;
+                .pricing-form_link {
+
+                }
+            }
+
+        }
+    }
+    &_link {
+        font: 24px $font_ph_bold;
+        color: $color-gary-2;
+        height: 48px;
+        background: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 245px;
+        box-sizing: border-box;
+        position: relative;
+        padding: 0 20px;
+        text-transform: uppercase;
+        &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 24px 0 24px 24px;
+            border-color: transparent transparent transparent $color-white;
+            position: absolute;
+            top: 0;
+            right: -24px;
+            transform: rotate(360deg);
+            z-index: 2;
+        }
+        @include tablet {
+            width: 100%;
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
+        .pricing-form_item:not(:first-child) & {
+            padding-left: 50px;
+            margin-left: -8px;
+            &:before {
+                content: '';
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 24px 0 24px 24px;
+                border-color: transparent transparent transparent $color-almost-white;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: rotate(360deg);
+                z-index: 1;
+            }
+            @include tablet {
+                margin-left: 0;
+                padding: 0;
+            }
+        }
+        .pricing-form_item__active & {
+            background: $color-drk-blue;
+            color: $color-white;
+            &:after {
+                border-color: transparent transparent transparent $color-drk-blue;
+            }
+            .pricing-form_image {
+                fill: $color-white;
+            }
+        }
+    }
+    &_image {
+        fill: $color-gary-2;
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+    }
+    &_form-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 555px;
+        @include tablet {
+            width: 100%;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+    }
+    &_form-item {
+
+    }
+    &_fistLastName {
+        display: flex;
+        justify-content: space-between;
+        .pricing-form_label {
+            flex-basis: 48%;
+
+        }
+        @include tablet {
+            flex-wrap: wrap;
+            .pricing-form_label {
+                flex-basis: 100%;
+            }
+        }
+    }
+    &_label {
+        display: flex;
+        flex-direction: column;
+        font: 12px $font_light;
+        color: $color-black;
+        margin-bottom: 15px;
+    }
+
+    &_input,
+    &_textarea {
+        display: block;
+        margin: 0;
+        width: 100%;
+        appearance: none;
+        box-shadow: none;
+        border-radius: 5px;
+        border: 1px $color-gary-2 solid;
+        height: 40px;
+        font: 18px $font_light;
+        box-sizing: border-box;
+        padding: 0 10px;
+        color: $color-black;
+    }
+    &_textarea {
+        width: 100%;
+        box-sizing: border-box;
+        height: 120px;
+
+    }
+    &_buttons-holder {
+        width: 215px;
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+    }
+    &_text {
+        font: 700 12px $font_light;
+    }
+    &_redmark {
+        color: red;
+    }
+    &_message {
+        font: 14px $font_light;
+        color: $color-gray;
+        margin-bottom: 30px;
+        a {
+            color: $color-gary-2;
+        }
+    }
+}

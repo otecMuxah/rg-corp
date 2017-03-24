@@ -1,0 +1,9 @@
+.tag-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &_item {
+        flex: 1 1 25%;
+        margin: 3px;
+    }
+}

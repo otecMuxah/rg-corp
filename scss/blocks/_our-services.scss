@@ -1,0 +1,79 @@
+.our-services {
+    width: 100%;
+    padding: 79px 0 38px;
+    &_wrapper {
+        max-width: $site-width;
+        width: 100%;
+        .try-block_title {
+            margin-top: 30px;
+        }
+    }
+    &_list {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+        &:after {
+            display: none;
+        }
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 67px;
+        }
+        @include phone {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+    &_item {
+        width: 300px;
+        flex: 0 0 33%;
+        margin-bottom: 30px;
+        &:nth-child(3n) {
+            position: relative;
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                height: 2px;
+                background: $color-green;
+                width: 259px;
+                top: 61px;
+                left: 50px;
+                transform: translate(-70%,0);
+            }
+            &:after {
+                left: -329px;
+                transform: translate(-71%,0);
+            }
+        }
+        @include width-1140 {
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
+    }
+    &_title {
+        color: $color-white;
+    }
+    &_image-wrapper {
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 2px solid $color-green;
+        margin-bottom: 12px;
+    }
+    &_image {
+        fill: $color-green;
+        width: 60px;
+
+        svg {
+            fill: $color-green;
+            width: 60px;
+        }
+    }
+    &_text {
+        color: $color-white;
+        font: 28px/35px $font_ph;
+    }
+}
