@@ -1,6 +1,7 @@
 .solutions {
     width: 99%;
     margin-bottom: 78px;
+
     &__biedge-bg {
         background: $color-almost-white;
         margin-bottom: 0;
@@ -54,9 +55,9 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        flex: 1;
+        flex: 1 1 40%;
         @include tablet {
-            margin-bottom: 40px;
+            margin: 0 10px 40px;
         }
     }
     &_link {
@@ -136,9 +137,14 @@
             width: 60px;
             fill: $color-white;
         }
+        img {
+            transition: height 0.3s linear;
+            height: 60px;
+            width: 60px;
+        }
     }
     &_title {
-        font: 700 28px/35px $font_ph_bold;
+        font: 28px/35px $font_ex_bold;
         color: $color-black;
         position: relative;
         text-transform: uppercase;

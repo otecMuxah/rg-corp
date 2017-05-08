@@ -1,10 +1,9 @@
 .breadcrumbs {
     display: flex;
     position: absolute;
-    top: 100px;
-    left: 50%;
+    top: 85px;
+    left: calc(50% - 570px);
     width: 1140px;
-    transform: translate(-50%,0);
     z-index: 2;
     @include width-1140 {
         left: 20px;
@@ -34,7 +33,7 @@
             width: 0;
             height: 0;
             border-style: solid;
-            border-width: 11px 0 11px 11.5px;
+            border-width: 11px 0 11px 11px;
             border-color: transparent transparent transparent $color-white;
             position: absolute;
             top: 0;

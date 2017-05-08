@@ -1,0 +1,91 @@
+.our-leaders {
+
+    background: url("../images/our-leaders-background.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    &_wrapper {
+        @include wrapper-pref;
+        align-items: stretch;
+        padding: 40px 0;
+    }
+    &_title {
+        align-self: center;
+    }
+    &_item {
+        display: flex;
+        margin-bottom: 50px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @include phone {
+            flex-direction: column;
+            align-items: center;
+            padding: 0 10px;
+        }
+    }
+    &_rank {
+        font: 16px/21px $font_light;
+        color: $color-gary-82;
+        text-transform: uppercase;
+        margin-bottom: 34px;
+    }
+    &_name {
+        font: 22px/27px $font_ex_bold;
+        color: $color-green;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    &_photo {
+        flex-shrink: 0;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        position: relative;
+        margin-right: 70px;
+        @include phone {
+            margin: 0 0 40px;
+        }
+        .dixon & {
+            background: url("../images/dixon.jpg") no-repeat;
+        }
+        .alex-kry & {
+            background: url("../images/alex-kry.jpg") no-repeat;
+        }
+        .rando305 & {
+            background: url("../images/rando305.jpg") no-repeat;
+        }
+        .vvoous & {
+            background: url("../images/vvoous.jpg") no-repeat;
+        }
+        .cotoha & {
+            background: url("../images/cotoha.jpg") no-repeat;
+        }
+        .footer_social-list {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            margin-bottom: 14px;
+
+        }
+        .footer_social-link {
+            width: 40px;
+            height: 40px;
+            &:after {
+                display: none;
+            }
+        }
+        .footer_social-item {
+            &:nth-child(2) {
+                position: relative;
+                bottom: -30px;
+            }
+        }
+    }
+    &_description {
+        font: 18px/23px $font_light;
+        color: $color-black;
+        margin-bottom: 15px;
+    }
+}

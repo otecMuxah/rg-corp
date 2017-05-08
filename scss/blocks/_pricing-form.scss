@@ -49,7 +49,6 @@
 
                 }
             }
-
         }
     }
     &_link {
@@ -156,6 +155,9 @@
         font: 12px $font_light;
         color: $color-black;
         margin-bottom: 15px;
+        &__error input {
+            border-color: red;
+        }
     }
 
     &_input,
@@ -177,7 +179,7 @@
         width: 100%;
         box-sizing: border-box;
         height: 120px;
-
+        resize: none;
     }
     &_buttons-holder {
         width: 215px;

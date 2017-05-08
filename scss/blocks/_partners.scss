@@ -1,6 +1,8 @@
 .partners {
     background: #ebebeb;
-    padding: 25px 0;
+    height: 80px;
+    padding: 20px 0;
+    box-sizing: border-box;
     width: 100%;
     position: relative;
     margin-bottom: 65px;
@@ -23,51 +25,16 @@
         justify-content: center;
         align-items: center;
     }
-    //.owl-carousel {
-    //    .owl-stage-outer {
-    //        z-index: 1;
-    //    }
-    //    .owl-item {
-    //        img {
-    //            width: auto;
-    //        }
-    //    }
-    //    .owl-nav {
-    //        position: absolute;
-    //        top: 0;
-    //        left: 0;
-    //        width: 100%;
-    //        overflow: hidden;
-    //        display: flex;
-    //        justify-content: space-between;
-    //        z-index: 0;
-    //        .owl-next {
-    //            position: relative;
-    //            background: url(../images/arrow.png) no-repeat;
-    //            width: 13px;
-    //            height: 20px;
-    //            text-indent: 0;
-    //            font-size: 0;
-    //            &:hover {
-    //                opacity: 0.8;
-    //            }
-    //        }
-    //        .owl-prev {
-    //            width: 13px;
-    //            height: 20px;
-    //            text-indent: 0;
-    //            font-size: 0;
-    //            background: url(../images/arrow.png) no-repeat;
-    //            transform: rotate(180deg);
-    //            &:hover {
-    //                opacity: 0.8;
-    //            }
-    //        }
-    //    }
-    //    .disabled {
-    //        display: none;
-    //    }
-    //}
+    .slick-slide img {
+        width: 100%;
+        max-height: 40px;
+        padding: 0 5px;
+        box-sizing: border-box;
+    }
+    .slick-track {
+        display: flex;
+        align-items: center;
+    }
     .slick-prev,
     .slick-next {
         left: 0;

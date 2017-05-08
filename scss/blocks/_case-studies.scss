@@ -29,7 +29,7 @@
         height: 100%;
         overflow: hidden;
         &:hover {
-            background: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.7);
             transition: all 0.3s linear;
             .case-studies_in-wrapper {
                 transform: translateY(0%);
@@ -41,11 +41,14 @@
             }
             .case-studies_button {
                 visibility: visible;
-
+            }
+            .case-studies_item {
+                filter: blur(3px);
+                transition: all 0.3s linear;
             }
         }
         @include tablet {
-            background: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.7);
             .case-studies_in-wrapper {
                 transform: translateY(0%);
                 transition: all 0.3s linear;

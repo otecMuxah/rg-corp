@@ -171,7 +171,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font: 38px $font_ph_bold;
+        font: 38px $font_ex_bold;
         position: relative;
         margin-bottom: 52px;
         &:before {
@@ -236,7 +236,7 @@
     }
     &_styleline {
         position: absolute;
-        border: 1px solid $color-beige;
+        border: 2px solid $color-beige;
         border-top: none;
         border-radius: 0 0 12px 12px;
         top: 415px;
@@ -268,5 +268,14 @@
         position: relative;
         width: 100%;
     }
-
+    &_arrows {
+        position: absolute;
+        z-index: 2;
+        top: 428px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 32px;
+        height: 28px;
+        background: #f0f0f0 url(../images/arrows.png) no-repeat center;
+    }
 }

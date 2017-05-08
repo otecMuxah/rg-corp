@@ -3,17 +3,6 @@
     background: $color-almost-white;
     overflow: hidden;
     padding: 40px 0;
-    .owl-carousel {
-        .owl-stage-outer {
-            padding: 40px 0;
-            margin-top: -40px;
-        }
-        .owl-item {
-            @include small-phone {
-                //max-width: 200px;
-            }
-        }
-    }
     &_wrapper {
         @include wrapper-pref;
         padding: 80px 0;
@@ -23,12 +12,17 @@
         overflow: hidden;
     }
     &_button {
-        display: none;
+        visibility: hidden;
         width: 100%;
         cursor: pointer;
         background: none;
         &:focus {
             outline: 0;
+        }
+        @include phone {
+            font-size: 14px;
+            padding: 5px;
+            box-sizing: border-box;
         }
     }
     &_column {
@@ -37,13 +31,13 @@
             outline: 0;
         }
         .button {
-            display: none;
+            //display: none;
         }
         &__active {
             transition: transform 0.2s linear;
             transform: scale(1.03);
             .support-price_button {
-                display: block;
+                visibility: visible;
             }
             @include width-1140 {
                 transform: scale(1);
@@ -131,6 +125,9 @@
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+        @include phone {
+            padding: 0 10px;
+        }
     }
     &_desc,
     &_pay-less {
@@ -157,7 +154,7 @@
         box-sizing: border-box;
         padding: 10px;
         @include tablet {
-            height: 80px;
+            height: 100px;
         }
         &--price {
             margin-top: 2px;
@@ -191,6 +188,12 @@
             margin-left: 5px;
             left: 0;
             transform: translate(70%,0);
+            @include phone {
+                left: 50%;
+                top: 27px;
+                transform: translate(-50%,0);
+                margin: 0;
+            }
         }
         .support-price_column__names & {
             font: 12px $font_light;
@@ -221,9 +224,14 @@
         left: 0;
         z-index: 20;
         display: none;
-        .support-price__showPopup & {
-            display: flex;
-        }
+    }
+    .support-price__showPopup {
+        //display: flex;
+    }
+    &_success-holder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     &_success-holder {
         display: flex;
@@ -243,6 +251,17 @@
             align-items: center;
             min-height: 320px;
         }
+        .button-holder {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .button {
+            margin: 0 4px;
+            @include phone {
+                padding: 7px;
+            }
+        }
     }
     .button-holder {
         display: flex;
@@ -255,8 +274,15 @@
             height: 20px;
             width: 27px;
         }
+        img {
+            height: 20px;
+            width: 27px;
+        }
         &__mail {
             fill: $color-drk-blue;
         }
     }
+}
+.support-price__showPopup {
+    display: flex;
 }

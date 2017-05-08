@@ -21,9 +21,11 @@
         &:last-child {
             margin-bottom: 67px;
         }
+        @include tablet {
+            justify-content: space-around;
+        }
         @include phone {
             flex-wrap: wrap;
-            justify-content: space-around;
         }
     }
     &_item {
@@ -70,6 +72,10 @@
         svg {
             fill: $color-green;
             width: 60px;
+        }
+        img {
+            width: 60px;
+            height: 60px;
         }
     }
     &_text {

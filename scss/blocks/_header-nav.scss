@@ -1,6 +1,5 @@
 .header-nav {
     display: flex;
-    justify-content: space-between;
     width: 665px;
     box-sizing: border-box;
     position: relative;
@@ -11,6 +10,7 @@
         font-family: $font_ph_bold;
         font-size: 18px;
         line-height: 23px;
+        text-transform: uppercase;
         .header__fixed & {
             color: $color-black;
         }
@@ -42,6 +42,10 @@
     }
     &_item {
         position: relative;
+        margin-right: 25px;
+        &:last-child {
+            margin-right: 0;
+        }
         &:before {
             content: '';
             position: absolute;
@@ -50,7 +54,7 @@
             transform: translateX(-50%);
             height: 3px;
             width: 0;
-            background: $color-green;
+            background: #abe271;
             transition: width 0.2s linear;
         }
         &__active {

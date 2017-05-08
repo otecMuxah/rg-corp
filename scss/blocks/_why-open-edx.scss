@@ -17,18 +17,17 @@
             justify-content: center;
         }
     }
-    &_image {
-        svg {
-            visibility: visible;
-            height: 60px;
-            fill: $color-beige;
-            .why-open-edx_text-wrapper & {
-                fill: $color-white;
-                width: 32px;
-                height: 29px;
-                margin-right: 14px;
-                margin-bottom: 12px;
-            }
+    &_image svg,
+    &_image img {
+        visibility: visible;
+        height: 60px;
+        fill: $color-beige;
+        .why-open-edx_text-wrapper & {
+            fill: $color-white;
+            width: 32px;
+            height: 29px;
+            margin-right: 14px;
+            margin-bottom: 12px;
         }
     }
 
@@ -56,7 +55,8 @@
             .why-open-edx_text-wrapper {
                 color: $color-black;
                 transition: color 0.3s linear 0.3s;
-                .why-open-edx_image svg {
+                .why-open-edx_image svg,
+                .why-open-edx_image img {
                     fill: $color-green;
                     transition: fill 0.3s linear 0.3s;
                 }
@@ -64,9 +64,13 @@
                     color: $color-black;
                     transition: color 0.3s linear 0.3s;
                 }
+                .why-open-edx_image img {
+                    visibility: visible;
+                }
 
             }
-            .why-open-edx_image svg {
+            .why-open-edx_image svg,
+            .why-open-edx_image img {
                 fill: $color-black;
                 transition: fill 0.3s linear 0.3s;
             }
@@ -79,13 +83,21 @@
             .why-open-edx_text-wrapper {
                 color: $color-black;
                 transition: color 0.3s linear 0.3s;
-                .why-open-edx_image svg {
+                .why-open-edx_image svg,
+                .why-open-edx_image img {
                     fill: $color-green;
+                    transition: fill 0.3s linear 0.3s;
+                }
+                .why-open-edx_image img {
                     transition: fill 0.3s linear 0.3s;
                 }
                 .why-open-edx_name {
                     color: $color-black;
                     transition: color 0.3s linear 0.3s;
+                }
+                .why-open-edx_image img {
+                    visibility: visible;
+                    transition: visibility 0.3s linear 0.3s;
                 }
 
             }
@@ -132,6 +144,10 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+
+        .why-open-edx_image img {
+            visibility: hidden;
+        }
     }
     &_text {
         font: 14px $font_light;

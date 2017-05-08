@@ -1,12 +1,18 @@
 .radio-list {
     display: flex;
     justify-content: space-around;
+    @include tablet {
+        flex-wrap: wrap;
+    }
     &_wrapper {
         border: 1px solid $color-drk-blue;
         border-radius: 5px;
         padding: 15px 0;
         position: relative;
         margin: 20px 0;
+        @include tablet {
+            margin: 40px 0;
+        }
     }
     &_inner-wrapper {
         display: flex;
@@ -18,12 +24,18 @@
         position: absolute;
         left: 0;
         top: -20px;
+        @include tablet {
+            top: -35px;
+        }
     }
     &_item {
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        @include tablet {
+            margin-bottom: 20px;
+        }
     }
     &_text {
         font: 16px/23px $font_light;

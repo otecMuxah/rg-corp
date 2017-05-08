@@ -2,10 +2,20 @@
     background: $color-almost-white;
     display: block;
     padding: 40px 0;
+    position: relative;
     &_wrapper {
         @include wrapper-pref;
         flex-direction: row;
         align-items: flex-start;
+    }
+    &_filter-icon {
+        cursor: pointer;
+        display: none;
+        max-width: 265px;
+        margin: 0 auto 30px;
+        @include tablet {
+            display: block;
+        }
     }
     &_filter {
         max-width: 265px;
@@ -16,6 +26,23 @@
         flex-direction: column;
         background: $color-white;
         margin-right: 25px;
+        @include tablet {
+            position: fixed;
+            top: 50%;
+            transform: translate(-100%,-50%);
+        }
+        &__active {
+            transform: translate(0,-50%);
+            z-index: 10;
+        }
+    }
+    &_close-filter {
+        display: none;
+        margin-bottom: 30px;
+        @include tablet {
+            display: block;
+        }
+
     }
     &_search {
         margin-bottom: 40px;
@@ -38,6 +65,7 @@
         width: 100%;
         box-sizing: border-box;
         font: 14px $font_light;
+        border: 1px solid $color-black;
     }
     &_title {
         font: 18px $font_ph_bold;
@@ -54,5 +82,17 @@
     }
     &_materials-item {
         margin-bottom: 5px;
+    }
+    &_posts-holder {
+        width: 100%;
+        @include tablet {
+            margin: 0 10px;
+            box-sizing: border-box;
+        }
+        .blog_item {
+            @include phone {
+                width: 300px;
+            }
+        }
     }
 }

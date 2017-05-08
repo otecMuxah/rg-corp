@@ -26,13 +26,15 @@
         }
     }
     &_link {
-        display: flex;
-        flex-direction: column;
         background: $color-white;
         position: relative;
-        padding:  0 15px 15px;
         box-sizing: border-box;
-        position: relative;
+        cursor: pointer;
+        a {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
         &:hover {
             .blog_button-holder {
                 visibility: visible;
@@ -80,13 +82,14 @@
         justify-content: space-between;
         font: 12px/17px $font_light;
         color: $color-gray;
-        border-top: 1px solid $color-gray;
-        margin: 15px -15px 0;
-        padding: 10px 15px 0;
+        border-top: 1px solid #e3e3e3;
+        padding: 10px 15px;
+        box-sizing: border-box;
     }
     &_views-image {
-        width: 17px;
-        height: 12px;
+        width: 21px;
+        height: 16px;
+        margin-bottom: -3px;
         fill: $color-drk-blue;
     }
     &_badge {

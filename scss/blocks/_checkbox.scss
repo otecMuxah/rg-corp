@@ -5,6 +5,9 @@
     &_inner-wrapper {
         display: flex;
         justify-content: space-around;
+        @include tablet {
+            flex-wrap: wrap;
+        }
     }
     &_label {
         overflow: hidden;
@@ -12,6 +15,9 @@
         cursor: pointer;
         color: $color-black;
         font: 14px/18px $font_light;
+        @include tablet {
+            margin: 0 20px 10px 0;
+        }
     }
     &_checkbox {
         position: absolute;
