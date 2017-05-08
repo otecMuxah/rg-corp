@@ -230,26 +230,36 @@ $(document).ready(function () {
     $openPopup.on('click', function () {
         $('.support-price').addClass('support-price__showPopup')
     });
+
     $closePopup.on('click', function () {
         $('.support-price').removeClass('support-price__showPopup')
     });
+
     $headNavDrop.on('touchstart mouseenter', function () {
         $(this).closest('.header-nav_item').addClass('header-nav_item__active');
     });
+
     $headNavDrop.on('touchmove  mouseleave', function () {
         $(this).closest('.header-nav_item').removeClass('header-nav_item__active');
     });
+
     $headNavDropdown.on('click', function (e) {
         e.preventDefault();
         $(this).closest('.header-nav_item').toggleClass('header-nav_item__show-dropdown');
     });
+
     $hamburger.on('click', function () {
         $(this).toggleClass('is-active');
         $('.header-nav').toggleClass('header-nav_visible');
     });
+
     $('.support-price_list:not(.support-price_list__names)').on('click', function () {
         $('.support-price_column').removeClass('support-price_column__active');
         $(this).closest('.support-price_column').addClass('support-price_column__active');
+    });
+
+    $('.blog-page_filter-icon').on('click', function () {
+        $('.blog-page_filter').toggleClass('blog-page_filter__active');
     });
 
     $mainBannerMore.on('click', function () {
@@ -264,14 +274,19 @@ $(document).ready(function () {
         })
     });
 
-    $.fn.isOnScreen = function () {
-        var element = this[0];
-        var bounds = element.getBoundingClientRect();
-        return bounds.top < window.innerHeight && bounds.bottom > 0;
-    };
+    // $.fn.isOnScreen = function () {
+    //     var element = this[0];
+    //     var bounds = element.getBoundingClientRect();
+    //     return bounds.top < window.innerHeight && bounds.bottom > 0;
+    // };
 
 
     if ($counter.length > 0) {
+        $.fn.isOnScreen = function () {
+            var element = this[0];
+            var bounds = element.getBoundingClientRect();
+            return bounds.top < window.innerHeight && bounds.bottom > 0;
+        };
         function showElement() {
             var $count = $('.count');
             if (fired == 0 && $count.isOnScreen()) {
@@ -323,6 +338,17 @@ $(document).ready(function () {
             if ($counter.length > 0) {showElement()}
         }
     };
+    $('.button_close').on('click', function (event) {
+        event.preventDefault();
+        $(event.currentTarget).parents('.support-price_popup-wrapper').find('.js-input').each(function (ind, el){
+            $(el).val('');
+        });
+        $(event.currentTarget).parents('.support-price_popup-wrapper').find('.js-error').each(function (ind, el){
+            $(el).text('');
+        });
+        $(event.currentTarget).parents('.support-price_popup-wrapper').removeClass('support-price__showPopup');
+        $('#support-send-form').off('click');
+    });
 
     window.addEventListener('scroll', $.throttle(250, callbackScroll));
 });
