@@ -19,12 +19,15 @@
         }
     }
     &_item {
-        flex: 0 1 23%;
-        width: 265px;
-        padding: 15px 0;
-        margin-bottom: 20px;
+        flex: 1 1 25%;
+        max-width: 265px;
+        padding: 10px 0;
+        margin: 0 20px 20px 0;
         box-sizing: border-box;
         position: relative;
+        &:nth-child(4) {
+            margin-right: 0;
+        }
         &:before {
             content: '';
             position: absolute;
@@ -35,7 +38,10 @@
             background: $color-green;
         }
         .about-us_list-text & {
-            flex: 0 1 50%;
+            flex: 0 1 33%;
+        }
+        @include desktop {
+            margin: 0 20px 20px;
         }
         @include phone {
             flex-basis: 45%;
@@ -44,5 +50,8 @@
     &_text {
         font: 16px $font_light;
         color: $color-black;
+        @include desktop {
+            padding: 0 20px;
+        }
     }
 }

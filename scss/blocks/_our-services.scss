@@ -67,15 +67,16 @@
     }
     &_image {
         fill: $color-green;
-        width: 60px;
-
+        width: 50px;
+        height: 50px;
         svg {
             fill: $color-green;
-            width: 60px;
+            width: 50px;
+            height: 50px;
         }
         img {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
         }
     }
     &_text {

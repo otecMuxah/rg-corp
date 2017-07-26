@@ -1,10 +1,10 @@
 .pricing-form {
     width: 100%;
-    background: $color-almost-white;
     padding: 60px 0;
-    &_wrapper {
-        @include wrapper-pref;
-    }
+    background: $color-almost-white url(../images/our-leaders-background.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     &_list {
         width: 100%;
         max-width: 840px;
@@ -49,6 +49,9 @@
 
                 }
             }
+        }
+        .pricing-form_buttons-holder {
+            width: auto;
         }
     }
     &_link {
@@ -199,6 +202,58 @@
         margin-bottom: 30px;
         a {
             color: $color-gary-2;
+        }
+    }
+    &_wrapper {
+        @include wrapper-pref;
+        label {
+            display: block;
+            font: 12px $font_light;
+            color: $color-black;
+            margin-bottom: 5px;
+        }
+        .error {
+            border-color: red;
+        }
+        input, textarea {
+            display: block;
+            width: 100%;
+            appearance: none;
+            box-shadow: none;
+            border-radius: 5px;
+            border: 1px $color-gary-2 solid;
+            height: 40px;
+            font: 18px $font_light;
+            box-sizing: border-box;
+            padding: 0 10px;
+            color: $color-black;
+            margin-bottom: 15px;
+        }
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            height: 120px;
+            resize: none;
+            margin-bottom: 15px;
+        }
+        select {
+            display: block;
+            width: 100%;
+            appearance: none;
+            box-shadow: none;
+            border-radius: 5px;
+            border: 1px $color-gary-2 solid;
+            height: 40px;
+            font: 18px $font_light;
+            box-sizing: border-box;
+            padding: 0 10px;
+            color: $color-black;
+            background: #ffffff url(../../../static/images/down-up-arrow.svg) no-repeat 96% 50%;
+            background-size: 10px 7px;
+            margin-bottom: 15px;
+        }
+        .pricing-form_buttons-holder {
+            width: auto;
         }
     }
 }

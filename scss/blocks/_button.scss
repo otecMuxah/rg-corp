@@ -18,6 +18,15 @@
             background: none;
         }
     }
+    &__inverted {
+        color: $color-white;
+        background: $color-green;
+        &:hover {
+            color: $color-green;
+            box-shadow: inset 0 0 0 2px $color-green;
+            background: none;
+        }
+    }
     &__black {
         color: $color-black;
         box-shadow: inset 0 0 0 2px $color-black;
@@ -28,14 +37,32 @@
             color: $color-white;
             background: $color-black;
         }
+        &--inverted {
+            color: $color-white;
+            background: $color-black;
+            &:hover,
+            &__active {
+                color: $color-black;
+                background: none;
+            }
+        }
     }
+
     &__white {
         color: $color-white;
         box-shadow: inset 0 0 0 2px $color-white;
-        padding: 7px 32px;
         &:hover {
-            color: $color-drk-blue;
+            color: $color-black;
             background: $color-white;
+        }
+        &--inverted {
+            color: $color-black;
+            background: $color-white;
+            &:hover {
+                color: $color-white;
+                box-shadow: inset 0 0 0 2px $color-white;
+                background: none;
+            }
         }
     }
     &__next,

@@ -28,12 +28,16 @@
         margin-right: 25px;
         @include tablet {
             position: fixed;
-            top: 50%;
-            transform: translate(-100%,-50%);
+            top: 0;
+            left: 0;
+            transform: translate(-100%,0);
         }
         &__active {
-            transform: translate(0,-50%);
+            transform: translate(0,0);
             z-index: 10;
+            height: 100vh;
+            max-width: 100vw;
+            overflow-y: auto;
         }
     }
     &_close-filter {
@@ -45,7 +49,7 @@
 
     }
     &_search {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
     &_search-icon {
         width: 16px;
@@ -66,6 +70,7 @@
         box-sizing: border-box;
         font: 14px $font_light;
         border: 1px solid $color-black;
+        color: $color-black;
     }
     &_title {
         font: 18px $font_ph_bold;
@@ -78,7 +83,10 @@
     }
     &_checkbox-holder,
     &_tags-holder {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+        @include tablet {
+            margin-bottom: 10px;
+        }
     }
     &_materials-item {
         margin-bottom: 5px;
@@ -94,5 +102,9 @@
                 width: 300px;
             }
         }
+    }
+    .blog_link a {
+        height: 345px;
+        box-sizing: border-box;
     }
 }

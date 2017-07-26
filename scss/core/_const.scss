@@ -13,10 +13,19 @@
 }
 @font-face {
     font-family: 'roboto-light';
-    src: url('../fonts/roboto-light.woff') format('woff'), url('../fonts/roboto-light.woff2') format('woff2');
+    src: url('../fonts/Roboto-Light.woff') format('woff'), url('../fonts/Roboto-Light.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
+
+
+@font-face {
+    font-family: 'PhenomenaExBold';
+    src: url('../fonts/Phenomena-ExtraBold.woff2') format('woff2'), url('../fonts/Phenomena-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
 
 //break points
 $res_360:   360px;
@@ -44,7 +53,10 @@ $color-mid-blue:        #7695b9;
 $color-gray:            #949494;
 $color-gary-2:          #c6c6c6;
 $color-gary-3:          #b5b5b5;
+$color-gary-82:         #828282;
 $color-red:             #ff6363;
+$color-case-green:      #4db870;
+$color-case-blue:       #829adb;
 //
 $site-width:            1140px;
 
@@ -53,5 +65,7 @@ $site-width:            1140px;
 $font_light:      roboto-light, Arial, sans-serif;
 $font_ph:         phenomenaregular, Arial, sans-serif;
 $font_ph_bold:    phenomenabold, Arial, sans-serif;
+$font_ex_bold:    PhenomenaExBold, Arial, sans-serif;
+
 
 

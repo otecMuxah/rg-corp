@@ -3,7 +3,7 @@
     padding-top: 90px;
     min-height: 610px;
     height: auto;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     .main-banner_header {
         font-size: 3vw;
         color: $color-white;
@@ -28,7 +28,7 @@
     &_inner-holder {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         width: 100%;
         @include tablet {
             flex-direction: column;
@@ -43,26 +43,32 @@
 
     }
     &_inner-wrapper {
-        padding-top: 40px;
+        padding: 40px 0;
     }
     &_image-wrapper {
-        padding: 60px;
+        height: 440px;
+        width: 440px;
+        flex-shrink: 0;
         border-radius: 50%;
         background: rgba(255,255,255,0.2);
         z-index: -1;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-right: 30px;
+        margin: 0 100px 0 50px;
+        @include tablet {
+            width: 300px;
+            height: 300px;
+            margin: 0 0 30px;
+        }
     }
     &_image,
+    &_image svg,
     &_image img {
         max-width: 520px;
-        width: 100%;
         display: block;
         position: relative;
         flex-shrink: 0;
-
         @include width-1140 {
             height: auto;
             max-width: 320px;
@@ -70,6 +76,5 @@
         @include phone {
             margin: 0 0 20px;
         }
-
     }
 }

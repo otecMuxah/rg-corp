@@ -10,14 +10,14 @@
     .hamburger {
         display: none;
     }
-    @include desktop {
+    @include width-1140 {
         padding: 0 15px;
         box-sizing: border-box;
         .button {
             display: none;
         }
     }
-    @include tablet {
+    @include desktop {
         .hamburger {
             display: block;
         }
@@ -37,6 +37,9 @@
         .header__fixed & {
             display: none;
         }
+        @include width-1140 {
+            margin-right: 20px;
+        }
     }
     &_logo-super {
         display: none;
@@ -46,6 +49,9 @@
         .header__fixed & {
             display: block;
         }
+        @include width-1140 {
+            margin-right: 20px;
+        }
     }
     &__fixed {
         position: fixed;
@@ -53,8 +59,10 @@
         color: $color-black;
         z-index: 10;
         transition: color 0.5s linear;
+        animation: header-show 0.3s;
         .header_wrapper {
             height: 60px;
+
         }
         .header-nav_item__dropdown .header-nav_link:after {
             border-color: #222 transparent transparent;
@@ -72,5 +80,28 @@
             }
         }
     }
+    &__not-fixed {
+        animation: header-hide 0.3s;
+    }
+}
 
+@keyframes header-show {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes header-hide {
+    0% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-100%);
+    }
+    100% {
+        position: absolute;
+    }
 }

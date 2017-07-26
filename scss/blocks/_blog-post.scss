@@ -4,43 +4,98 @@
     &_wrapper {
         @include wrapper-pref;
         max-width: 950px;
-        background: $color-white;
-        display: block;
         align-items: stretch;
-        padding: 40px 20px;
+        padding: 0 20px 40px 20px;
+        background: $color-white;
         img {
             width: 100%;
             height: auto;
             margin: 5px;
+        }
+        &__inherit_background {
+            background: $color-almost-white;
+        }
+        > .button {
+            margin-top: 20px;
+            align-self: center;
+            color: $color-black;
+            &:hover {
+                color: $color-white;
+                text-decoration: none;
+            }
         }
     }
     &_head-wrapper {
         flex-direction: row;
         align-items: flex-start;
     }
-    &_title, h1, h2, h3, h4, h5, h6 {
+    &_title, h1 {
         font: 28px $font_ph_bold;
         color: $color-black;
         margin-bottom: 7px;
     }
-    &_small-title,
-    p > strong {
+    &_small-title, h2, h3, h4, h5, h6 {
         font: 20px $font_ph_bold;
         color: $color-black;
         margin-bottom: 7px;
     }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 22px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 18px;
+    }
+    h6 {
+        font-size: 16px;
+    }
+    pre {
+        font: 28px/35px $font_ex_bold;
+        color: $color-black;
+        position: relative;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 40px 36px;
+        align-self: center;
+        @include small-phone {
+        }
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 15px;
+            height: 3px;
+            background: $color-emerald;
+        }
+        &:before {
+            left: -30px;
+        }
+        &:after {
+            right: -30px;
+        }
+    }
+
     &_paragraph,
-    p {
+    p,
+    address {
         font: 16px $font_light;
         color: $color-black;
         margin-bottom: 15px;
+        line-height: 22px;
     }
     &_image {
         float: left;
         margin: 10px 10px 10px 0;
     }
     &_quote,
-    blockquote {
+    blockquote,
+    blockquote p {
         position: relative;
         padding: 50px;
         font: 700 22px $font_light;
@@ -50,10 +105,7 @@
         margin: 0 30px;
         text-align: center;
     }
-    blockquote p strong {
-        font: 700 22px $font_light;
-        color: #949494;
-    }
+
     &_commas {
         position: absolute;
         top: 50%;
@@ -72,6 +124,8 @@
         }
     }
     blockquote {
+        font: 700 22px $font_light;
+        color: #949494;
         &:before,
         &:after {
             content: '';
@@ -103,20 +157,44 @@
             margin: 0 10px 0 0;
         }
     }
-    .button {
-        align-self: center;
+    .tag-list {
+        list-style: none;
+        margin-bottom: 0;
+        padding: 0;
     }
+
     .blog_status {
         border-top: 0;
-        border-bottom: 1px solid #949494;
+        border-bottom: 1px solid $color-gary-2;
         margin-bottom: 30px;
+    }
+    .blog_status,
+    .blog_comments,
+    .blog_date {
+        margin-right: 20px;
     }
     ol {
         list-style: decimal;
         padding-left: 40px;
+        margin-bottom: 15px;
+        font: 16px $font_light;
+        color: $color-black;
     }
     ul {
         list-style: disc;
         padding-left: 40px;
+        margin-bottom: 15px;
+        font: 16px $font_light;
+        color: $color-black;
+    }
+    li {
+        margin-bottom: 5px;
+    }
+    a {
+        font: 16px $font_light;
+        color: #67a822;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }

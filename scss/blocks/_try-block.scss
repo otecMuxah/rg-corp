@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     background: url(../images/main-banner-bg.jpg);
-    background-attachment: fixed;
+    //background-attachment: fixed;
     padding: 38px 0 30px;
     transform: translate3d(0,0,0);
     &:before {
@@ -22,5 +22,9 @@
         text-transform: uppercase;
         margin-bottom: 7px;
         color: $color-white;
+        @include phone {
+            padding: 0 15px;
+            text-align: center;
+        }
     }
 }

@@ -1,6 +1,6 @@
 .solutions {
     width: 99%;
-    margin-bottom: 78px;
+    margin-bottom: 40px;
 
     &__biedge-bg {
         background: $color-almost-white;
@@ -28,7 +28,7 @@
         &:after {
             content: '';
             position: absolute;
-            width: 90%;
+            width: 85%;
             height: 1px;
             background: $color-dark-blue;
             z-index: 0;
@@ -46,7 +46,7 @@
         }
         &__small {
             &:after {
-                width: 70%;
+                width: 85%;
             }
         }
     }
@@ -55,9 +55,12 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        flex: 1 1 40%;
+        flex: 0 1 25%;
+        z-index: 2;
+        transform: perspective(1px) translateZ(0);
         @include tablet {
             margin: 0 10px 40px;
+            flex: 0 1 33%;
         }
     }
     &_link {
@@ -66,6 +69,7 @@
         justify-content: center;
         flex-direction: column;
         width: 100%;
+
         .solutions__biedge-bg & {
             width: 140px;
         }
@@ -77,15 +81,21 @@
                 }
             }
             .solutions_image {
-                width: 66px;
-                height: 66px;
+                opacity: 0;
+                transition-duration: 0.3s;
+                animation-name: hvr-icon-drop;
+                animation-duration: 0.3s;
+                animation-delay: 0.3s;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-in-out;
+                animation-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
                 transition: all 0.3s linear;
                 &__k12 {
                     height: 33px;
                 }
                 svg {
-                    width: 66px;
-                    height: 66px;
+                    width: 50px;
+                    height: 50px;
                     transition: all 0.3s linear;
                     &__k12 {
                         height: 33px;
@@ -93,15 +103,22 @@
                 }
             }
             img {
-                transform: scale(1.1);
+                opacity: 0;
+                transition-duration: 0.3s;
+                animation-name: hvr-icon-drop;
+                animation-duration: 0.3s;
+                animation-delay: 0.3s;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-in-out;
+                animation-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
                 transition: all 0.3s linear;
             }
         }
     }
     &_image {
         transition: height 0.3s linear;
-        height: 60px;
-        width: 60px;
+        height: 50px;
+        width: 50px;
         fill: $color-white;
         &__wrapper {
             width: 120px;
@@ -116,16 +133,16 @@
             z-index: 1;
             margin-bottom: 32px;
             &:after {
-                content: '';
-                position: absolute;
-                width: 120px;
-                height: 120px;
-                border-radius: 50%;
-                bottom: -100%;
-                left: 50%;
-                transform: translate(-50%,0);
-                transition: transform 0.3s linear;
-                background: rgba(0,0,0,0.8) url(../images/zoom-tool.png) no-repeat 50% 25%;
+                //content: '';
+                //position: absolute;
+                //width: 120px;
+                //height: 120px;
+                //border-radius: 50%;
+                //bottom: -100%;
+                //left: 50%;
+                //transform: translate(-50%,0);
+                //transition: transform 0.3s linear;
+                //background: rgba(0,0,0,0.8) url(../images/zoom-tool.png) no-repeat 50% 25%;
             }
         }
         &__k12 {
@@ -133,14 +150,14 @@
         }
         svg {
             transition: height 0.3s linear;
-            height: 60px;
-            width: 60px;
+            height: 50px;
+            width: 50px;
             fill: $color-white;
         }
         img {
             transition: height 0.3s linear;
-            height: 60px;
-            width: 60px;
+            height: 50px;
+            width: 50px;
         }
     }
     &_title {
@@ -148,7 +165,8 @@
         color: $color-black;
         position: relative;
         text-transform: uppercase;
-        margin-bottom: 36px;
+        text-align: center;
+        margin: 0 40px 36px;
         @include small-phone {
         }
         &:before,
@@ -174,8 +192,39 @@
         display: inline-block;
         width: 100%;
     }
+    &_image__wrapper svg {
+        width: 50px;
+        height: 50px;
+        fill: $color-white;
+    }
 }
-#education-software {
-    width: 60px;
-    height: 60px;
+
+
+@-webkit-keyframes hvr-icon-drop {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    51%,
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes hvr-icon-drop {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    51%,
+    100% {
+        opacity: 1;
+    }
 }

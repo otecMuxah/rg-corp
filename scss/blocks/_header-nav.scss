@@ -1,6 +1,6 @@
 .header-nav {
     display: flex;
-    width: 665px;
+    //width: 665px;
     box-sizing: border-box;
     position: relative;
     z-index: 9;
@@ -11,18 +11,19 @@
         font-size: 18px;
         line-height: 23px;
         text-transform: uppercase;
+        white-space: nowrap;
         .header__fixed & {
             color: $color-black;
         }
         .header-nav_item__dropdown &:after {
             content: '';
             position: absolute;
-            right: -11px;
+            right: -12px;
             top: 50%;
             width: 0;
             height: 0;
             border-style: solid;
-            border-width: 5px 4px 0 4px;
+            border-width: 3px 3px 0 3px;
             border-color: #ffffff transparent transparent;
             transform: translateY(-50%);
             transition: transform 0.2s linear;
@@ -31,7 +32,7 @@
             transform: translateY(-50%) rotate(180deg);
             transition: transform 0.2s linear;
         }
-        @include tablet {
+        @include desktop {
             .header__fixed & {
                 color: $color-white;
             }
@@ -68,7 +69,7 @@
                 display: block;
             }
         }
-        @include tablet {
+        @include desktop {
             margin-bottom: 15px;
             &:before {
                 content: '';
@@ -100,7 +101,10 @@
         left: 50%;
         transform: translate(-50%, 97%);
         min-width: 100%;
-        padding-top: 60px;
+        padding-top: 46px;
+        .header__fixed & {
+            padding-top: 26px;
+        }
     }
     &_drop-list {
         box-shadow: 0 4px 14.45px 2.55px rgba(0, 0, 2, 0.2);
@@ -110,7 +114,7 @@
         border-radius: 0 0 12px 12px;
         position: relative;
         padding: 12px 0;
-        @include tablet {
+        @include desktop {
             margin: 10px -12px 0;
             border-radius: 0;
             &:after {
@@ -135,7 +139,7 @@
         &:hover {
             background: $color-white;
             .header-nav_drop-link {
-                color: $color-drk-blue;
+                color: $color-black;
             }
         }
     }
@@ -144,19 +148,22 @@
         font: 12px/17px $font_light;
         text-transform: uppercase;
         white-space: nowrap;
-        @include tablet {
+        @include desktop {
             color: $color-white;
+            white-space: pre-wrap;
+            overflow-y: auto;
+            font-size: 15px;
         }
     }
-    @include tablet {
+    @include desktop {
         flex-direction: column;
         position: absolute;
         background: #232c44;
         bottom: 0;
         transform: translate(0, -150%);
-        width: 100%;
+        width: 320px;
         box-sizing: border-box;
-        left: 0;
+        right: 0;
         padding: 25px;
         transition: transform 0.3s linear;
         overflow: hidden;

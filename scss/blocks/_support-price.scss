@@ -2,10 +2,10 @@
     width: 100%;
     background: $color-almost-white;
     overflow: hidden;
-    padding: 40px 0;
+    padding: 0;
     &_wrapper {
         @include wrapper-pref;
-        padding: 80px 0;
+        padding: 40px 0 40px;
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
@@ -15,7 +15,7 @@
         visibility: hidden;
         width: 100%;
         cursor: pointer;
-        background: none;
+        //background: none;
         &:focus {
             outline: 0;
         }
@@ -27,6 +27,7 @@
     }
     &_column {
         transition: transform 0.2s linear;
+        cursor: pointer;
         &:focus {
             outline: 0;
         }
@@ -43,10 +44,13 @@
                 transform: scale(1);
             }
         }
+
         &__names {
             margin: 10px;
             flex-shrink: 0;
             width: 215px;
+            cursor: default!important;
+
             @include width-1140 {
                 flex: 1 0 20%;
                 margin-right: 10px;
@@ -64,7 +68,7 @@
         align-items: center;
         font: 22px $font_ph_bold;
         color: $color-white;
-        margin-bottom: 1px;
+        margin-bottom: 15px;
         &:before {
             content: '';
             position: absolute;
@@ -100,7 +104,11 @@
         &__message-popup {
             font: 28px $font_ph_bold;
             margin-bottom: 15px;
-
+            max-width: 80%;
+            text-align: center;
+            @include phone {
+                font-size: 22px;
+            }
         }
         &__message-popup-small {
             font: 16px $font_light;
@@ -114,10 +122,11 @@
         }
     }
     &_text {
-        font: 12px $font_light;
+        font: 14px $font_light;
         color: $color-black;
         &__red {
             color: $color-red;
+            align-self: flex-start;
         }
     }
     &_desc-holder {
@@ -142,7 +151,6 @@
         font: 22px $font_ph_bold;
         color: $color-black;
         margin-bottom: 25px;
-        cursor: pointer;
     }
     &_item {
         display: flex;
@@ -244,12 +252,20 @@
         background: $color-white;
         padding: 20px;
         box-shadow: 0 4px 14.45px 2.55px rgba(0, 0, 2, 0.2);
+        position: relative;
         &__sucsess {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
             min-height: 320px;
+            height: 40%;
+            @include phone {
+                width: 100vw;
+                height: 80vh;
+                justify-content: space-around;
+                padding: 30px 0;
+            }
         }
         .button-holder {
             display: flex;

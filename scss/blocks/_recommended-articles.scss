@@ -1,12 +1,11 @@
 .recommended-articles {
     background: $color-almost-white;
-
     &_wrapper {
         @include wrapper-pref;
         max-width: 950px;
         align-items: flex-start;
-        background: $color-white;
         padding: 40px 20px;
+        background: $color-white;
     }
     &_title {
         font: 20px $font_ph_bold;
@@ -17,6 +16,9 @@
     &_small-title {
         font: 24px $font_ph_bold;
         color: $color-black;
+        max-height: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     &_list {
         display: flex;
@@ -25,7 +27,7 @@
         flex-wrap: wrap;
     }
     &_item {
-        width: 390px;
+        width: 430px;
         box-sizing: border-box;
         margin-bottom: 20px;
         @include small-phone {
@@ -38,18 +40,21 @@
         box-sizing: border-box;
         display: block;
         margin-right: 15px;
+        flex-shrink: 0;
+        align-self: flex-start;
     }
     &_link {
         display: flex;
-
     }
     &_link-holder {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
     }
     .blog_status {
         border: 0;
-        justify-content: space-around;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
     }
 }

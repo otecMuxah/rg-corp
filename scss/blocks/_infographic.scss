@@ -19,7 +19,7 @@
             position: absolute;
             width: 280px;
             height: 281px;
-            border: 2px solid #c7c7c7;
+            border: 1px solid #c7c7c7;
             border-radius: 50%;
             top: 216px;
             left: 17px;
@@ -141,7 +141,7 @@
         justify-content: flex-start;
         background: $color-white;
         box-sizing: border-box;
-        padding: 25px 15px;
+        padding: 25px 10px;
         text-align: center;
         &:after {
             content: '';
@@ -149,13 +149,13 @@
             left: -1px;
             top: 217px;
             width: 101%;
-            border-top: 2px solid $color-beige;
+            border-top: 1px solid $color-beige;
             z-index: 0;
             box-sizing: border-box;
         }
         .infographic_item__low-row & {
             &:after {
-                top: 33.5%;
+                top: 33.7%;
             }
         }
         @include width-1140 {
@@ -222,10 +222,11 @@
         }
     }
     &_header {
-        font: 25px/25px $font_ph_bold;
+        font: 24px/25px $font_ex_bold;
         color: $color-green;
-        margin-bottom: 20px;
-        width: 200px;
+        margin-bottom: 17px;
+        width: 235px;
+        height: 50px;
         .infographic_item__low-row & {
             margin-bottom: 10px;
         }
@@ -233,10 +234,11 @@
     &_text {
         font: 14px $font_light;
         width: 100%;
+        height: 65px;
     }
     &_styleline {
         position: absolute;
-        border: 2px solid $color-beige;
+        border: 1px solid $color-beige;
         border-top: none;
         border-radius: 0 0 12px 12px;
         top: 415px;

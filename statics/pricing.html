@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pricing</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
 <svg class="svg-sprite">
@@ -329,195 +329,39 @@
         </div>
     </div>
 </section>
-<section class="pricing-form">
-    <div class="pricing-form_wrapper">
-        <ul class="pricing-form_list">
-            <li class="pricing-form_item pricing-form_item__active">
-                <span class="pricing-form_link">
-                    <svg class="pricing-form_image">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#one-in-round-icon"></use>
-                    </svg>
-                Overall info
-                </span>
-            </li>
-            <li class="pricing-form_item"><span class="pricing-form_link">
-                <svg class="pricing-form_image">
-                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#two-in-round-icon"></use>
-                </svg>
-                Configuration</span>
-            </li>
-            <li class="pricing-form_item"><span class="pricing-form_link">
-                <svg class="pricing-form_image">
-                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#three-in-round-icon"></use>
-                </svg>
-                Xblocks</span>
-            </li>
-        </ul>
+<section class="pricing-form"><div class="pricing-form_wrapper">
+
+
+    <form action="" method="post" class="pricing-form_form-wrapper"><input type="hidden" name="csrfmiddlewaretoken" value="Ba2kHglb8uZevEBsFV3UQVPQUERN1jgYvbbWcUAfaNOON907aExvs50k3NSixNBn">
         <ul class="pricing-form_form-container">
-            <li class="pricing-form_form-item">
-                <div class="pricing-form_form-wrapper">
-                    <div class="pricing-form_fistLastName">
-                        <label for="input-name" class="pricing-form_label">
-                            <span class="pricing-form_text">First Name<span class="pricing-form_redmark">*</span></span>
-                            <input type="text" id="input-name" class="pricing-form_input">
-                        </label>
-                        <label for="input-last-name" class="pricing-form_label">
-                            <span class="pricing-form_text">Last Name</span>
-                            <input type="text" id="input-last-name" class="pricing-form_input">
-                        </label>
-                    </div>
-                    <label for="input-organization" class="pricing-form_label">
-                        <span class="pricing-form_text">Organization<span class="pricing-form_redmark">*</span></span>
-                        <input type="text" id="input-organization" class="pricing-form_input">
-                    </label>
-                    <label for="input-job-title" class="pricing-form_label">
-                        <span class="pricing-form_text">Job title<span class="pricing-form_redmark">*</span></span>
-                        <input type="text" id="input-job-title" class="pricing-form_input">
-                    </label>
-                    <label for="input-email" class="pricing-form_label">
-                        <span class="pricing-form_text">Email<span class="pricing-form_redmark">*</span></span>
-                        <input type="text" id="input-email" class="pricing-form_input">
-                    </label>
-                    <label for="input-website" class="pricing-form_label">
-                        <span class="pricing-form_text">Website<span class="pricing-form_redmark">*</span></span>
-                        <input type="text" id="input-website" class="pricing-form_input">
-                    </label>
-                    <label for="input-purpose" class="pricing-form_label">
-                        <span class="pricing-form_text">Please tell the purpose of using open edx</span>
-                        <textarea type="text" id="input-purpose" class="pricing-form_textarea"></textarea>
-                    </label>
-                    <div class="pricing-form_buttons-holder">
-                        <a href="#" class="button button__black  button__back">Back</a>
-                        <a href="#" class="button button__black  button__next">Next</a>
-                    </div>
-                </div>
-            </li>
-            <li class="pricing-form_form-item">
-                <div class="pricing-form_form-wrapper">
-                    <div class="radio-list_wrapper">
-                        <span class="radio-list_title">Total number of registrations system should be able to support</span>
-                        <ul class="radio-list">
-                            <li class="radio-list_item">
-                                <input id="radio-1" class="radio-list_radio" name="radio" type="radio" />
-                                <label for="radio-1" class="radio-list_label">Under 1k</label>
-                            </li>
-                            <li class="radio-list_item">
-                                <input id="radio-2" class="radio-list_radio" name="radio" type="radio" />
-                                <label for="radio-2" class="radio-list_label">1K - 10K</label>
-                            </li>
-                            <li class="radio-list_item">
-                                <input id="radio-3" class="radio-list_radio" name="radio" type="radio" />
-                                <label for="radio-3" class="radio-list_label">10K-50K</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="radio-list_wrapper radio-list_vertical">
-                        <span class="radio-list_title">Where you want to host Open edX?</span>
-                        <ul class="radio-list">
-                            <li class="radio-list_item">
-                                <input id="radio-11" class="radio-list_radio" name="radio2" type="radio" />
-                                <label for="radio-11" class="radio-list_label">
-                                    <img class="radio-list_image" src="images/amazon-logo.png" alt="amazon logo">
-                                </label>
-                            </li>
-                            <li class="radio-list_item">
-                                <input id="radio-21" class="radio-list_radio" name="radio2" type="radio" />
-                                <label for="radio-21" class="radio-list_label">
-                                    <img class="radio-list_image" src="images/azure-logo.png" alt="azure logo">
-                                </label>
-                            </li>
-                            <li class="radio-list_item">
-                                <input id="radio-31" class="radio-list_radio" name="radio2" type="radio" />
-                                <label for="radio-31" class="radio-list_label">
-                                    <img class="radio-list_image" src="images/dig-ocean-logo.png" alt="digital logo">
-                                </label>
-                            </li>
-                            <li class="radio-list_item">
-                                <input id="radio-41" class="radio-list_radio" name="radio2" type="radio" />
-                                <label for="radio-41" class="radio-list_label">50K - 200K</label>
-                            </li>
-                            <li class="radio-list_item">
-                                <input id="radio-51" class="radio-list_radio" name="radio2" type="radio" />
-                                <label for="radio-51" class="radio-list_label">Over 200K</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="radio-list_wrapper">
-                        <span class="radio-list_title">Number of online users system should be able to support</span>
-                        <ul class="radio-list">
-                            <li class="radio-list_item">
-                                <input id="radio-11" class="radio-list_radio" name="radio2" type="radio" />
-                                <label for="radio-11" class="radio-list_label">Under 1k</label>
-                            </li>
-                            <li class="radio-list_item">
-                                <input id="radio-21" class="radio-list_radio" name="radio2" type="radio" />
-                                <label for="radio-21" class="radio-list_label">1K - 10K</label>
-                            </li>
-                            <li class="radio-list_item">
-                                <input id="radio-31" class="radio-list_radio" name="radio2" type="radio" />
-                                <label for="radio-31" class="radio-list_label">10K-50K</label>
-                            </li>
-                            <li class="radio-list_item">
-                                <input id="radio-41" class="radio-list_radio" name="radio2" type="radio" />
-                                <label for="radio-41" class="radio-list_label">50K - 200K</label>
-                            </li>
-                            <li class="radio-list_item">
-                                <input id="radio-51" class="radio-list_radio" name="radio2" type="radio" />
-                                <label for="radio-51" class="radio-list_label">Over 200K</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="radio-list_wrapper checkbox_wrapper">
-                        <span class="radio-list_title">What branded mobile apps would you like to have?</span>
-                        <div class="checkbox_inner-wrapper">
-                            <label class="checkbox_label" for="checkbox-ios">
-                                <input id="checkbox-ios" class="checkbox_checkbox" type="checkbox">
-                                <span class="checkbox_check"></span>iOs
-                            </label>
-                            <label class="checkbox_label" for="checkbox-android">
-                                <input id="checkbox-android" class="checkbox_checkbox" type="checkbox">
-                                <span class="checkbox_check"></span>Android
-                            </label>
-                            <label class="checkbox_label" for="checkbox-both">
-                                <input id="checkbox-both" class="checkbox_checkbox" type="checkbox">
-                                <span class="checkbox_check"></span>Both iOs and Android
-                            </label>
-                            <label class="checkbox_label" for="checkbox-notsure">
-                                <input id="checkbox-notsure" class="checkbox_checkbox" type="checkbox">
-                                <span class="checkbox_check"></span>Not sure
-                            </label>
-                        </div>
-                    </div>
-                    <div class="pricing-form_buttons-holder">
-                        <a href="#" class="button button__black  button__back">Back</a>
-                        <a href="#" class="button button__black  button__next">Next</a>
-                    </div>
-                </div>
-            </li>
-            <li class="pricing-form_form-item">
-                <div class="pricing-form_form-wrapper">
-                    <label for="custom-xbloks" class="pricing-form_label">
-                        <span class="pricing-form_text">Enable custom xbloks</span>
-                        <textarea type="text" id="custom-xbloks" class="pricing-form_textarea"></textarea>
-                    </label>
-                    <span class="pricing-form_message">
-                        Please add list of XBlocks that should be enabled in the system (from the list: <a href="https://github.com/edx/edx-platform/wiki/List-of-XBlocks">https://github.com/edx/edx-platform/wiki/List-of-XBlocks</a> ). There are other xblocks that are not listed here, so just describe functionality you need and we will search through
-                    </span>
-                    <label for="custom-xbloks" class="pricing-form_label">
-                        <span class="pricing-form_text">Develop brand new xblocks</span>
-                        <textarea type="text" id="custom-xbloks" class="pricing-form_textarea"></textarea>
-                    </label>
-                    <span class="pricing-form_message">
-                        Please describe what do you need
-                    </span>
-                    <div class="pricing-form_buttons-holder">
-                        <a href="#" class="button button__black  button__back">Back</a>
-                        <a href="#" class="button button__black  button__next">Next</a>
-                    </div>
-                </div>
-            </li>
+            <li><label for="id_name">Name:</label> <input id="id_name" maxlength="255" name="name" type="text"></li>
+            <li><label for="id_email">Email:</label> <input id="id_email" maxlength="254" name="email" type="email" required=""></li>
+            <li><label for="id_organization">Organization:</label> <input id="id_organization" maxlength="255" name="organization" type="text"></li>
+            <li><label for="id_organization_type">Organization type:</label> <select id="id_organization_type" name="organization_type">
+                <option value="" selected="selected">---------</option>
+                <option value="U">University</option>
+                <option value="C">Corporate</option>
+                <option value="E">Educational Business</option>
+                <option value="S">Startup</option>
+                <option value="NGO">NGO</option>
+            </select></li>
+            <li><label for="id_job_title">Job title:</label> <input id="id_job_title" maxlength="255" name="job_title" type="text"></li>
+            <li><label for="id_website">Website:</label> <input id="id_website" maxlength="200" name="website" type="url"></li>
+            <li><label for="id_registration_support">Total number of registrations system should be able to support:</label> <select id="id_registration_support" name="registration_support">
+                <option value="" selected="selected">---------</option>
+                <option value="K">Under 1K</option>
+                <option value="10K">1K - 10K</option>
+                <option value="50K">10K - 50K</option>
+                <option value="50k+">50k+</option>
+            </select></li>
+            <li><label for="id_purpose">Please tell the purpose of using open edx:</label> <textarea cols="40" id="id_purpose" name="purpose" rows="10"></textarea></li>
         </ul>
-    </div>
+        <div class="pricing-form_buttons-holder">
+            <button type="submit" name="goto_step" class="button button__black">Submit</button>
+        </div>
+    </form>
+
+</div>
 </section>
 <section class="try-block">
     <span class="try-block_title">Shedule a demo!</span>
@@ -549,8 +393,8 @@
 
 
 
-<script type="text/javascript" src="script/jquery-2.2.4.min.js"></script>
-<script type="text/javascript" src="script/jquery.ba-throttle-debounce.min.js"></script>
-<script type="text/javascript" src="script/main.js"></script>
+<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/jquery.ba-throttle-debounce.min.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
 </body>
 </html>

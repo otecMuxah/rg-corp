@@ -5,10 +5,14 @@
     left: calc(50% - 570px);
     width: 1140px;
     z-index: 2;
+
     @include width-1140 {
         left: 20px;
         width: auto;
         transform: translate(0,0);
+    }
+    @include tablet {
+        display: none;
     }
     &_home-icon {
         width: 15px;

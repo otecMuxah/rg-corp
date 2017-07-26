@@ -3,7 +3,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     &_item {
-        flex: 1 1 25%;
+        flex-grow: 1;
         margin: 3px;
         border: 1px solid $color-black;
         box-shadow: none;

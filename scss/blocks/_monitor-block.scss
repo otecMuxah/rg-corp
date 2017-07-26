@@ -1,0 +1,97 @@
+.monitor-block {
+    background: $color-case-green;
+    padding: 80px 0 90px;
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background: linear-gradient(to right, #78be30 0%,#7aa980 50%,#7d94d0 100%);
+    }
+    &__reversed {
+        &:before {
+            right: auto;
+            left: 0;
+            transform: translate(50%, -50%);
+        }
+    }
+
+    &_wrapper {
+        @include wrapper-pref;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        @include width-1140 {
+            padding: 0 20px;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0, -50%);
+            width: 546px;
+            height: 546px;
+            border-radius: 50%;
+            background: white;
+            opacity: 0.102;
+        }
+        .monitor-block__reversed & {
+            flex-direction: row-reverse;
+            @include width-760 {
+                flex-direction: column;
+            }
+        }
+        .monitor-block__reversed &:before {
+            right: auto;
+            left: 0;
+        }
+        .monitor-block__centered & {
+            flex-direction: column-reverse;
+            align-items: center;
+
+        }
+        @include width-760 {
+            flex-direction: column;
+        }
+    }
+    &_title {
+        font: 36px $font_ph_bold;
+        color: $color-white;
+        margin-bottom: 50px;
+    }
+    &_text {
+        font: 24px $font_light;
+        color: $color-white;
+    }
+    &_text-wrapper {
+        margin-left: 30px;
+    }
+    .solutions-banner_image-wrapper {
+        background: none;
+        max-width: 650px;
+        flex-basis: auto;
+
+    }
+    &__centered {
+        .solutions-banner_image-wrapper {
+            max-width: 100%;
+            margin: 30px 0;
+        }
+        .solutions-banner_image, .solutions-banner_image svg, .solutions-banner_image img {
+            width: 100%;
+            max-width: 100%;
+        }
+        .case-banner_monitor-screen {
+            height: 73%;
+            top: 8px;
+            @include width-760 {
+                top: 0;
+            }
+        }
+    }
+}

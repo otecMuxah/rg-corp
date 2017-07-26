@@ -23,6 +23,11 @@
     &_wrapper {
         max-width: $site-width;
         margin: 0 auto;
+        &__centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
     &_inner-wrapper {
         display: flex;
@@ -30,6 +35,9 @@
         justify-content: center;
         flex-direction: column;
         font-family: $font_light;
+        .main-banner_wrapper__centered & {
+            transform: translateY(-20%);
+        }
     }
     &_header {
         font: 5vw $font_ph;
@@ -54,9 +62,14 @@
         position: relative;
         padding-bottom: 21px;
         margin-bottom: 45px;
+        &__nowrap {
+            white-space: nowrap;
+        }
         @include phone {
             font-size: 20px;
             line-height: 25px;
+            white-space: pre-line;
+            margin-bottom: 0;
         }
         &:after {
             content: '';
@@ -75,11 +88,13 @@
             @include phone {
                 font-size: 14px;
                 line-height: 20px;
+                margin-bottom: 10px;
             }
             &:after {
                 display: none;
             }
         }
+
     }
     &_more {
         position: absolute;
