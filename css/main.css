@@ -4382,7 +4382,8 @@ article + .social_div {
 
 .case-banner {
   background: #595959;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  height: 100vh; }
   .case-banner_inner-holder {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -4490,6 +4491,7 @@ article + .social_div {
   background: url("../images/docker-commands.jpg");
   background-size: cover;
   background-position: center;
+  height: 100vh;
   padding-top: 200px;
   padding-bottom: 205px;
   position: relative;
@@ -4562,7 +4564,8 @@ article + .social_div {
 .challenge {
   background: #829adb;
   padding: 85px 0;
-  position: relative; }
+  position: relative;
+  height: 100vh; }
   .challenge:after {
     content: '';
     position: absolute;
@@ -4614,7 +4617,8 @@ article + .social_div {
     display: block;
     text-align: center;
     width: 100%;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    line-height: 1; }
     .challenge .solutions_title:before, .challenge .solutions_title:after {
       display: none; }
 
@@ -4661,12 +4665,14 @@ article + .social_div {
   font-size: 14px; }
 
 .case-solution {
-  background: #595959; }
+  background: #595959;
+  height: 150vh; }
 
 .monitor-block {
   background: #4db870;
   padding: 80px 0 90px;
-  position: relative; }
+  position: relative;
+  height: 100vh; }
   .monitor-block:after {
     content: '';
     position: absolute;
@@ -4756,11 +4762,11 @@ article + .social_div {
     -ms-flex-preferred-size: auto;
         flex-basis: auto; }
   .monitor-block__centered .solutions-banner_image-wrapper {
-    max-width: 100%;
+    max-width: 750px;
     margin: 30px 0; }
   .monitor-block__centered .solutions-banner_image, .monitor-block__centered .solutions-banner_image svg, .monitor-block__centered .solutions-banner_image img {
     width: 100%;
-    max-width: 100%; }
+    max-width: 750px; }
   .monitor-block__centered .case-banner_monitor-screen {
     height: 73%;
     top: 8px; }

@@ -7,8 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Case</title>
     <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="../js/third_party/modernizr.js"></script>
+    <link rel="stylesheet" href="../js/third_party/style.css">
 </head>
-<body>
+<body data-hijacking="off" data-animation="fixed">
 <svg class="svg-sprite">
     <symbol id="big-logo" viewBox="0 0 277.256 80.25">
         <g>
@@ -650,291 +652,839 @@
         </g>
     </symbol>
 </svg>
-<header class="header">
-    <header class="header_wrapper">
-        <a href="/" class="header_logo">RaccoonGang
-            <svg class="header_logo">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#big-logo"></use>
-            </svg>
-        </a>
-        <a href="#" class="header_logo-super">
-            <svg version="1.1" id="raccoon-logo" xmlns="http://www.w3.org/2000/svg"
-                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="100px"
-                 viewBox="0 0 80.957 80">
+<section class="cd-section">
+    <div>
+        <header class="header">
+            <header class="header_wrapper">
+                <a href="/" class="header_logo">RaccoonGang
+                    <svg class="header_logo">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#big-logo"></use>
+                    </svg>
+                </a>
+                <a href="#" class="header_logo-super">
+                    <svg version="1.1" id="raccoon-logo" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="100px"
+                         viewBox="0 0 80.957 80">
 
-                <!--__   start top white line   __-->
+                        <!--__   start top white line   __-->
 
-                <g class="top-line">
-                    <polygon class="ear white-animate-1" fill="#C6C6C6"
-                             points="26.35,17.589 18.435,25.475 26.311,24.191 		"></polygon>
-                    <polygon class="top-white-line white-animate-1" fill="#DBDADB"
-                             points="18.402,25.443 10.067,33.807 22.657,33.893 26.279,24.204 26.279,24.159 		"></polygon>
-                    <polygon class="top-white-line white-animate-1" fill="#C6C6C6"
-                             points="15.182,39.075 22.657,33.893 10.067,33.807 		"></polygon>
-                    <polygon class="top-white-line white-animate-1" fill="#B7B7B7"
-                             points="22.657,33.893 28.134,31.308 26.279,24.204 		"></polygon>
-                </g>
-                <polygon class="top-white-line white-animate-2" fill="#FFFFFF"
-                         points="26.279,24.204 28.134,31.308 33.104,33.833 40.421,37.319 36.228,21.789 		"></polygon>
-                <polygon class="top-white-line white-animate-3" fill="#E4E4E5"
-                         points="36.228,21.789 40.421,37.319 44.728,21.789 		"></polygon>
-                <polygon class="top-white-line white-animate-4" fill="#B9B9B9"
-                         points="44.728,21.789 40.421,37.319 47.604,33.833 52.74,31.234 54.598,24.184 		"></polygon>
-                <g class="top-line">
-                    <polygon class="ear white-animate-5" fill="#C6C6C6"
-                             points="54.609,17.597 54.598,24.163 62.349,25.356 		"></polygon>
-                    <polygon class="top-white-line white-animate-5" fill="#FFFFFF"
-                             points="52.74,31.234 59.295,33.833 54.598,24.184 		"></polygon>
-                    <polygon class="top-white-line white-animate-5" fill="#E9E8E9"
-                             points="62.349,25.356 54.598,24.163 54.598,24.184 59.295,33.833 70.719,33.748 		"></polygon>
-                    <polygon class="top-white-line white-animate-5" fill="#C6C6C6"
-                             points="59.295,33.833 65.668,38.844 70.719,33.748 		"></polygon>
-                </g>
+                        <g class="top-line">
+                            <polygon class="ear white-animate-1" fill="#C6C6C6"
+                                     points="26.35,17.589 18.435,25.475 26.311,24.191 		"></polygon>
+                            <polygon class="top-white-line white-animate-1" fill="#DBDADB"
+                                     points="18.402,25.443 10.067,33.807 22.657,33.893 26.279,24.204 26.279,24.159 		"></polygon>
+                            <polygon class="top-white-line white-animate-1" fill="#C6C6C6"
+                                     points="15.182,39.075 22.657,33.893 10.067,33.807 		"></polygon>
+                            <polygon class="top-white-line white-animate-1" fill="#B7B7B7"
+                                     points="22.657,33.893 28.134,31.308 26.279,24.204 		"></polygon>
+                        </g>
+                        <polygon class="top-white-line white-animate-2" fill="#FFFFFF"
+                                 points="26.279,24.204 28.134,31.308 33.104,33.833 40.421,37.319 36.228,21.789 		"></polygon>
+                        <polygon class="top-white-line white-animate-3" fill="#E4E4E5"
+                                 points="36.228,21.789 40.421,37.319 44.728,21.789 		"></polygon>
+                        <polygon class="top-white-line white-animate-4" fill="#B9B9B9"
+                                 points="44.728,21.789 40.421,37.319 47.604,33.833 52.74,31.234 54.598,24.184 		"></polygon>
+                        <g class="top-line">
+                            <polygon class="ear white-animate-5" fill="#C6C6C6"
+                                     points="54.609,17.597 54.598,24.163 62.349,25.356 		"></polygon>
+                            <polygon class="top-white-line white-animate-5" fill="#FFFFFF"
+                                     points="52.74,31.234 59.295,33.833 54.598,24.184 		"></polygon>
+                            <polygon class="top-white-line white-animate-5" fill="#E9E8E9"
+                                     points="62.349,25.356 54.598,24.163 54.598,24.184 59.295,33.833 70.719,33.748 		"></polygon>
+                            <polygon class="top-white-line white-animate-5" fill="#C6C6C6"
+                                     points="59.295,33.833 65.668,38.844 70.719,33.748 		"></polygon>
+                        </g>
 
-                <!--__   end top white line   __-->
+                        <!--__   end top white line   __-->
 
-                <!--__   start middle line black   __-->
+                        <!--__   start middle line black   __-->
 
-                <g class="middle-joined">
-                    <polygon class="middle-line-black black-animate-1" fill="#191C1A"
-                             points="15.192,39.071 24.198,48.086 30.599,44.12 22.667,33.888 		"></polygon>
-                    <polygon class="middle-line-black black-animate-1" fill="#181A1"
-                             points="22.667,33.888 30.599,44.12 28.144,31.303 		"></polygon>
-                </g>
-                <polygon class="middle-line-black black-animate-2" fill="#464749"
-                         points="33.114,33.828 28.144,31.303 30.599,44.12 40.43,42.025 40.431,37.314 		"></polygon>
-                <polygon class="middle-line-black black-animate-3" fill="#181A19"
-                         points="47.614,33.828 40.431,37.314 40.43,42.025 50.104,44.085 52.75,31.229 		"></polygon>
-                <g class="middle-joined black-animate-4">
-                    <polygon class="middle-line-black black-animate-4" fill="#393B3C"
-                             points="52.75,31.229 50.104,44.085 59.305,33.828 		"></polygon>
-                    <polygon class="middle-line-black black-animate-4" fill="#46474A"
-                             points="59.305,33.828 50.104,44.085 56.55,48.058 65.733,38.877 		"></polygon>
-                </g>
+                        <g class="middle-joined">
+                            <polygon class="middle-line-black black-animate-1" fill="#191C1A"
+                                     points="15.192,39.071 24.198,48.086 30.599,44.12 22.667,33.888 		"></polygon>
+                            <polygon class="middle-line-black black-animate-1" fill="#181A1"
+                                     points="22.667,33.888 30.599,44.12 28.144,31.303 		"></polygon>
+                        </g>
+                        <polygon class="middle-line-black black-animate-2" fill="#464749"
+                                 points="33.114,33.828 28.144,31.303 30.599,44.12 40.43,42.025 40.431,37.314 		"></polygon>
+                        <polygon class="middle-line-black black-animate-3" fill="#181A19"
+                                 points="47.614,33.828 40.431,37.314 40.43,42.025 50.104,44.085 52.75,31.229 		"></polygon>
+                        <g class="middle-joined black-animate-4">
+                            <polygon class="middle-line-black black-animate-4" fill="#393B3C"
+                                     points="52.75,31.229 50.104,44.085 59.305,33.828 		"></polygon>
+                            <polygon class="middle-line-black black-animate-4" fill="#46474A"
+                                     points="59.305,33.828 50.104,44.085 56.55,48.058 65.733,38.877 		"></polygon>
+                        </g>
 
-                <!--__   end middle line black   __-->
+                        <!--__   end middle line black   __-->
 
-                <!--__   start bottom white line   __-->
+                        <!--__   start bottom white line   __-->
 
-                <polygon class="bottom-white-line bottom-white-animate-1" fill="#B9B9B9"
-                         points="24.214,48.025 30.785,54.676 40.429,51.106 30.663,44.052 		"></polygon>
-                <polygon class="bottom-white-line bottom-white-animate-2" fill="#E4E4E5"
-                         points="30.663,44.052 40.429,51.106 40.494,41.956 		"></polygon>
-                <polygon class="bottom-white-line bottom-white-animate-3" fill="#E4E4E5"
-                         points="40.494,41.956 40.429,51.106 50.167,44.017 		"></polygon>
-                <polygon class="bottom-white-line bottom-white-animate-4" fill="#FFFFFF"
-                         points="50.167,44.017 40.429,51.106 50.055,54.595 56.711,48.064 		"></polygon>
+                        <polygon class="bottom-white-line bottom-white-animate-1" fill="#B9B9B9"
+                                 points="24.214,48.025 30.785,54.676 40.429,51.106 30.663,44.052 		"></polygon>
+                        <polygon class="bottom-white-line bottom-white-animate-2" fill="#E4E4E5"
+                                 points="30.663,44.052 40.429,51.106 40.494,41.956 		"></polygon>
+                        <polygon class="bottom-white-line bottom-white-animate-3" fill="#E4E4E5"
+                                 points="40.494,41.956 40.429,51.106 50.167,44.017 		"></polygon>
+                        <polygon class="bottom-white-line bottom-white-animate-4" fill="#FFFFFF"
+                                 points="50.167,44.017 40.429,51.106 50.055,54.595 56.711,48.064 		"></polygon>
 
-                <!--__   end bottom white line   __-->
+                        <!--__   end bottom white line   __-->
 
-                <!--__   start bottom line black   __-->
+                        <!--__   start bottom line black   __-->
 
-                <polygon class="bottom-line-black bottom-black-animate-1" fill="#181A19"
-                         points="30.668,54.659 40.43,64.493 40.429,51.106 		"></polygon>
-                <polygon class="bottom-line-black bottom-black-animate-2" fill="#46474A"
-                         points="40.429,51.106 40.43,64.493 50.192,54.644 		"></polygon>
+                        <polygon class="bottom-line-black bottom-black-animate-1" fill="#181A19"
+                                 points="30.668,54.659 40.43,64.493 40.429,51.106 		"></polygon>
+                        <polygon class="bottom-line-black bottom-black-animate-2" fill="#46474A"
+                                 points="40.429,51.106 40.43,64.493 50.192,54.644 		"></polygon>
 
-                <!--__   end bottom line black   __-->
+                        <!--__   end bottom line black   __-->
 
-                <!--__   start border   __-->
+                        <!--__   start border   __-->
 
-                <polygon class="border" fill="#464749"
-                         points="10.067,33.807 18.437,25.438 15.692,25.887 7.698,33.881 10.078,33.817 		"></polygon>
-                <polygon class="border" fill="#393B3C"
-                         points="36.228,21.789 44.728,21.789 44.736,21.791 45.326,20.148 45.322,20.147 35.458,20.178 36.178,21.802 		"></polygon>
-                <polygon class="border" fill="#464749"
-                         points="70.719,33.748 70.717,33.75 73.258,33.823 65.35,25.899 62.332,25.339 		"></polygon>
-                <polygon class="border" fill="#181A19"
-                         points="54.598,24.184 54.609,17.597 62.332,25.339 65.35,25.899 52.883,13.406 52.884,21.749 54.546,24.171 		"></polygon>
-                <polygon class="border" fill="#464749"
-                         points="54.546,24.171 52.884,21.749 52.884,21.789 45.326,20.148 44.736,21.791 		"></polygon>
-                <polygon class="border" fill="#46474A"
-                         points="40.429,64.306 40.429,66.621 40.439,66.631 51.93,55.145 50.063,54.587 		"></polygon>
-                <polygon class="border" fill="#46474A"
-                         points="73.258,33.823 70.717,33.75 65.68,38.832 56.6,47.992 50.063,54.587 51.93,55.145 58.148,48.929 67.134,39.947 73.259,33.824 		"></polygon>
-                <polygon class="border" fill="#181A19"
-                         points="40.429,64.306 40.387,64.348 30.766,54.657 24.187,48.03 15.263,39.04 10.067,33.807 7.698,33.881 13.916,40.109 22.695,48.888 28.999,55.192 40.429,66.621 		"></polygon>
-                <polygon class="border" fill="#181A19"
-                         points="35.458,20.178 35.35,20.178 28.1,21.789 28.1,21.766 28.207,13.369 15.692,25.887 18.437,25.438 26.305,17.57 26.291,24.202 26.401,24.175 36.178,21.802 		"></polygon>
+                        <polygon class="border" fill="#464749"
+                                 points="10.067,33.807 18.437,25.438 15.692,25.887 7.698,33.881 10.078,33.817 		"></polygon>
+                        <polygon class="border" fill="#393B3C"
+                                 points="36.228,21.789 44.728,21.789 44.736,21.791 45.326,20.148 45.322,20.147 35.458,20.178 36.178,21.802 		"></polygon>
+                        <polygon class="border" fill="#464749"
+                                 points="70.719,33.748 70.717,33.75 73.258,33.823 65.35,25.899 62.332,25.339 		"></polygon>
+                        <polygon class="border" fill="#181A19"
+                                 points="54.598,24.184 54.609,17.597 62.332,25.339 65.35,25.899 52.883,13.406 52.884,21.749 54.546,24.171 		"></polygon>
+                        <polygon class="border" fill="#464749"
+                                 points="54.546,24.171 52.884,21.749 52.884,21.789 45.326,20.148 44.736,21.791 		"></polygon>
+                        <polygon class="border" fill="#46474A"
+                                 points="40.429,64.306 40.429,66.621 40.439,66.631 51.93,55.145 50.063,54.587 		"></polygon>
+                        <polygon class="border" fill="#46474A"
+                                 points="73.258,33.823 70.717,33.75 65.68,38.832 56.6,47.992 50.063,54.587 51.93,55.145 58.148,48.929 67.134,39.947 73.259,33.824 		"></polygon>
+                        <polygon class="border" fill="#181A19"
+                                 points="40.429,64.306 40.387,64.348 30.766,54.657 24.187,48.03 15.263,39.04 10.067,33.807 7.698,33.881 13.916,40.109 22.695,48.888 28.999,55.192 40.429,66.621 		"></polygon>
+                        <polygon class="border" fill="#181A19"
+                                 points="35.458,20.178 35.35,20.178 28.1,21.789 28.1,21.766 28.207,13.369 15.692,25.887 18.437,25.438 26.305,17.57 26.291,24.202 26.401,24.175 36.178,21.802 		"></polygon>
 
-                <!--__   end border   __-->
+                        <!--__   end border   __-->
 
-            </svg>
+                    </svg>
 
-        </a>
+                </a>
 
-        <ul class="header-nav">
-
-
-            <li class="header-nav_item">
-                <a href="/about-us/" class="header-nav_link">About Us</a>
-            </li>
+                <ul class="header-nav">
 
 
-            <li class="header-nav_item">
-                <a href="/materials/" class="header-nav_link">Materials</a>
-            </li>
+                    <li class="header-nav_item">
+                        <a href="/about-us/" class="header-nav_link">About Us</a>
+                    </li>
 
 
-            <li class="header-nav_item header-nav_item__dropdown">
-                <div class="header-nav_link header-nav_link__dropdown">Solutions</div>
-                <div class="header-nav_drop-wrapper">
-                    <ul class="header-nav_drop-list">
-
-                        <li class="header-nav_drop-item">
-                            <a href="/solutions/lms-nonprofits/" class="header-nav_drop-link">LMS for nonprofits</a>
-                        </li>
-
-                        <li class="header-nav_drop-item">
-                            <a href="/solutions/customer-onboarding/" class="header-nav_drop-link">Customer
-                                Onboarding</a>
-                        </li>
-
-                        <li class="header-nav_drop-item">
-                            <a href="/solutions/solutions-elearning-business/" class="header-nav_drop-link">Solutions
-                                for eLearning Business</a>
-                        </li>
-
-                        <li class="header-nav_drop-item">
-                            <a href="/solutions/higher-education-software/" class="header-nav_drop-link">Higher
-                                Education Software</a>
-                        </li>
-
-                        <li class="header-nav_drop-item">
-                            <a href="/solutions/k12-online-learning/" class="header-nav_drop-link">K12 Online
-                                Learning</a>
-                        </li>
-
-                        <li class="header-nav_drop-item">
-                            <a href="/solutions/online-employee-training/" class="header-nav_drop-link">Online Employee
-                                Training</a>
-                        </li>
+                    <li class="header-nav_item">
+                        <a href="/materials/" class="header-nav_link">Materials</a>
+                    </li>
 
 
-                    </ul>
-                </div>
+                    <li class="header-nav_item header-nav_item__dropdown">
+                        <div class="header-nav_link header-nav_link__dropdown">Solutions</div>
+                        <div class="header-nav_drop-wrapper">
+                            <ul class="header-nav_drop-list">
 
-            </li>
+                                <li class="header-nav_drop-item">
+                                    <a href="/solutions/lms-nonprofits/" class="header-nav_drop-link">LMS for nonprofits</a>
+                                </li>
 
+                                <li class="header-nav_drop-item">
+                                    <a href="/solutions/customer-onboarding/" class="header-nav_drop-link">Customer
+                                        Onboarding</a>
+                                </li>
 
-            <li class="header-nav_item header-nav_item__dropdown">
-                <div class="header-nav_link header-nav_link__dropdown">Services</div>
-                <div class="header-nav_drop-wrapper">
-                    <ul class="header-nav_drop-list">
+                                <li class="header-nav_drop-item">
+                                    <a href="/solutions/solutions-elearning-business/" class="header-nav_drop-link">Solutions
+                                        for eLearning Business</a>
+                                </li>
 
-                        <li class="header-nav_drop-item">
-                            <a href="/services/open-edx-third-party-authentication/" class="header-nav_drop-link">Open
-                                edX Third Party Authentication</a>
-                        </li>
+                                <li class="header-nav_drop-item">
+                                    <a href="/solutions/higher-education-software/" class="header-nav_drop-link">Higher
+                                        Education Software</a>
+                                </li>
 
-                        <li class="header-nav_drop-item">
-                            <a href="/services/open-edx-platform-deployment/" class="header-nav_drop-link">Open edX
-                                Platform Deployment</a>
-                        </li>
+                                <li class="header-nav_drop-item">
+                                    <a href="/solutions/k12-online-learning/" class="header-nav_drop-link">K12 Online
+                                        Learning</a>
+                                </li>
 
-                        <li class="header-nav_drop-item">
-                            <a href="/services/open-edx-mobile-application-development/" class="header-nav_drop-link">Open
-                                edX Mobile Application Development</a>
-                        </li>
-
-                        <li class="header-nav_drop-item">
-                            <a href="/services/open-edx-ecommerce-integration/" class="header-nav_drop-link">Open edX
-                                eCommerce Integration</a>
-                        </li>
-
-                        <li class="header-nav_drop-item">
-                            <a href="/services/open-edx-custom-feature-development/" class="header-nav_drop-link">Open
-                                edX Custom Feature Development</a>
-                        </li>
+                                <li class="header-nav_drop-item">
+                                    <a href="/solutions/online-employee-training/" class="header-nav_drop-link">Online Employee
+                                        Training</a>
+                                </li>
 
 
-                    </ul>
-                </div>
+                            </ul>
+                        </div>
 
-            </li>
-
-
-            <li class="header-nav_item">
-                <a href="/university/" class="header-nav_link">University</a>
-            </li>
+                    </li>
 
 
-            <li class="header-nav_item">
-                <a href="/get-quotes/" class="header-nav_link">Get quotes</a>
-            </li>
+                    <li class="header-nav_item header-nav_item__dropdown">
+                        <div class="header-nav_link header-nav_link__dropdown">Services</div>
+                        <div class="header-nav_drop-wrapper">
+                            <ul class="header-nav_drop-list">
+
+                                <li class="header-nav_drop-item">
+                                    <a href="/services/open-edx-third-party-authentication/" class="header-nav_drop-link">Open
+                                        edX Third Party Authentication</a>
+                                </li>
+
+                                <li class="header-nav_drop-item">
+                                    <a href="/services/open-edx-platform-deployment/" class="header-nav_drop-link">Open edX
+                                        Platform Deployment</a>
+                                </li>
+
+                                <li class="header-nav_drop-item">
+                                    <a href="/services/open-edx-mobile-application-development/" class="header-nav_drop-link">Open
+                                        edX Mobile Application Development</a>
+                                </li>
+
+                                <li class="header-nav_drop-item">
+                                    <a href="/services/open-edx-ecommerce-integration/" class="header-nav_drop-link">Open edX
+                                        eCommerce Integration</a>
+                                </li>
+
+                                <li class="header-nav_drop-item">
+                                    <a href="/services/open-edx-custom-feature-development/" class="header-nav_drop-link">Open
+                                        edX Custom Feature Development</a>
+                                </li>
 
 
-            <li class="header-nav_item header-nav_item__current">
-                <a href="/support/" class="header-nav_link">Support</a>
-            </li>
+                            </ul>
+                        </div>
+
+                    </li>
 
 
-            <li class="header-nav_item">
-                <a href="/contact-us/" class="header-nav_link">Contact Us</a>
-            </li>
+                    <li class="header-nav_item">
+                        <a href="/university/" class="header-nav_link">University</a>
+                    </li>
 
 
-        </ul>
+                    <li class="header-nav_item">
+                        <a href="/get-quotes/" class="header-nav_link">Get quotes</a>
+                    </li>
 
-        <a href="#" class="button js-header-button js-request-demo button__white">Request Demo</a>
-        <div class="hamburger hamburger__elastic" type="button">
+
+                    <li class="header-nav_item header-nav_item__current">
+                        <a href="/support/" class="header-nav_link">Support</a>
+                    </li>
+
+
+                    <li class="header-nav_item">
+                        <a href="/contact-us/" class="header-nav_link">Contact Us</a>
+                    </li>
+
+
+                </ul>
+
+                <a href="#" class="button js-header-button js-request-demo button__white">Request Demo</a>
+                <div class="hamburger hamburger__elastic" type="button">
                         <span class="hamburger-box">
                             <span class="hamburger-inner"></span>
                         </span>
-        </div>
-    </header>
-</header>
-<ul class="breadcrumbs">
+                </div>
+            </header>
+        </header>
+        <ul class="breadcrumbs">
 
 
-    <li class="breadcrumbs_item">
-        <a href="/" class="breadcrumbs_link">
-            <svg class="breadcrumbs_home-icon">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#home-icon"></use>
-            </svg>
-        </a>
-    </li>
+            <li class="breadcrumbs_item">
+                <a href="/" class="breadcrumbs_link">
+                    <svg class="breadcrumbs_home-icon">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#home-icon"></use>
+                    </svg>
+                </a>
+            </li>
 
-    <li class="breadcrumbs_item">
-        <a href="/support/" class="breadcrumbs_link">Support</a>
-    </li>
-
-
-    <!--for fix-->
+            <li class="breadcrumbs_item">
+                <a href="/support/" class="breadcrumbs_link">Support</a>
+            </li>
 
 
-</ul>
-<section class="case-header">
-    <div class="case-header_wrapper">
-        <div class="case-header_holder-circle">
-            <div class="case-header_image-wrapper">
-                <img src="../images/logo-open-ru.png" alt="Logo" class="case-header__image">
+            <!--for fix-->
+
+
+        </ul>
+        <section class="case-header">
+            <div class="case-header_wrapper">
+                <div class="case-header_holder-circle">
+                    <div class="case-header_image-wrapper">
+                        <img src="../images/logo-open-ru.png" alt="Logo" class="case-header__image">
+                    </div>
+                    <p class="case-header_paragraph">
+                        OpenEdu.ru is one of the leading online education providers in Eurasia.
+                    </p>
+                </div>
+
             </div>
-            <p class="case-header_paragraph">
-                OpenEdu.ru is one of the leading online education providers in Eurasia.
-            </p>
-        </div>
+        </section>
+        <section class="main-banner solutions-banner case-banner ">
+            <div class="main-banner_wrapper">
+                <div class="main-banner_inner-wrapper solutions-banner_inner-wrapper">
+                    <div class="solutions-banner_inner-holder case-banner_inner-holder">
+                        <h3 class="solutions_title support-price_title">Client</h3>
+                        <div class="solutions-banner_text-holder case-banner_text-holder">
+                            <p class="main-banner_paragraph case-banner_paragraph"><strong>Open edX</strong> platform allows
+                                easy management of the courseware, yet it does require technical background for setup and
+                                configuration. Raccoon Gang employees were the part of Open edX platform development and
+                                release. Our team is also actively participating in further Open edX evolvement. Due to this we
+                                can guarantee the best level of Open edX technical support you would expect.</p>
+                        </div>
+                        <div class="solutions-banner_text-holder case-banner_text-holder">
+                            <p class="main-banner_paragraph case-banner_paragraph"><strong>Open edX</strong> platform allows
+                                easy management of the courseware, yet it does require technical background for setup and
+                                configuration. Raccoon Gang employees were the part of Open edX platform development and
+                                release. Our team is also actively participating in further Open edX evolvement. Due to this we
+                                can guarantee the best level of Open edX technical support you would expect.</p>
+                        </div>
+                        <div class="solutions-banner_image-wrapper">
+                            <div class="solutions-banner_image">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Слой_1"
+                                     data-name="Слой 1" viewBox="0 0 554 443">
+                                    <defs>
+                                        <style>.cls-1 {
+                                            fill: url(#Безымянный_градиент);
+                                        }
 
+                                        .cls-2 {
+                                            fill: url(#Безымянный_градиент_2);
+                                        }
+
+                                        .cls-3 {
+                                            fill: url(#Безымянный_градиент_3);
+                                        }
+
+                                        .cls-4 {
+                                            fill: url(#Безымянный_градиент_4);
+                                        }
+
+                                        .cls-5 {
+                                            fill: url(#Безымянный_градиент_5);
+                                        }
+
+                                        .cls-6 {
+                                            fill: url(#Безымянный_градиент_6);
+                                        }
+
+                                        .cls-7 {
+                                            fill: #231f20;
+                                        }
+
+                                        .cls-8 {
+                                            fill: url(#Безымянный_градиент_7);
+                                        }</style>
+                                        <linearGradient id="Безымянный_градиент" x1="192.94" y1="4" x2="368.16" y2="4"
+                                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
+                                                        gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.01" stop-color="#58595b"/>
+                                            <stop offset="0.28" stop-color="#757679"/>
+                                            <stop offset="0.51" stop-color="#88898d"/>
+                                            <stop offset="1" stop-color="#58595b"/>
+                                        </linearGradient>
+                                        <linearGradient id="Безымянный_градиент_2" x1="278.6" y1="69.5" x2="278.6" y2="-7.05"
+                                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
+                                                        gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.08" stop-color="#6d6f73"/>
+                                            <stop offset="0.13" stop-color="#97999c"/>
+                                            <stop offset="0.18" stop-color="#cccdce"/>
+                                            <stop offset="0.21" stop-color="#e0e1e2"/>
+                                            <stop offset="0.32" stop-color="#a7a9ac"/>
+                                            <stop offset="0.39" stop-color="#868789"/>
+                                            <stop offset="0.46" stop-color="#636363"/>
+                                            <stop offset="0.53" stop-color="#6e6f6f"/>
+                                            <stop offset="0.65" stop-color="#8b8d8f"/>
+                                            <stop offset="0.74" stop-color="#a6aaad"/>
+                                        </linearGradient>
+                                        <radialGradient id="Безымянный_градиент_3" cx="362.3" cy="-27.29" r="64.19"
+                                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
+                                                        gradientUnits="userSpaceOnUse">
+                                            <stop offset="0" stop-color="#fff"/>
+                                            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                                        </radialGradient>
+                                        <radialGradient id="Безымянный_градиент_4" cx="368.18" cy="-27.29" r="64.19"
+                                                        gradientTransform="translate(564.93 444) rotate(180)"
+                                                        xlink:href="#Безымянный_градиент_3"/>
+                                        <linearGradient id="Безымянный_градиент_5" x1="210.42" y1="1.87" x2="346.94" y2="1.87"
+                                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
+                                                        gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.01" stop-color="#fff" stop-opacity="0"/>
+                                            <stop offset="0.51" stop-color="#fff"/>
+                                            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                                        </linearGradient>
+                                        <linearGradient id="Безымянный_градиент_6" x1="-9.68" y1="69.73" x2="592.57" y2="109.21"
+                                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
+                                                        gradientUnits="userSpaceOnUse">
+                                            <stop offset="0" stop-color="#78797d"/>
+                                            <stop offset="0.32" stop-color="#737478"/>
+                                            <stop offset="0.49" stop-color="#6d6f73"/>
+                                            <stop offset="1" stop-color="#6d6f73"/>
+                                        </linearGradient>
+                                        <linearGradient id="Безымянный_градиент_7" x1="-9.62" y1="70.74" x2="592.57" y2="110.21"
+                                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
+                                                        gradientUnits="userSpaceOnUse">
+                                            <stop offset="0" stop-color="#898a8f"/>
+                                            <stop offset="0.05" stop-color="#909196"/>
+                                            <stop offset="0.31" stop-color="#b1b2b6"/>
+                                            <stop offset="0.57" stop-color="#c8cacd"/>
+                                            <stop offset="0.8" stop-color="#d6d8db"/>
+                                            <stop offset="1" stop-color="#dbdde0"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <title>monitor</title>
+                                    <path class="cls-1"
+                                          d="M194,437v1.3c0,3.21,4.49,4.7,18.11,4.7H346.94c13.62,0,18.38-2,18.42-5H365v-1Z"/>
+                                    <path class="cls-2"
+                                          d="M347.86,418.52C335.7,406.14,335.24,379,335.24,379H222s-.46,27.14-12.61,39.52S178.17,442,211.19,442H346C379,442,360,430.91,347.86,418.52Z"/>
+                                    <path class="cls-3"
+                                          d="M289.46,442c6.74-15,28.28-27,55.07-29.65a29,29,0,0,0,4.24,5.62c11.94,12.16,30.52,23-.15,24Z"/>
+                                    <path class="cls-4"
+                                          d="M269.59,442c-6.74-15-28.28-27-55.07-29.65a28.9,28.9,0,0,1-4.24,5.62c-11.94,12.16-30.52,23,.15,24Z"/>
+                                    <path class="cls-5"
+                                          d="M210.42,442.13c11.38-.19,22.75-.28,34.13-.35l34.13-.11,34.13.11,17.07.13,17.06.23-17.06.23-17.07.13-34.13.11-34.13-.11C233.17,442.4,221.79,442.31,210.42,442.13Z"/>
+                                    <path class="cls-6"
+                                          d="M0,363.24A17.12,17.12,0,0,0,17,380H537.49A16.72,16.72,0,0,0,554,363.24V332H0Z"/>
+                                    <path class="cls-7"
+                                          d="M537.49,0H17C7.85,0,0,6.5,0,15.62V331H554V15.62C554,6.5,546.61,0,537.49,0ZM531,308H23V22H531Z"/>
+                                    <path class="cls-8"
+                                          d="M0,361.41C0,370.53,7.85,379,17,379H537.49c9.12,0,16.51-8.47,16.51-17.59V331H0Z"/>
+                                </svg>
+                                <div class="case-banner_monitor-screen">
+                                    <iframe src="https://player.vimeo.com/video/186453378" width="640" height="360"
+                                            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="benefits-section_list case-banner_list">
+                            <li class="benefits-section_item">
+                                <div class="benefits-section_link">
+                                    <span class="benefits-section_empty"></span>
+                                    <span class="benefits-section_number">1</span>
+                                    <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
+                                </div>
+                            </li>
+                            <li class="benefits-section_item">
+                                <div class="benefits-section_link">
+                                    <span class="benefits-section_empty"></span>
+                                    <span class="benefits-section_number">2</span>
+                                    <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
+                                </div>
+                            </li>
+                            <li class="benefits-section_item">
+                                <div class="benefits-section_link">
+                                    <span class="benefits-section_empty"></span>
+                                    <span class="benefits-section_number">3</span>
+                                    <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
+                                </div>
+                            </li>
+                            <li class="benefits-section_item">
+                                <div class="benefits-section_link">
+                                    <span class="benefits-section_empty"></span>
+                                    <span class="benefits-section_number">4</span>
+                                    <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
+                                </div>
+                            </li>
+                            <li class="benefits-section_item">
+                                <div class="benefits-section_link">
+                                    <span class="benefits-section_empty"></span>
+                                    <span class="benefits-section_number">5</span>
+                                    <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
+                                </div>
+                            </li>
+                            <li class="benefits-section_item">
+                                <div class="benefits-section_link">
+                                    <span class="benefits-section_empty"></span>
+                                    <span class="benefits-section_number">6</span>
+                                    <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </div>
 </section>
-<section class="main-banner solutions-banner case-banner">
-    <div class="main-banner_wrapper">
-        <div class="main-banner_inner-wrapper solutions-banner_inner-wrapper">
-            <div class="solutions-banner_inner-holder case-banner_inner-holder">
-                <h2 class="solutions_title support-price_title">Client</h2>
-                <div class="solutions-banner_text-holder case-banner_text-holder">
-                    <p class="main-banner_paragraph case-banner_paragraph"><strong>Open edX</strong> platform allows
-                        easy management of the courseware, yet it does require technical background for setup and
-                        configuration. Raccoon Gang employees were the part of Open edX platform development and
-                        release. Our team is also actively participating in further Open edX evolvement. Due to this we
-                        can guarantee the best level of Open edX technical support you would expect.</p>
+<section class="cd-section">
+    <div>
+        <section class="challenge ">
+            <div class="challenge_wrapper">
+                <h3 class="solutions_title support-price_title">Challenge</h3>
+                <ul class="benefits-section_list case-benefits">
+                    <li class="benefits-section_item">
+                        <div class="benefits-section_link">
+                            <span class="benefits-section_empty"></span>
+                            <span class="benefits-section_number">1</span>
+                            <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
+                        </div>
+                    </li>
+                    <li class="benefits-section_item">
+                        <div class="benefits-section_link">
+                            <span class="benefits-section_empty"></span>
+                            <span class="benefits-section_number">2</span>
+                            <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
+                        </div>
+                    </li>
+                    <li class="benefits-section_item">
+                        <div class="benefits-section_link">
+                            <span class="benefits-section_empty"></span>
+                            <span class="benefits-section_number">3</span>
+                            <span class="benefits-section_text">Look & Feel: changing the UI/UX of eLearning platform was required:
+                        <ul>
+                            <li>replacing default themes with custom ones</li>
+                            <li>changing the menus and interactions between elements</li>
+                        </ul>
+                    </span>
+                        </div>
+                    </li>
+                    <li class="benefits-section_item">
+                        <div class="benefits-section_link">
+                            <span class="benefits-section_empty"></span>
+                            <span class="benefits-section_number">4</span>
+                            <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
+                        </div>
+                    </li>
+                    <li class="benefits-section_item">
+                        <div class="benefits-section_link">
+                            <span class="benefits-section_empty"></span>
+                            <span class="benefits-section_number">5</span>
+                            <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
+                        </div>
+                    </li>
+                    <li class="benefits-section_item">
+                        <div class="benefits-section_link">
+                            <span class="benefits-section_empty"></span>
+                            <span class="benefits-section_number">6</span>
+                            <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</section>
+<section class="cd-section">
+    <div>
+<section class="challenge case-solution ">
+    <div class="challenge_wrapper">
+        <h3 class="solutions_title support-price_title">Challenge</h3>
+        <ul class="benefits-section_list case-benefits">
+            <li class="benefits-section_item">
+                <div class="benefits-section_link">
+                    <span class="benefits-section_empty"></span>
+                    <span class="benefits-section_number">1</span>
+                    <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
                 </div>
-                <div class="solutions-banner_text-holder case-banner_text-holder">
-                    <p class="main-banner_paragraph case-banner_paragraph"><strong>Open edX</strong> platform allows
-                        easy management of the courseware, yet it does require technical background for setup and
-                        configuration. Raccoon Gang employees were the part of Open edX platform development and
-                        release. Our team is also actively participating in further Open edX evolvement. Due to this we
-                        can guarantee the best level of Open edX technical support you would expect.</p>
+            </li>
+            <li class="benefits-section_item">
+                <div class="benefits-section_link">
+                    <span class="benefits-section_empty"></span>
+                    <span class="benefits-section_number">2</span>
+                    <span class="benefits-section_text">
+                <p>Reduce the costs significantly  using our solution based on open-source learning management system.</p>
+                <img src="../images/example-pic.jpg" alt="">
+                <p>Reduce the costs significantly  using our solution based on open-source learning management system.</p>
+                <img src="../images/example-pic.jpg" alt="">
+            </span>
+                </div>
+            </li>
+            <li class="benefits-section_item">
+                <div class="benefits-section_link">
+                    <span class="benefits-section_empty"></span>
+                    <span class="benefits-section_number">3</span>
+                    <span class="benefits-section_text">Look & Feel: changing the UI/UX of eLearning platform was required:
+                <ul>
+                    <li>replacing default themes with custom ones</li>
+                    <li>changing the menus and interactions between elements</li>
+                </ul>
+            </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+    </div>
+</section>
+<section class="cd-section">
+    <div>
+        <section class="monitor-block case-banner ">
+            <div class="monitor-block_wrapper">
+                <div class="solutions-banner_image-wrapper">
+                    <div class="solutions-banner_image">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Слой_1"
+                             data-name="Слой 1" viewBox="0 0 554 443">
+                            <defs>
+                                <style>.cls-1 {
+                                    fill: url(#Безымянный_градиент);
+                                }
+
+                                .cls-2 {
+                                    fill: url(#Безымянный_градиент_2);
+                                }
+
+                                .cls-3 {
+                                    fill: url(#Безымянный_градиент_3);
+                                }
+
+                                .cls-4 {
+                                    fill: url(#Безымянный_градиент_4);
+                                }
+
+                                .cls-5 {
+                                    fill: url(#Безымянный_градиент_5);
+                                }
+
+                                .cls-6 {
+                                    fill: url(#Безымянный_градиент_6);
+                                }
+
+                                .cls-7 {
+                                    fill: #231f20;
+                                }
+
+                                .cls-8 {
+                                    fill: url(#Безымянный_градиент_7);
+                                }</style>
+                                <linearGradient id="Безымянный_градиент" x1="192.94" y1="4" x2="368.16" y2="4"
+                                                gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.01" stop-color="#58595b"/>
+                                    <stop offset="0.28" stop-color="#757679"/>
+                                    <stop offset="0.51" stop-color="#88898d"/>
+                                    <stop offset="1" stop-color="#58595b"/>
+                                </linearGradient>
+                                <linearGradient id="Безымянный_градиент_2" x1="278.6" y1="69.5" x2="278.6" y2="-7.05"
+                                                gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.08" stop-color="#6d6f73"/>
+                                    <stop offset="0.13" stop-color="#97999c"/>
+                                    <stop offset="0.18" stop-color="#cccdce"/>
+                                    <stop offset="0.21" stop-color="#e0e1e2"/>
+                                    <stop offset="0.32" stop-color="#a7a9ac"/>
+                                    <stop offset="0.39" stop-color="#868789"/>
+                                    <stop offset="0.46" stop-color="#636363"/>
+                                    <stop offset="0.53" stop-color="#6e6f6f"/>
+                                    <stop offset="0.65" stop-color="#8b8d8f"/>
+                                    <stop offset="0.74" stop-color="#a6aaad"/>
+                                </linearGradient>
+                                <radialGradient id="Безымянный_градиент_3" cx="362.3" cy="-27.29" r="64.19"
+                                                gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#fff"/>
+                                    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                                </radialGradient>
+                                <radialGradient id="Безымянный_градиент_4" cx="368.18" cy="-27.29" r="64.19"
+                                                gradientTransform="translate(564.93 444) rotate(180)"
+                                                xlink:href="#Безымянный_градиент_3"/>
+                                <linearGradient id="Безымянный_градиент_5" x1="210.42" y1="1.87" x2="346.94" y2="1.87"
+                                                gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.01" stop-color="#fff" stop-opacity="0"/>
+                                    <stop offset="0.51" stop-color="#fff"/>
+                                    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                                </linearGradient>
+                                <linearGradient id="Безымянный_градиент_6" x1="-9.68" y1="69.73" x2="592.57" y2="109.21"
+                                                gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#78797d"/>
+                                    <stop offset="0.32" stop-color="#737478"/>
+                                    <stop offset="0.49" stop-color="#6d6f73"/>
+                                    <stop offset="1" stop-color="#6d6f73"/>
+                                </linearGradient>
+                                <linearGradient id="Безымянный_градиент_7" x1="-9.62" y1="70.74" x2="592.57" y2="110.21"
+                                                gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#898a8f"/>
+                                    <stop offset="0.05" stop-color="#909196"/>
+                                    <stop offset="0.31" stop-color="#b1b2b6"/>
+                                    <stop offset="0.57" stop-color="#c8cacd"/>
+                                    <stop offset="0.8" stop-color="#d6d8db"/>
+                                    <stop offset="1" stop-color="#dbdde0"/>
+                                </linearGradient>
+                            </defs>
+                            <title>monitor</title>
+                            <path class="cls-1"
+                                  d="M194,437v1.3c0,3.21,4.49,4.7,18.11,4.7H346.94c13.62,0,18.38-2,18.42-5H365v-1Z"/>
+                            <path class="cls-2"
+                                  d="M347.86,418.52C335.7,406.14,335.24,379,335.24,379H222s-.46,27.14-12.61,39.52S178.17,442,211.19,442H346C379,442,360,430.91,347.86,418.52Z"/>
+                            <path class="cls-3"
+                                  d="M289.46,442c6.74-15,28.28-27,55.07-29.65a29,29,0,0,0,4.24,5.62c11.94,12.16,30.52,23-.15,24Z"/>
+                            <path class="cls-4"
+                                  d="M269.59,442c-6.74-15-28.28-27-55.07-29.65a28.9,28.9,0,0,1-4.24,5.62c-11.94,12.16-30.52,23,.15,24Z"/>
+                            <path class="cls-5"
+                                  d="M210.42,442.13c11.38-.19,22.75-.28,34.13-.35l34.13-.11,34.13.11,17.07.13,17.06.23-17.06.23-17.07.13-34.13.11-34.13-.11C233.17,442.4,221.79,442.31,210.42,442.13Z"/>
+                            <path class="cls-6"
+                                  d="M0,363.24A17.12,17.12,0,0,0,17,380H537.49A16.72,16.72,0,0,0,554,363.24V332H0Z"/>
+                            <path class="cls-7"
+                                  d="M537.49,0H17C7.85,0,0,6.5,0,15.62V331H554V15.62C554,6.5,546.61,0,537.49,0ZM531,308H23V22H531Z"/>
+                            <path class="cls-8"
+                                  d="M0,361.41C0,370.53,7.85,379,17,379H537.49c9.12,0,16.51-8.47,16.51-17.59V331H0Z"/>
+                        </svg>
+                        <div class="case-banner_monitor-screen">
+                            <iframe src="https://player.vimeo.com/video/186453378" width="640" height="360"
+                                    frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="monitor-block_text-wrapper">
+                    <h3 class="monitor-block_title">Exam</h3>
+                    <p class="monitor-block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus amet aperiam asperiores aspernatur corporis dignissimos expedita facilis incidunt iste laboriosam nesciunt nihil officia omnis quibusdam, recusandae sequi ullam vero!</p>
+                </div>
+            </div>
+        </section>
+        <section class="message-block">
+            <div class="message-block_wrapper">
+                <div class="message-block_title">Title</div>
+                <div class="message-block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam architecto, asperiores consequatur cum, distinctio dolore est et eveniet facilis id impedit perspiciatis quos ratione repellat repellendus sint tempore voluptatibus.</div>
+            </div>
+        </section>
+    </div>
+</section>
+<section class="cd-section">
+    <div>
+        <section class="monitor-block case-banner monitor-block__reversed">
+            <div class="monitor-block_wrapper">
+                <div class="solutions-banner_image-wrapper">
+                    <div class="solutions-banner_image">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Слой_1"
+                             data-name="Слой 1" viewBox="0 0 554 443">
+                            <defs>
+                                <style>.cls-1 {
+                                    fill: url(#Безымянный_градиент);
+                                }
+
+                                .cls-2 {
+                                    fill: url(#Безымянный_градиент_2);
+                                }
+
+                                .cls-3 {
+                                    fill: url(#Безымянный_градиент_3);
+                                }
+
+                                .cls-4 {
+                                    fill: url(#Безымянный_градиент_4);
+                                }
+
+                                .cls-5 {
+                                    fill: url(#Безымянный_градиент_5);
+                                }
+
+                                .cls-6 {
+                                    fill: url(#Безымянный_градиент_6);
+                                }
+
+                                .cls-7 {
+                                    fill: #231f20;
+                                }
+
+                                .cls-8 {
+                                    fill: url(#Безымянный_градиент_7);
+                                }</style>
+                                <linearGradient id="Безымянный_градиент" x1="192.94" y1="4" x2="368.16" y2="4"
+                                                gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.01" stop-color="#58595b"/>
+                                    <stop offset="0.28" stop-color="#757679"/>
+                                    <stop offset="0.51" stop-color="#88898d"/>
+                                    <stop offset="1" stop-color="#58595b"/>
+                                </linearGradient>
+                                <linearGradient id="Безымянный_градиент_2" x1="278.6" y1="69.5" x2="278.6" y2="-7.05"
+                                                gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.08" stop-color="#6d6f73"/>
+                                    <stop offset="0.13" stop-color="#97999c"/>
+                                    <stop offset="0.18" stop-color="#cccdce"/>
+                                    <stop offset="0.21" stop-color="#e0e1e2"/>
+                                    <stop offset="0.32" stop-color="#a7a9ac"/>
+                                    <stop offset="0.39" stop-color="#868789"/>
+                                    <stop offset="0.46" stop-color="#636363"/>
+                                    <stop offset="0.53" stop-color="#6e6f6f"/>
+                                    <stop offset="0.65" stop-color="#8b8d8f"/>
+                                    <stop offset="0.74" stop-color="#a6aaad"/>
+                                </linearGradient>
+                                <radialGradient id="Безымянный_градиент_3" cx="362.3" cy="-27.29" r="64.19"
+                                                gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#fff"/>
+                                    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                                </radialGradient>
+                                <radialGradient id="Безымянный_градиент_4" cx="368.18" cy="-27.29" r="64.19"
+                                                gradientTransform="translate(564.93 444) rotate(180)"
+                                                xlink:href="#Безымянный_градиент_3"/>
+                                <linearGradient id="Безымянный_градиент_5" x1="210.42" y1="1.87" x2="346.94" y2="1.87"
+                                                gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.01" stop-color="#fff" stop-opacity="0"/>
+                                    <stop offset="0.51" stop-color="#fff"/>
+                                    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                                </linearGradient>
+                                <linearGradient id="Безымянный_градиент_6" x1="-9.68" y1="69.73" x2="592.57" y2="109.21"
+                                                gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#78797d"/>
+                                    <stop offset="0.32" stop-color="#737478"/>
+                                    <stop offset="0.49" stop-color="#6d6f73"/>
+                                    <stop offset="1" stop-color="#6d6f73"/>
+                                </linearGradient>
+                                <linearGradient id="Безымянный_градиент_7" x1="-9.62" y1="70.74" x2="592.57" y2="110.21"
+                                                gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#898a8f"/>
+                                    <stop offset="0.05" stop-color="#909196"/>
+                                    <stop offset="0.31" stop-color="#b1b2b6"/>
+                                    <stop offset="0.57" stop-color="#c8cacd"/>
+                                    <stop offset="0.8" stop-color="#d6d8db"/>
+                                    <stop offset="1" stop-color="#dbdde0"/>
+                                </linearGradient>
+                            </defs>
+                            <title>monitor</title>
+                            <path class="cls-1"
+                                  d="M194,437v1.3c0,3.21,4.49,4.7,18.11,4.7H346.94c13.62,0,18.38-2,18.42-5H365v-1Z"/>
+                            <path class="cls-2"
+                                  d="M347.86,418.52C335.7,406.14,335.24,379,335.24,379H222s-.46,27.14-12.61,39.52S178.17,442,211.19,442H346C379,442,360,430.91,347.86,418.52Z"/>
+                            <path class="cls-3"
+                                  d="M289.46,442c6.74-15,28.28-27,55.07-29.65a29,29,0,0,0,4.24,5.62c11.94,12.16,30.52,23-.15,24Z"/>
+                            <path class="cls-4"
+                                  d="M269.59,442c-6.74-15-28.28-27-55.07-29.65a28.9,28.9,0,0,1-4.24,5.62c-11.94,12.16-30.52,23,.15,24Z"/>
+                            <path class="cls-5"
+                                  d="M210.42,442.13c11.38-.19,22.75-.28,34.13-.35l34.13-.11,34.13.11,17.07.13,17.06.23-17.06.23-17.07.13-34.13.11-34.13-.11C233.17,442.4,221.79,442.31,210.42,442.13Z"/>
+                            <path class="cls-6"
+                                  d="M0,363.24A17.12,17.12,0,0,0,17,380H537.49A16.72,16.72,0,0,0,554,363.24V332H0Z"/>
+                            <path class="cls-7"
+                                  d="M537.49,0H17C7.85,0,0,6.5,0,15.62V331H554V15.62C554,6.5,546.61,0,537.49,0ZM531,308H23V22H531Z"/>
+                            <path class="cls-8"
+                                  d="M0,361.41C0,370.53,7.85,379,17,379H537.49c9.12,0,16.51-8.47,16.51-17.59V331H0Z"/>
+                        </svg>
+                        <div class="case-banner_monitor-screen">
+                            <iframe src="https://player.vimeo.com/video/186453378" width="640" height="360"
+                                    frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="monitor-block_text-wrapper">
+                    <h3 class="monitor-block_title">Exam</h3>
+                    <p class="monitor-block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus amet aperiam asperiores aspernatur corporis dignissimos expedita facilis incidunt iste laboriosam nesciunt nihil officia omnis quibusdam, recusandae sequi ullam vero!</p>
+                </div>
+            </div>
+        </section>
+        <section class="message-block">
+            <div class="message-block_wrapper">
+                <div class="message-block_title">Title</div>
+                <div class="message-block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam architecto, asperiores consequatur cum, distinctio dolore est et eveniet facilis id impedit perspiciatis quos ratione repellat repellendus sint tempore voluptatibus.</div>
+            </div>
+        </section>
+    </div>
+</section>
+<section class="cd-section">
+    <div>
+        <section class="monitor-block case-banner monitor-block__centered">
+            <div class="monitor-block_wrapper">
+                <div class="monitor-block_text-wrapper">
+
+                    <p class="monitor-block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus amet aperiam asperiores aspernatur corporis dignissimos expedita facilis incidunt iste laboriosam nesciunt nihil officia omnis quibusdam, recusandae sequi ullam vero!</p>
                 </div>
                 <div class="solutions-banner_image-wrapper">
                     <div class="solutions-banner_image">
@@ -1053,590 +1603,82 @@
                         </div>
                     </div>
                 </div>
-                <ul class="benefits-section_list case-banner_list">
-                    <li class="benefits-section_item">
-                        <div class="benefits-section_link">
-                            <span class="benefits-section_empty"></span>
-                            <span class="benefits-section_number">1</span>
-                            <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
-                        </div>
-                    </li>
-                    <li class="benefits-section_item">
-                        <div class="benefits-section_link">
-                            <span class="benefits-section_empty"></span>
-                            <span class="benefits-section_number">2</span>
-                            <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
-                        </div>
-                    </li>
-                    <li class="benefits-section_item">
-                        <div class="benefits-section_link">
-                            <span class="benefits-section_empty"></span>
-                            <span class="benefits-section_number">3</span>
-                            <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
-                        </div>
-                    </li>
-                    <li class="benefits-section_item">
-                        <div class="benefits-section_link">
-                            <span class="benefits-section_empty"></span>
-                            <span class="benefits-section_number">4</span>
-                            <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
-                        </div>
-                    </li>
-                    <li class="benefits-section_item">
-                        <div class="benefits-section_link">
-                            <span class="benefits-section_empty"></span>
-                            <span class="benefits-section_number">5</span>
-                            <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
-                        </div>
-                    </li>
-                    <li class="benefits-section_item">
-                        <div class="benefits-section_link">
-                            <span class="benefits-section_empty"></span>
-                            <span class="benefits-section_number">6</span>
-                            <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
-                        </div>
-                    </li>
+                <div class="monitor-block_text-wrapper">
+
+                    <p class="monitor-block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus amet aperiam asperiores aspernatur corporis dignissimos expedita facilis incidunt iste laboriosam nesciunt nihil officia omnis quibusdam, recusandae sequi ullam vero!</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+<section class="cd-section">
+    <div>
+        <section class="proposals">
+            <div class="proposals_wrapper">
+                <h3 class="proposals_title">Title</h3>
+                <img src="../images/example-pic.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam deleniti dolorum ducimus, ea eum facilis hic, illo labore maxime nemo odio praesentium quia rem rerum saepe vel veritatis voluptas.</p>
+                <img src="../images/example-pic.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam deleniti dolorum ducimus, ea eum facilis hic, illo labore maxime nemo odio praesentium quia rem rerum saepe vel veritatis voluptas.</p>
+                <img src="../images/example-pic.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam deleniti dolorum ducimus, ea eum facilis hic, illo labore maxime nemo odio praesentium quia rem rerum saepe vel veritatis voluptas.</p>
+                <img src="../images/example-pic.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam deleniti dolorum ducimus, ea eum facilis hic, illo labore maxime nemo odio praesentium quia rem rerum saepe vel veritatis voluptas.</p>
+            </div>
+        </section>
+    </div>
+</section>
+
+<section class="cd-section">
+    <div>
+        <section class="message-block">
+            <div class="message-block_wrapper">
+                <div class="message-block_title">Title</div>
+                <div class="message-block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam architecto, asperiores consequatur cum, distinctio dolore est et eveniet facilis id impedit perspiciatis quos ratione repellat repellendus sint tempore voluptatibus.</div>
+            </div>
+        </section>
+        <section class="try-block">
+            <span class="try-block_title">Shedule a demo!</span>
+            <a href="#" class="button">Request demo</a>
+        </section>
+        <footer class="footer">
+            <div class="footer_wrapper">
+                <a href="mailto:info@raccoongang.com" class="footer_email">INFO@RACCOONGANG.COM</a>
+                <ul class="footer_social-list">
+                    <li class="footer_social-item"><a href="#" class="footer_social-link">
+                        <svg class="footer_social-image">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook-icon"></use>
+                        </svg>
+                    </a></li>
+                    <li class="footer_social-item"><a href="#" class="footer_social-link">
+                        <svg class="footer_social-image">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#linked-icon"></use>
+                        </svg>
+                    </a></li>
+                    <li class="footer_social-item"><a href="#" class="footer_social-link">
+                        <svg class="footer_social-image">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter-icon"></use>
+                        </svg>
+                    </a></li>
                 </ul>
+                <span class="footer_copyright">&copy raccoon gang 2017</span>
             </div>
-        </div>
-    </div>
-
-</section>
-<section class="challenge">
-    <div class="challenge_wrapper">
-        <h2 class="solutions_title support-price_title">Challenge</h2>
-        <ul class="benefits-section_list case-benefits">
-            <li class="benefits-section_item">
-                <div class="benefits-section_link">
-                    <span class="benefits-section_empty"></span>
-                    <span class="benefits-section_number">1</span>
-                    <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
-                </div>
-            </li>
-            <li class="benefits-section_item">
-                <div class="benefits-section_link">
-                    <span class="benefits-section_empty"></span>
-                    <span class="benefits-section_number">2</span>
-                    <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
-                </div>
-            </li>
-            <li class="benefits-section_item">
-                <div class="benefits-section_link">
-                    <span class="benefits-section_empty"></span>
-                    <span class="benefits-section_number">3</span>
-                    <span class="benefits-section_text">Look & Feel: changing the UI/UX of eLearning platform was required:
-                        <ul>
-                            <li>replacing default themes with custom ones</li>
-                            <li>changing the menus and interactions between elements</li>
-                        </ul>
-                    </span>
-                </div>
-            </li>
-            <li class="benefits-section_item">
-                <div class="benefits-section_link">
-                    <span class="benefits-section_empty"></span>
-                    <span class="benefits-section_number">4</span>
-                    <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
-                </div>
-            </li>
-            <li class="benefits-section_item">
-                <div class="benefits-section_link">
-                    <span class="benefits-section_empty"></span>
-                    <span class="benefits-section_number">5</span>
-                    <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
-                </div>
-            </li>
-            <li class="benefits-section_item">
-                <div class="benefits-section_link">
-                    <span class="benefits-section_empty"></span>
-                    <span class="benefits-section_number">6</span>
-                    <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
-                </div>
-            </li>
-        </ul>
-    </div>
-</section>
-
-<section class="challenge case-solution">
-    <div class="challenge_wrapper">
-        <h2 class="solutions_title support-price_title">Challenge</h2>
-        <ul class="benefits-section_list case-benefits">
-            <li class="benefits-section_item">
-                <div class="benefits-section_link">
-                    <span class="benefits-section_empty"></span>
-                    <span class="benefits-section_number">1</span>
-                    <span class="benefits-section_text">Reduce the costs significantly  using our solution based on open-source learning management system.</span>
-                </div>
-            </li>
-            <li class="benefits-section_item">
-                <div class="benefits-section_link">
-                    <span class="benefits-section_empty"></span>
-                    <span class="benefits-section_number">2</span>
-                    <span class="benefits-section_text">
-                        <p>Reduce the costs significantly  using our solution based on open-source learning management system.</p>
-                        <img src="../images/example-pic.jpg" alt="">
-                        <p>Reduce the costs significantly  using our solution based on open-source learning management system.</p>
-                        <img src="../images/example-pic.jpg" alt="">
-                    </span>
-                </div>
-            </li>
-            <li class="benefits-section_item">
-                <div class="benefits-section_link">
-                    <span class="benefits-section_empty"></span>
-                    <span class="benefits-section_number">3</span>
-                    <span class="benefits-section_text">Look & Feel: changing the UI/UX of eLearning platform was required:
-                        <ul>
-                            <li>replacing default themes with custom ones</li>
-                            <li>changing the menus and interactions between elements</li>
-                        </ul>
-                    </span>
-                </div>
-            </li>
-        </ul>
-    </div>
-</section>
-<section class="monitor-block case-banner">
-    <div class="monitor-block_wrapper">
-        <div class="solutions-banner_image-wrapper">
-            <div class="solutions-banner_image">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Слой_1"
-                     data-name="Слой 1" viewBox="0 0 554 443">
-                    <defs>
-                        <style>.cls-1 {
-                            fill: url(#Безымянный_градиент);
-                        }
-
-                        .cls-2 {
-                            fill: url(#Безымянный_градиент_2);
-                        }
-
-                        .cls-3 {
-                            fill: url(#Безымянный_градиент_3);
-                        }
-
-                        .cls-4 {
-                            fill: url(#Безымянный_градиент_4);
-                        }
-
-                        .cls-5 {
-                            fill: url(#Безымянный_градиент_5);
-                        }
-
-                        .cls-6 {
-                            fill: url(#Безымянный_градиент_6);
-                        }
-
-                        .cls-7 {
-                            fill: #231f20;
-                        }
-
-                        .cls-8 {
-                            fill: url(#Безымянный_градиент_7);
-                        }</style>
-                        <linearGradient id="Безымянный_градиент" x1="192.94" y1="4" x2="368.16" y2="4"
-                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop offset="0.01" stop-color="#58595b"/>
-                            <stop offset="0.28" stop-color="#757679"/>
-                            <stop offset="0.51" stop-color="#88898d"/>
-                            <stop offset="1" stop-color="#58595b"/>
-                        </linearGradient>
-                        <linearGradient id="Безымянный_градиент_2" x1="278.6" y1="69.5" x2="278.6" y2="-7.05"
-                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop offset="0.08" stop-color="#6d6f73"/>
-                            <stop offset="0.13" stop-color="#97999c"/>
-                            <stop offset="0.18" stop-color="#cccdce"/>
-                            <stop offset="0.21" stop-color="#e0e1e2"/>
-                            <stop offset="0.32" stop-color="#a7a9ac"/>
-                            <stop offset="0.39" stop-color="#868789"/>
-                            <stop offset="0.46" stop-color="#636363"/>
-                            <stop offset="0.53" stop-color="#6e6f6f"/>
-                            <stop offset="0.65" stop-color="#8b8d8f"/>
-                            <stop offset="0.74" stop-color="#a6aaad"/>
-                        </linearGradient>
-                        <radialGradient id="Безымянный_градиент_3" cx="362.3" cy="-27.29" r="64.19"
-                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop offset="0" stop-color="#fff"/>
-                            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-                        </radialGradient>
-                        <radialGradient id="Безымянный_градиент_4" cx="368.18" cy="-27.29" r="64.19"
-                                        gradientTransform="translate(564.93 444) rotate(180)"
-                                        xlink:href="#Безымянный_градиент_3"/>
-                        <linearGradient id="Безымянный_градиент_5" x1="210.42" y1="1.87" x2="346.94" y2="1.87"
-                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop offset="0.01" stop-color="#fff" stop-opacity="0"/>
-                            <stop offset="0.51" stop-color="#fff"/>
-                            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-                        </linearGradient>
-                        <linearGradient id="Безымянный_градиент_6" x1="-9.68" y1="69.73" x2="592.57" y2="109.21"
-                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop offset="0" stop-color="#78797d"/>
-                            <stop offset="0.32" stop-color="#737478"/>
-                            <stop offset="0.49" stop-color="#6d6f73"/>
-                            <stop offset="1" stop-color="#6d6f73"/>
-                        </linearGradient>
-                        <linearGradient id="Безымянный_градиент_7" x1="-9.62" y1="70.74" x2="592.57" y2="110.21"
-                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop offset="0" stop-color="#898a8f"/>
-                            <stop offset="0.05" stop-color="#909196"/>
-                            <stop offset="0.31" stop-color="#b1b2b6"/>
-                            <stop offset="0.57" stop-color="#c8cacd"/>
-                            <stop offset="0.8" stop-color="#d6d8db"/>
-                            <stop offset="1" stop-color="#dbdde0"/>
-                        </linearGradient>
-                    </defs>
-                    <title>monitor</title>
-                    <path class="cls-1"
-                          d="M194,437v1.3c0,3.21,4.49,4.7,18.11,4.7H346.94c13.62,0,18.38-2,18.42-5H365v-1Z"/>
-                    <path class="cls-2"
-                          d="M347.86,418.52C335.7,406.14,335.24,379,335.24,379H222s-.46,27.14-12.61,39.52S178.17,442,211.19,442H346C379,442,360,430.91,347.86,418.52Z"/>
-                    <path class="cls-3"
-                          d="M289.46,442c6.74-15,28.28-27,55.07-29.65a29,29,0,0,0,4.24,5.62c11.94,12.16,30.52,23-.15,24Z"/>
-                    <path class="cls-4"
-                          d="M269.59,442c-6.74-15-28.28-27-55.07-29.65a28.9,28.9,0,0,1-4.24,5.62c-11.94,12.16-30.52,23,.15,24Z"/>
-                    <path class="cls-5"
-                          d="M210.42,442.13c11.38-.19,22.75-.28,34.13-.35l34.13-.11,34.13.11,17.07.13,17.06.23-17.06.23-17.07.13-34.13.11-34.13-.11C233.17,442.4,221.79,442.31,210.42,442.13Z"/>
-                    <path class="cls-6"
-                          d="M0,363.24A17.12,17.12,0,0,0,17,380H537.49A16.72,16.72,0,0,0,554,363.24V332H0Z"/>
-                    <path class="cls-7"
-                          d="M537.49,0H17C7.85,0,0,6.5,0,15.62V331H554V15.62C554,6.5,546.61,0,537.49,0ZM531,308H23V22H531Z"/>
-                    <path class="cls-8"
-                          d="M0,361.41C0,370.53,7.85,379,17,379H537.49c9.12,0,16.51-8.47,16.51-17.59V331H0Z"/>
-                </svg>
-                <div class="case-banner_monitor-screen">
-                    <iframe src="https://player.vimeo.com/video/186453378" width="640" height="360"
-                            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-        <div class="monitor-block_text-wrapper">
-            <h2 class="monitor-block_title">Exam</h2>
-            <p class="monitor-block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus amet aperiam asperiores aspernatur corporis dignissimos expedita facilis incidunt iste laboriosam nesciunt nihil officia omnis quibusdam, recusandae sequi ullam vero!</p>
-        </div>
-    </div>
-</section>
-<section class="message-block">
-    <div class="message-block_wrapper">
-        <div class="message-block_title">Title</div>
-        <div class="message-block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam architecto, asperiores consequatur cum, distinctio dolore est et eveniet facilis id impedit perspiciatis quos ratione repellat repellendus sint tempore voluptatibus.</div>
-    </div>
-</section>
-<section class="monitor-block case-banner monitor-block__reversed">
-    <div class="monitor-block_wrapper">
-        <div class="solutions-banner_image-wrapper">
-            <div class="solutions-banner_image">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Слой_1"
-                     data-name="Слой 1" viewBox="0 0 554 443">
-                    <defs>
-                        <style>.cls-1 {
-                            fill: url(#Безымянный_градиент);
-                        }
-
-                        .cls-2 {
-                            fill: url(#Безымянный_градиент_2);
-                        }
-
-                        .cls-3 {
-                            fill: url(#Безымянный_градиент_3);
-                        }
-
-                        .cls-4 {
-                            fill: url(#Безымянный_градиент_4);
-                        }
-
-                        .cls-5 {
-                            fill: url(#Безымянный_градиент_5);
-                        }
-
-                        .cls-6 {
-                            fill: url(#Безымянный_градиент_6);
-                        }
-
-                        .cls-7 {
-                            fill: #231f20;
-                        }
-
-                        .cls-8 {
-                            fill: url(#Безымянный_градиент_7);
-                        }</style>
-                        <linearGradient id="Безымянный_градиент" x1="192.94" y1="4" x2="368.16" y2="4"
-                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop offset="0.01" stop-color="#58595b"/>
-                            <stop offset="0.28" stop-color="#757679"/>
-                            <stop offset="0.51" stop-color="#88898d"/>
-                            <stop offset="1" stop-color="#58595b"/>
-                        </linearGradient>
-                        <linearGradient id="Безымянный_градиент_2" x1="278.6" y1="69.5" x2="278.6" y2="-7.05"
-                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop offset="0.08" stop-color="#6d6f73"/>
-                            <stop offset="0.13" stop-color="#97999c"/>
-                            <stop offset="0.18" stop-color="#cccdce"/>
-                            <stop offset="0.21" stop-color="#e0e1e2"/>
-                            <stop offset="0.32" stop-color="#a7a9ac"/>
-                            <stop offset="0.39" stop-color="#868789"/>
-                            <stop offset="0.46" stop-color="#636363"/>
-                            <stop offset="0.53" stop-color="#6e6f6f"/>
-                            <stop offset="0.65" stop-color="#8b8d8f"/>
-                            <stop offset="0.74" stop-color="#a6aaad"/>
-                        </linearGradient>
-                        <radialGradient id="Безымянный_градиент_3" cx="362.3" cy="-27.29" r="64.19"
-                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop offset="0" stop-color="#fff"/>
-                            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-                        </radialGradient>
-                        <radialGradient id="Безымянный_градиент_4" cx="368.18" cy="-27.29" r="64.19"
-                                        gradientTransform="translate(564.93 444) rotate(180)"
-                                        xlink:href="#Безымянный_градиент_3"/>
-                        <linearGradient id="Безымянный_градиент_5" x1="210.42" y1="1.87" x2="346.94" y2="1.87"
-                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop offset="0.01" stop-color="#fff" stop-opacity="0"/>
-                            <stop offset="0.51" stop-color="#fff"/>
-                            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-                        </linearGradient>
-                        <linearGradient id="Безымянный_градиент_6" x1="-9.68" y1="69.73" x2="592.57" y2="109.21"
-                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop offset="0" stop-color="#78797d"/>
-                            <stop offset="0.32" stop-color="#737478"/>
-                            <stop offset="0.49" stop-color="#6d6f73"/>
-                            <stop offset="1" stop-color="#6d6f73"/>
-                        </linearGradient>
-                        <linearGradient id="Безымянный_градиент_7" x1="-9.62" y1="70.74" x2="592.57" y2="110.21"
-                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop offset="0" stop-color="#898a8f"/>
-                            <stop offset="0.05" stop-color="#909196"/>
-                            <stop offset="0.31" stop-color="#b1b2b6"/>
-                            <stop offset="0.57" stop-color="#c8cacd"/>
-                            <stop offset="0.8" stop-color="#d6d8db"/>
-                            <stop offset="1" stop-color="#dbdde0"/>
-                        </linearGradient>
-                    </defs>
-                    <title>monitor</title>
-                    <path class="cls-1"
-                          d="M194,437v1.3c0,3.21,4.49,4.7,18.11,4.7H346.94c13.62,0,18.38-2,18.42-5H365v-1Z"/>
-                    <path class="cls-2"
-                          d="M347.86,418.52C335.7,406.14,335.24,379,335.24,379H222s-.46,27.14-12.61,39.52S178.17,442,211.19,442H346C379,442,360,430.91,347.86,418.52Z"/>
-                    <path class="cls-3"
-                          d="M289.46,442c6.74-15,28.28-27,55.07-29.65a29,29,0,0,0,4.24,5.62c11.94,12.16,30.52,23-.15,24Z"/>
-                    <path class="cls-4"
-                          d="M269.59,442c-6.74-15-28.28-27-55.07-29.65a28.9,28.9,0,0,1-4.24,5.62c-11.94,12.16-30.52,23,.15,24Z"/>
-                    <path class="cls-5"
-                          d="M210.42,442.13c11.38-.19,22.75-.28,34.13-.35l34.13-.11,34.13.11,17.07.13,17.06.23-17.06.23-17.07.13-34.13.11-34.13-.11C233.17,442.4,221.79,442.31,210.42,442.13Z"/>
-                    <path class="cls-6"
-                          d="M0,363.24A17.12,17.12,0,0,0,17,380H537.49A16.72,16.72,0,0,0,554,363.24V332H0Z"/>
-                    <path class="cls-7"
-                          d="M537.49,0H17C7.85,0,0,6.5,0,15.62V331H554V15.62C554,6.5,546.61,0,537.49,0ZM531,308H23V22H531Z"/>
-                    <path class="cls-8"
-                          d="M0,361.41C0,370.53,7.85,379,17,379H537.49c9.12,0,16.51-8.47,16.51-17.59V331H0Z"/>
-                </svg>
-                <div class="case-banner_monitor-screen">
-                    <iframe src="https://player.vimeo.com/video/186453378" width="640" height="360"
-                            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-        <div class="monitor-block_text-wrapper">
-            <h2 class="monitor-block_title">Exam</h2>
-            <p class="monitor-block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus amet aperiam asperiores aspernatur corporis dignissimos expedita facilis incidunt iste laboriosam nesciunt nihil officia omnis quibusdam, recusandae sequi ullam vero!</p>
-        </div>
-    </div>
-</section>
-<section class="message-block">
-    <div class="message-block_wrapper">
-        <div class="message-block_title">Title</div>
-        <div class="message-block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam architecto, asperiores consequatur cum, distinctio dolore est et eveniet facilis id impedit perspiciatis quos ratione repellat repellendus sint tempore voluptatibus.</div>
-    </div>
-</section>
-<section class="monitor-block case-banner monitor-block__centered">
-    <div class="monitor-block_wrapper">
-        <div class="monitor-block_text-wrapper">
-
-            <p class="monitor-block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus amet aperiam asperiores aspernatur corporis dignissimos expedita facilis incidunt iste laboriosam nesciunt nihil officia omnis quibusdam, recusandae sequi ullam vero!</p>
-        </div>
-        <div class="solutions-banner_image-wrapper">
-            <div class="solutions-banner_image">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Слой_1"
-                     data-name="Слой 1" viewBox="0 0 554 443">
-                    <defs>
-                        <style>.cls-1 {
-                            fill: url(#Безымянный_градиент);
-                        }
-
-                        .cls-2 {
-                            fill: url(#Безымянный_градиент_2);
-                        }
-
-                        .cls-3 {
-                            fill: url(#Безымянный_градиент_3);
-                        }
-
-                        .cls-4 {
-                            fill: url(#Безымянный_градиент_4);
-                        }
-
-                        .cls-5 {
-                            fill: url(#Безымянный_градиент_5);
-                        }
-
-                        .cls-6 {
-                            fill: url(#Безымянный_градиент_6);
-                        }
-
-                        .cls-7 {
-                            fill: #231f20;
-                        }
-
-                        .cls-8 {
-                            fill: url(#Безымянный_градиент_7);
-                        }</style>
-                        <linearGradient id="Безымянный_градиент" x1="192.94" y1="4" x2="368.16" y2="4"
-                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop offset="0.01" stop-color="#58595b"/>
-                            <stop offset="0.28" stop-color="#757679"/>
-                            <stop offset="0.51" stop-color="#88898d"/>
-                            <stop offset="1" stop-color="#58595b"/>
-                        </linearGradient>
-                        <linearGradient id="Безымянный_градиент_2" x1="278.6" y1="69.5" x2="278.6" y2="-7.05"
-                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop offset="0.08" stop-color="#6d6f73"/>
-                            <stop offset="0.13" stop-color="#97999c"/>
-                            <stop offset="0.18" stop-color="#cccdce"/>
-                            <stop offset="0.21" stop-color="#e0e1e2"/>
-                            <stop offset="0.32" stop-color="#a7a9ac"/>
-                            <stop offset="0.39" stop-color="#868789"/>
-                            <stop offset="0.46" stop-color="#636363"/>
-                            <stop offset="0.53" stop-color="#6e6f6f"/>
-                            <stop offset="0.65" stop-color="#8b8d8f"/>
-                            <stop offset="0.74" stop-color="#a6aaad"/>
-                        </linearGradient>
-                        <radialGradient id="Безымянный_градиент_3" cx="362.3" cy="-27.29" r="64.19"
-                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop offset="0" stop-color="#fff"/>
-                            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-                        </radialGradient>
-                        <radialGradient id="Безымянный_градиент_4" cx="368.18" cy="-27.29" r="64.19"
-                                        gradientTransform="translate(564.93 444) rotate(180)"
-                                        xlink:href="#Безымянный_градиент_3"/>
-                        <linearGradient id="Безымянный_градиент_5" x1="210.42" y1="1.87" x2="346.94" y2="1.87"
-                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop offset="0.01" stop-color="#fff" stop-opacity="0"/>
-                            <stop offset="0.51" stop-color="#fff"/>
-                            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-                        </linearGradient>
-                        <linearGradient id="Безымянный_градиент_6" x1="-9.68" y1="69.73" x2="592.57" y2="109.21"
-                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop offset="0" stop-color="#78797d"/>
-                            <stop offset="0.32" stop-color="#737478"/>
-                            <stop offset="0.49" stop-color="#6d6f73"/>
-                            <stop offset="1" stop-color="#6d6f73"/>
-                        </linearGradient>
-                        <linearGradient id="Безымянный_градиент_7" x1="-9.62" y1="70.74" x2="592.57" y2="110.21"
-                                        gradientTransform="matrix(1, 0, 0, -1, 0, 444)"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop offset="0" stop-color="#898a8f"/>
-                            <stop offset="0.05" stop-color="#909196"/>
-                            <stop offset="0.31" stop-color="#b1b2b6"/>
-                            <stop offset="0.57" stop-color="#c8cacd"/>
-                            <stop offset="0.8" stop-color="#d6d8db"/>
-                            <stop offset="1" stop-color="#dbdde0"/>
-                        </linearGradient>
-                    </defs>
-                    <title>monitor</title>
-                    <path class="cls-1"
-                          d="M194,437v1.3c0,3.21,4.49,4.7,18.11,4.7H346.94c13.62,0,18.38-2,18.42-5H365v-1Z"/>
-                    <path class="cls-2"
-                          d="M347.86,418.52C335.7,406.14,335.24,379,335.24,379H222s-.46,27.14-12.61,39.52S178.17,442,211.19,442H346C379,442,360,430.91,347.86,418.52Z"/>
-                    <path class="cls-3"
-                          d="M289.46,442c6.74-15,28.28-27,55.07-29.65a29,29,0,0,0,4.24,5.62c11.94,12.16,30.52,23-.15,24Z"/>
-                    <path class="cls-4"
-                          d="M269.59,442c-6.74-15-28.28-27-55.07-29.65a28.9,28.9,0,0,1-4.24,5.62c-11.94,12.16-30.52,23,.15,24Z"/>
-                    <path class="cls-5"
-                          d="M210.42,442.13c11.38-.19,22.75-.28,34.13-.35l34.13-.11,34.13.11,17.07.13,17.06.23-17.06.23-17.07.13-34.13.11-34.13-.11C233.17,442.4,221.79,442.31,210.42,442.13Z"/>
-                    <path class="cls-6"
-                          d="M0,363.24A17.12,17.12,0,0,0,17,380H537.49A16.72,16.72,0,0,0,554,363.24V332H0Z"/>
-                    <path class="cls-7"
-                          d="M537.49,0H17C7.85,0,0,6.5,0,15.62V331H554V15.62C554,6.5,546.61,0,537.49,0ZM531,308H23V22H531Z"/>
-                    <path class="cls-8"
-                          d="M0,361.41C0,370.53,7.85,379,17,379H537.49c9.12,0,16.51-8.47,16.51-17.59V331H0Z"/>
-                </svg>
-                <div class="case-banner_monitor-screen">
-                    <iframe src="https://player.vimeo.com/video/186453378" width="640" height="360"
-                            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-        <div class="monitor-block_text-wrapper">
-
-            <p class="monitor-block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus amet aperiam asperiores aspernatur corporis dignissimos expedita facilis incidunt iste laboriosam nesciunt nihil officia omnis quibusdam, recusandae sequi ullam vero!</p>
-        </div>
+        </footer>
     </div>
 </section>
 
 
-<section class="proposals">
-    <div class="proposals_wrapper">
-        <h2 class="proposals_title">Title</h2>
-        <img src="../images/example-pic.jpg" alt="">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam deleniti dolorum ducimus, ea eum facilis hic, illo labore maxime nemo odio praesentium quia rem rerum saepe vel veritatis voluptas.</p>
-        <img src="../images/example-pic.jpg" alt="">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam deleniti dolorum ducimus, ea eum facilis hic, illo labore maxime nemo odio praesentium quia rem rerum saepe vel veritatis voluptas.</p>
-        <img src="../images/example-pic.jpg" alt="">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam deleniti dolorum ducimus, ea eum facilis hic, illo labore maxime nemo odio praesentium quia rem rerum saepe vel veritatis voluptas.</p>
-        <img src="../images/example-pic.jpg" alt="">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam deleniti dolorum ducimus, ea eum facilis hic, illo labore maxime nemo odio praesentium quia rem rerum saepe vel veritatis voluptas.</p>
-    </div>
-</section>
-<section class="message-block">
-    <div class="message-block_wrapper">
-        <div class="message-block_title">Title</div>
-        <div class="message-block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam architecto, asperiores consequatur cum, distinctio dolore est et eveniet facilis id impedit perspiciatis quos ratione repellat repellendus sint tempore voluptatibus.</div>
-    </div>
-</section>
-<section class="try-block">
-    <span class="try-block_title">Shedule a demo!</span>
-    <a href="#" class="button">Request demo</a>
-</section>
-<footer class="footer">
-    <div class="footer_wrapper">
-        <a href="mailto:info@raccoongang.com" class="footer_email">INFO@RACCOONGANG.COM</a>
-        <ul class="footer_social-list">
-            <li class="footer_social-item"><a href="#" class="footer_social-link">
-                <svg class="footer_social-image">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook-icon"></use>
-                </svg>
-            </a></li>
-            <li class="footer_social-item"><a href="#" class="footer_social-link">
-                <svg class="footer_social-image">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#linked-icon"></use>
-                </svg>
-            </a></li>
-            <li class="footer_social-item"><a href="#" class="footer_social-link">
-                <svg class="footer_social-image">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter-icon"></use>
-                </svg>
-            </a></li>
-        </ul>
-        <span class="footer_copyright">&copy raccoon gang 2017</span>
-    </div>
-</footer>
 
-<script type="text/javascript" src="script/jquery-2.2.4.min.js"></script>
-<script type="text/javascript" src="script/jquery.ba-throttle-debounce.min.js"></script>
-<script type="text/javascript" src="script/main.js"></script>
+
+<!--<script type="text/javascript" src="script/jquery-2.2.4.min.js"></script>-->
+<!--<script type="text/javascript" src="script/jquery.ba-throttle-debounce.min.js"></script>-->
+<!--<script type="text/javascript" src="script/main.js"></script>-->
+
+<script type="text/javascript" src="../js/third_party/jquery-2.2.4.min.js"></script>
+
+
+<script type="text/javascript" src="../js/third_party/velocity.min.js"></script>
+<script type="text/javascript" src="../js/third_party/velocity.ui.min.js"></script>
+<script type="text/javascript" src="../js/third_party/main.js"></script>
 </body>
 </html>
