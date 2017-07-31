@@ -20,6 +20,18 @@
             margin-bottom: 0;
         }
     }
+    &_link-text {
+        font: 20px/22px $font_light;
+        display: block;
+        transform: translate(20%,0);
+        ul {
+            list-style: disc;
+            display: block;
+            padding-left: 40px;
+            flex: 0 0 100%;
+            font-size: 14px;
+        }
+    }
     &_link {
         display: flex;
         align-items: center;

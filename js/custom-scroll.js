@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function(){
     var totalHeight = function() {
         var blocks = $('.block');
         result = 0;
-        // console.log(blocks);
         for (var i=0; i<blocks.length; i++) {
             result+=blocks[i].offsetHeight;
             blocks[i].style.zIndex = blocks.length - i;
@@ -25,15 +24,15 @@ document.addEventListener("DOMContentLoaded", function(){
     };
     window.onscroll = function() {
         var active = $('.active');
-        // console.log(scrolledHeight);
+        console.log(scrolledHeight);
         var scrolled = (window.pageYOffset || document.documentElement.scrollTop) - scrolledHeight;
-        // console.log("Scrolled = "+scrolled);
-        var translate = 'translate(0,-'+scrolled+'px)';
+        console.log("Scrolled = "+scrolled);
+        var translate = 'translate3d(0,-'+scrolled+'px,0)';
         var rect = active[0].getBoundingClientRect();
 
         if (rect.bottom <= 0 ) {
             var nextSibl = active.next('.block');
-            // console.log("Plus = "+$('.active')[0].offsetHeight);
+            console.log("Plus = "+$('.active')[0].offsetHeight);
             scrolledHeight += $('.active')[0].offsetHeight;
             $('.active')[0].style.transform = 'translate(0,0)';
             blocks.removeClass('active');
@@ -46,13 +45,17 @@ document.addEventListener("DOMContentLoaded", function(){
             var prevSibling = active.prev('.block');
             $('.active')[0].style.transform = 'translate(0,0)';
             blocks.removeClass('active');
+            console.log(prevSibling);
             prevSibling.addClass('active');
-            // console.log("Minus = "+prevSibling[0].offsetHeight);
+            console.log("Minus = "+prevSibling[0].offsetHeight);
             scrolledHeight -= prevSibling[0].offsetHeight;
             rect = $('.active')[0].getBoundingClientRect();
+        } else if (scrolled < 0 && $('.block1.active').length > 0) {
+            blocks.removeClass('active');
+            $('.block1').addClass('active');
         }
         active[0].style.transform = translate;
-        // console.log(rect);
+        console.log(rect);
         // active.style.transform = translate;
     };
 });
