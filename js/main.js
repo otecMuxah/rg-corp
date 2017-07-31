@@ -384,4 +384,8 @@ $(document).ready(function () {
     }
 
     window.addEventListener('scroll', $.throttle(500, callbackScroll));
+
+
+
+
 });

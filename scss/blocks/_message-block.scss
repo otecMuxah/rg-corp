@@ -1,7 +1,7 @@
 .message-block {
     position: relative;
     padding: 80px 0 90px;
-
+    background: $color-almost-white;
     &:after {
         content: '';
         position: absolute;

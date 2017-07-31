@@ -1,0 +1,15 @@
+.custom-scroll {
+    .block {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        font-size: 100px;
+        box-sizing: border-box;
+    }
+    .active {
+        z-index: 100 !important;
+    }
+}
