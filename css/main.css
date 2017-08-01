@@ -4936,7 +4936,8 @@ article + .social_div {
   min-height: 100vh;
   height: auto;
   font-size: 100px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  transition: 50ms; }
   .custom-scroll .block:last-child {
     padding-bottom: 0; }
 
