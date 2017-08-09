@@ -2514,7 +2514,7 @@ article + .social_div {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 10;
+  z-index: 100;
   box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.25); }
   .back-to-top_image {
     height: 22px;
@@ -3060,8 +3060,10 @@ article + .social_div {
   .benefits-section_link-text {
     font: 20px/22px roboto-light, Arial, sans-serif;
     display: block;
-    -webkit-transform: translate(20%, 0);
-            transform: translate(20%, 0); }
+    -webkit-transform: translate(9%, 0);
+            transform: translate(9%, 0);
+    color: #fff;
+    margin: 15px 0; }
     .benefits-section_link-text ul {
       list-style: disc;
       display: block;
@@ -3092,7 +3094,7 @@ article + .social_div {
       position: relative;
       z-index: 2;
       margin: 20px 0 20px -30px;
-      box-shadow: 18px 21px 32px 0px rgba(0, 0, 0, 0.75); }
+      box-shadow: 18px 21px 32px 0 rgba(0, 0, 0, 0.4); }
   .benefits-section_number {
     background: #778fcf;
     width: 60px;
@@ -3161,7 +3163,7 @@ article + .social_div {
     background: #778fcf;
     height: 95%;
     top: 4px;
-    left: 196px;
+    left: 32px;
     -webkit-transform: translate(-100%, 0);
             transform: translate(-100%, 0);
     z-index: -1; }
@@ -4501,6 +4503,11 @@ article + .social_div {
     width: 100%; }
     .case-banner .solutions_title:before, .case-banner .solutions_title:after {
       display: none; }
+  .case-banner .shadow {
+    -webkit-filter: drop-shadow(18px 21px 32px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(18px 21px 32px rgba(0, 0, 0, 0.5));
+    /* Same syntax as box-shadow, except
+                                                       for the spread property */ }
 
 .case-header {
   background: url("../images/docker-commands.jpg");
@@ -4520,15 +4527,6 @@ article + .social_div {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.2); }
-  .case-header:after {
-    content: '';
-    position: absolute;
-    z-index: 2;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    background: linear-gradient(to right, #5dd083 0%, #88a3ea 100%); }
   .case-header_wrapper {
     max-width: 1140px;
     display: -webkit-box;
@@ -4588,8 +4586,7 @@ article + .social_div {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 10px;
-    background: linear-gradient(to right, #5dd083 0%, #88a3ea 100%); }
+    height: 10px; }
   .challenge:before {
     content: '';
     position: absolute;
@@ -4628,6 +4625,24 @@ article + .social_div {
         -ms-flex-align: center;
             align-items: center;
     padding: 85px 0; }
+  .challenge .benefits-section_text {
+    box-shadow: 0 20px 29px 0 rgba(0, 0, 0, 0.28);
+    width: auto;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto; }
+  .challenge .benefits-section_list {
+    max-width: 810px; }
+  .challenge .benefits-section_link {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .challenge .benefits-section_number {
+    background: #4db870;
+    color: #fff;
+    border-color: #4db870;
+    box-shadow: 0 20px 29px 0 rgba(0, 0, 0, 0.28); }
+  .challenge .benefits-section_item:first-child .benefits-section_number:before {
+    background: #4db870; }
   .challenge .solutions_title {
     color: #fff;
     display: block;
@@ -4635,7 +4650,7 @@ article + .social_div {
     width: 100%;
     text-transform: capitalize;
     line-height: 1;
-    margin: 0; }
+    margin: 0 0 40px; }
     .challenge .solutions_title:before, .challenge .solutions_title:after {
       display: none; }
   .challenge_banner {
@@ -4681,7 +4696,7 @@ article + .social_div {
 
 .case-benefits .benefits-section_item:first-child .benefits-section_number:before {
   background: #4db870;
-  left: 195px;
+  left: 22px;
   height: calc(100% - 90px);
   top: 50%;
   -webkit-transform: translate(0, -50%);
@@ -4707,6 +4722,8 @@ article + .social_div {
 .case-solution {
   background: #595959;
   height: 150vh; }
+  .case-solution .benefits-section_text {
+    box-shadow: none; }
 
 .monitor-block {
   background: #4db870;
@@ -4729,13 +4746,14 @@ article + .social_div {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 10px;
-    background: linear-gradient(to right, #5dd083 0%, #88a3ea 100%); }
-  .monitor-block__reversed:before {
-    right: auto;
-    left: 0;
-    -webkit-transform: translate(50%, -50%);
-            transform: translate(50%, -50%); }
+    height: 10px; }
+  .monitor-block__reversed {
+    text-align: right; }
+    .monitor-block__reversed:before {
+      right: auto;
+      left: 0;
+      -webkit-transform: translate(50%, -50%);
+              transform: translate(50%, -50%); }
   .monitor-block_wrapper {
     max-width: 1140px;
     display: -webkit-box;
@@ -4822,6 +4840,11 @@ article + .social_div {
     @media screen and (max-width: 770px) {
       .monitor-block__centered .case-banner_monitor-screen {
         top: 0; } }
+  .monitor-block .shadow {
+    -webkit-filter: drop-shadow(18px 21px 32px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(18px 21px 32px rgba(0, 0, 0, 0.5));
+    /* Same syntax as box-shadow, except
+                                                       for the spread property */ }
 
 .message-block {
   position: relative;
@@ -4841,8 +4864,7 @@ article + .social_div {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 10px;
-    background: linear-gradient(to right, #5dd083 0%, #88a3ea 100%); }
+    height: 10px; }
   .message-block_wrapper {
     max-width: 1140px;
     display: -webkit-box;
@@ -4883,8 +4905,7 @@ article + .social_div {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 10px;
-    background: linear-gradient(to right, #5dd083 0%, #88a3ea 100%); }
+    height: 10px; }
   .proposals_wrapper {
     max-width: 1140px;
     display: -webkit-box;
@@ -4925,7 +4946,7 @@ article + .social_div {
     margin-bottom: 30px; }
   .proposals img {
     width: 100%;
-    box-shadow: 18px 21px 32px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 18px 21px 32px 0px rgba(0, 0, 0, 0.4);
     margin-bottom: 30px; }
 
 .custom-scroll .block {
@@ -4937,7 +4958,16 @@ article + .social_div {
   height: auto;
   font-size: 100px;
   box-sizing: border-box;
-  transition: 50ms; }
+  transition: 100ms; }
+  .custom-scroll .block:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #5dd083 0%, #88a3ea 100%); }
   .custom-scroll .block:last-child {
     padding-bottom: 0; }
 
@@ -4947,4 +4977,5 @@ article + .social_div {
           flex: 1 1 100%; }
 
 .custom-scroll .active {
-  z-index: 100 !important; }
+  z-index: 100 !important;
+  transition: 100ms; }

@@ -14,7 +14,7 @@
         left: 0;
         width: 100%;
         height: 10px;
-        background: linear-gradient(to right, #5dd083 0%, #88a3ea 100%);
+
     }
     &__reversed {
         &:before {
@@ -22,6 +22,7 @@
             left: 0;
             transform: translate(50%, -50%);
         }
+        text-align: right;
     }
 
     &_wrapper {
@@ -97,5 +98,10 @@
                 top: 0;
             }
         }
+    }
+    .shadow {
+        -webkit-filter: drop-shadow( 18px 21px 32px rgba(0,0,0,0.5) );
+        filter: drop-shadow( 18px 21px 32px rgba(0,0,0,0.5) ); /* Same syntax as box-shadow, except
+                                                       for the spread property */
     }
 }

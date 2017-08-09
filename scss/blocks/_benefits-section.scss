@@ -23,7 +23,9 @@
     &_link-text {
         font: 20px/22px $font_light;
         display: block;
-        transform: translate(20%,0);
+        transform: translate(9%,0);
+        color: $color-white;
+        margin: 15px 0;
         ul {
             list-style: disc;
             display: block;
@@ -46,7 +48,7 @@
             position: relative;
             z-index: 2;
             margin: 20px 0 20px -30px;
-            box-shadow: 18px 21px 32px 0px rgba(0,0,0,0.75);
+            box-shadow: 18px 21px 32px 0 rgba(0,0,0,0.4);
         }
     }
     &_number {
@@ -109,7 +111,7 @@
                 background: $color-drk-blue;
                 height: 95%;
                 top: 4px;
-                left: 196px;
+                left: 32px;
                 transform: translate(-100%, 0);
                 z-index: -1;
                 @include width-1140 {

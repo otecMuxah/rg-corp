@@ -22,7 +22,6 @@ $(document).ready(function () {
         $priceCarousel = $('.support-price_carousel'),
         $counter = $('.facts_list');
 
-
     if ($parntersCarousel.length > 0) {
         $parntersCarousel.slick({
             accessibility: true,
@@ -100,7 +99,7 @@ $(document).ready(function () {
                     }
                 }
             ]
-        })
+        });
     }
 
 
@@ -271,9 +270,20 @@ $(document).ready(function () {
     });
 
     $toTopButton.on('click', function () {
-        $mainBanner.velocity('scroll', {
-
-        })
+        if ($('.firstBlock').length > 0) {
+            $('.wrapper').velocity('scroll', {
+                duration: 1000
+            });
+            setTimeout(function () {
+                $('.block').removeClass('active');
+                $('.firstBlock').addClass('active');
+            }, 1100);
+        } else {
+            $mainBanner.velocity('scroll', {
+                duration: 'slow',
+                easing: "spring"
+            });
+        }
     });
 
     // $.fn.isOnScreen = function () {
@@ -282,6 +292,31 @@ $(document).ready(function () {
     //     return bounds.top < window.innerHeight && bounds.bottom > 0;
     // };
 
+    function showElement() {
+        var $count = $('.count');
+        if (fired === 0 && $count.isOnScreen()) {
+            fired = 1;
+            $count.each(function () {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 800,
+                    easing: 'swing',
+                    step: function (now) {
+                        if (now > 1000) {
+                            var greater = true;
+                            now = now / 1000;
+                        }
+                        var amount = Math.ceil(now);
+                        if (greater) {
+                            amount += 'K';
+                        }
+                        $(this).text(amount);
+                    }
+                });
+            });
+        }
+    }
 
     if ($counter.length > 0) {
         $.fn.isOnScreen = function () {
@@ -289,31 +324,7 @@ $(document).ready(function () {
             var bounds = element.getBoundingClientRect();
             return bounds.top < window.innerHeight && bounds.bottom > 0;
         };
-        function showElement() {
-            var $count = $('.count');
-            if (fired == 0 && $count.isOnScreen()) {
-                fired = 1;
-                $count.each(function () {
-                    $(this).prop('Counter', 0).animate({
-                        Counter: $(this).text()
-                    }, {
-                        duration: 800,
-                        easing: 'swing',
-                        step: function (now) {
-                            if (now > 1000) {
-                                var greater = true;
-                                now = now / 1000;
-                            }
-                            var amount = Math.ceil(now);
-                            if (greater) {
-                                amount += 'K';
-                            }
-                            $(this).text(amount);
-                        }
-                    });
-                });
-            }
-        }
+
     }
 
     $window.resize($.throttle(250, function () {
