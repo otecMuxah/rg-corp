@@ -1,87 +1,78 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
     "use strict";
 
-    const   blocks = $('.block'),
-            firstBlock = $('.firstBlock'),
-            wrapper = $('.wrapper');
-
+    var blocks = $('.block'),
+        wrapper = $('.wrapper'),
+        blocksObj = {},
+        result = 0,
+        scrolledHeight = 0,
+        activeBlock = 0;
+    // function that allow event to happen in specific period of time
+    function debounce(func, wait, immediate) {
+        var timeout;
+        return function () {
+            var context = this,
+                args = arguments;
+            var later = function () {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    }
     if (blocks.length > 0) {
-        var result = 0,
-            scrolledHeight = 0;
-        var sections = {};
-
         //calculate total height of all blocks
-        var totalHeight = function() {
+        var totalHeight = function () {
             result = 0;
-            for (var i=0; i<blocks.length; i++) {
-                result+=blocks[i].clientHeight;
+            for (var i = 0; i < blocks.length; i++) {
+                result += blocks[i].offsetHeight;
                 blocks[i].style.zIndex = blocks.length - i;
-
+                $(blocks[i]).addClass('block' + i);
+                blocksObj[i] = result;
             }
-            wrapper.css('height',result);
+            wrapper.css('height', result);
         };
         totalHeight();
-
-        // function that allow event to happen in specific period of time
-        function debounce(func, wait, immediate) {
-            var timeout;
-            return function () {
-                var context = this, args = arguments;
-                var later = function () {
-                    timeout = null;
-                    if (!immediate) func.apply(context, args);
-                };
-                var callNow = immediate && !timeout;
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-                if (callNow) func.apply(context, args);
-            };
-        }
-
-
-        var debouncedScroll = debounce(function() {
-            var scrolled = (window.pageYOffset || document.documentElement.scrollTop) - scrolledHeight,
-                translate = 'translate3d(0,-'+scrolled+'px,0)',
+        var scrollEffect = debounce(function () {
+            var scrolled = window.pageYOffset || document.documentElement.scrollTop,
+                scrolledBlock = Math.abs(scrolled - scrolledHeight),
+                translate = 'translate3d(0,-' + scrolledBlock + 'px,0)',
                 active = $('.active'),
-                rect = active[0].getBoundingClientRect(),
-                prevSibling = active.prev('.block');
+                currentBlockHeight = blocksObj[activeBlock] - (blocksObj[activeBlock - 1] || 0);
 
-            if (!window.pageYOffset && !document.documentElement.scrollTop) {
-                scrolledHeight = 0;
-                scrolled = 0;
+            if (scrolled >= blocksObj[activeBlock]) {
+                scrolledHeight = blocksObj[activeBlock];
+                active[0].style.transform = 'translate3d(0,-' + currentBlockHeight + 'px,0)';
+                activeBlock++;
                 blocks.removeClass('active');
-                firstBlock.addClass('active').css('transform', 'translate3d(0,0,0');
-            }
-            // next block
-            if (rect.bottom < 0 ) {
-                var nextSibl = active.next('.block');
-                scrolledHeight += $('.active')[0].offsetHeight;
-                if (nextSibl.hasClass('block')) {
-                    blocks.removeClass('active');
-                    nextSibl.addClass('active');
+                $('.block' + activeBlock).addClass('active');
+            } else if (scrolled <= scrolledHeight && activeBlock && scrolled < blocksObj[activeBlock - 1]) {
+                translate = 'translate3d(0,0,0)';
+                active[0].style.transform = 'translate3d(0,0,0)';
+                scrolledHeight = blocksObj[activeBlock - 2];
+                if (activeBlock > 0) {
+                    activeBlock--;
                 }
-            }
-            // prev block
-            if (scrolled < 0 && $('.firstBlock.active').length > 0) {
+                if (activeBlock === 0) {
+                    scrolledHeight = 0;
+                }
                 blocks.removeClass('active');
-                firstBlock.addClass('active');
-            } else if (scrolled < 0) {
-                $('.active')[0].style.transform = 'translate3d(0,0,0)';
-                if (prevSibling.hasClass('block')) {
-                    blocks.removeClass('active');
-                    prevSibling.addClass('active');
-                    scrolledHeight -= prevSibling[0].offsetHeight;
-                }
+                $('.block' + activeBlock).addClass('active');
             }
 
             active[0].style.transform = translate;
-        },1); // 1 is number in ms how often function can be executed
+        }, 10); // 1 is number in ms how often function can be executed
 
         blocks[0].className += ' active';
+
         window.onresize = function () {
             totalHeight();
         };
-        window.onscroll = debouncedScroll;
+
+        window.onscroll = scrollEffect;
         totalHeight();
     }
 });
