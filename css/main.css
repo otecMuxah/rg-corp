@@ -4929,7 +4929,6 @@ article + .social_div {
     margin-bottom: 30px; }
   .proposals img {
     width: 100%;
-    box-shadow: 18px 21px 32px 0px rgba(0, 0, 0, 0.4);
     margin-bottom: 30px; }
 
 .custom-scroll .block {
@@ -4942,7 +4941,9 @@ article + .social_div {
   font-size: 100px;
   box-sizing: border-box;
   transition: 150ms;
-  will-change: transform; }
+  will-change: transform;
+  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+          animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
   .custom-scroll .block:after {
     content: '';
     position: absolute;

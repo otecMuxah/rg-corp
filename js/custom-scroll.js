@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             active[0].style.transform = translate;
-        }, 10); // 1 is number in ms how often function can be executed
+        }, 1); // 1 is number in ms how often function can be executed
 
         blocks[0].className += ' active';
 

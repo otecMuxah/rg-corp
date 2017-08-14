@@ -11,6 +11,7 @@
         box-sizing: border-box;
         transition: 150ms;
         will-change: transform;
+        animation-timing-function:  cubic-bezier(0.42, 0, 0.58, 1.0);
         &:after {
             content: '';
             position: absolute;
