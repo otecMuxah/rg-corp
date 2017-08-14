@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (scrolled >= blocksObj[activeBlock]) {
                 scrolledHeight = blocksObj[activeBlock];
+                translate = 'translate3d(0,-' + currentBlockHeight + 'px,0)';
                 active[0].style.transform = 'translate3d(0,-' + currentBlockHeight + 'px,0)';
                 activeBlock++;
                 blocks.removeClass('active');
@@ -64,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             active[0].style.transform = translate;
-        }, 1); // 1 is number in ms how often function can be executed
+        }, 10); // 1 is number in ms how often function can be executed
 
         blocks[0].className += ' active';
 

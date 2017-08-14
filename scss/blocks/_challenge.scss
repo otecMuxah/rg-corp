@@ -2,7 +2,6 @@
     background: $color-case-blue;
     padding: 85px 0;
     position: relative;
-    height: 100vh;
     &:after {
         content: '';
         position: absolute;
@@ -31,7 +30,7 @@
         padding: 85px 0;
     }
     .benefits-section_text {
-        box-shadow: 0 20px 29px 0 rgba(0, 0, 0, 0.28);
+        // box-shadow: 0 20px 29px 0 rgba(0, 0, 0, 0.28);
         width: auto;
         flex-basis: auto;
     }
@@ -45,7 +44,7 @@
         background: $color-case-green;
         color: $color-white;
         border-color: $color-case-green;
-        box-shadow: 0 20px 29px 0 rgba(0, 0, 0, 0.28);
+        // box-shadow: 0 20px 29px 0 rgba(0, 0, 0, 0.28);
     }
     .benefits-section_item:first-child .benefits-section_number:before {
         background: $color-case-green;

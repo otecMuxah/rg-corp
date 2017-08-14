@@ -133,7 +133,6 @@ article + .social_div {
 .header {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 14.45px 2.55px rgba(0, 0, 2, 0.2);
   position: absolute;
   z-index: 101;
   color: #fff;
@@ -3093,8 +3092,7 @@ article + .social_div {
       width: 100%;
       position: relative;
       z-index: 2;
-      margin: 20px 0 20px -30px;
-      box-shadow: 18px 21px 32px 0 rgba(0, 0, 0, 0.4); }
+      margin: 20px 0 20px -30px; }
   .benefits-section_number {
     background: #778fcf;
     width: 60px;
@@ -4439,8 +4437,7 @@ article + .social_div {
       border: 0;
       width: 45px;
       height: 45px;
-      font-size: 24px;
-      box-shadow: 0 20px 29px 0 rgba(0, 0, 0, 0.28); }
+      font-size: 24px; }
     .case-banner_list .benefits-section_item:first-child .benefits-section_number:before {
       background: #4db870;
       left: 24px; }
@@ -4503,11 +4500,6 @@ article + .social_div {
     width: 100%; }
     .case-banner .solutions_title:before, .case-banner .solutions_title:after {
       display: none; }
-  .case-banner .shadow {
-    -webkit-filter: drop-shadow(18px 21px 32px rgba(0, 0, 0, 0.5));
-    filter: drop-shadow(18px 21px 32px rgba(0, 0, 0, 0.5));
-    /* Same syntax as box-shadow, except
-                                                       for the spread property */ }
 
 .case-header {
   background: url("../images/docker-commands.jpg");
@@ -4577,8 +4569,7 @@ article + .social_div {
 .challenge {
   background: #829adb;
   padding: 85px 0;
-  position: relative;
-  height: 100vh; }
+  position: relative; }
   .challenge:after {
     content: '';
     position: absolute;
@@ -4626,7 +4617,6 @@ article + .social_div {
             align-items: center;
     padding: 85px 0; }
   .challenge .benefits-section_text {
-    box-shadow: 0 20px 29px 0 rgba(0, 0, 0, 0.28);
     width: auto;
     -ms-flex-preferred-size: auto;
         flex-basis: auto; }
@@ -4639,8 +4629,7 @@ article + .social_div {
   .challenge .benefits-section_number {
     background: #4db870;
     color: #fff;
-    border-color: #4db870;
-    box-shadow: 0 20px 29px 0 rgba(0, 0, 0, 0.28); }
+    border-color: #4db870; }
   .challenge .benefits-section_item:first-child .benefits-section_number:before {
     background: #4db870; }
   .challenge .solutions_title {
@@ -4691,8 +4680,7 @@ article + .social_div {
   border: 0;
   width: 45px;
   height: 45px;
-  font-size: 24px;
-  box-shadow: 0 20px 29px 0 rgba(0, 0, 0, 0.28); }
+  font-size: 24px; }
 
 .case-benefits .benefits-section_item:first-child .benefits-section_number:before {
   background: #4db870;
@@ -4840,11 +4828,6 @@ article + .social_div {
     @media screen and (max-width: 770px) {
       .monitor-block__centered .case-banner_monitor-screen {
         top: 0; } }
-  .monitor-block .shadow {
-    -webkit-filter: drop-shadow(18px 21px 32px rgba(0, 0, 0, 0.5));
-    filter: drop-shadow(18px 21px 32px rgba(0, 0, 0, 0.5));
-    /* Same syntax as box-shadow, except
-                                                       for the spread property */ }
 
 .message-block {
   position: relative;
@@ -4958,7 +4941,8 @@ article + .social_div {
   height: auto;
   font-size: 100px;
   box-sizing: border-box;
-  transition: 100ms; }
+  transition: 150ms;
+  will-change: transform; }
   .custom-scroll .block:after {
     content: '';
     position: absolute;
@@ -4978,4 +4962,4 @@ article + .social_div {
 
 .custom-scroll .active {
   z-index: 100 !important;
-  transition: 100ms; }
+  transition: 150ms; }

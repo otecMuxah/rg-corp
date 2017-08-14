@@ -36,7 +36,7 @@
             width: 45px;
             height: 45px;
             font-size: 24px;
-            box-shadow: 0 20px 29px 0 rgba(0, 0, 0, 0.28);
+            // box-shadow: 0 20px 29px 0 rgba(0, 0, 0, 0.28);
         }
         .benefits-section_item:first-child .benefits-section_number:before {
             background: $color-case-green;
@@ -102,9 +102,9 @@
             display: none;
         }
     }
-    .shadow {
-        -webkit-filter: drop-shadow( 18px 21px 32px rgba(0,0,0,0.5) );
-        filter: drop-shadow( 18px 21px 32px rgba(0,0,0,0.5) ); /* Same syntax as box-shadow, except
-                                                       for the spread property */
-    }
+    // .shadow {
+    //     -webkit-filter: drop-shadow( 18px 21px 32px rgba(0,0,0,0.5) );
+    //     filter: drop-shadow( 18px 21px 32px rgba(0,0,0,0.5) ); /* Same syntax as box-shadow, except
+    //                                                    for the spread property */
+    // }
 }

@@ -99,9 +99,9 @@
             }
         }
     }
-    .shadow {
-        -webkit-filter: drop-shadow( 18px 21px 32px rgba(0,0,0,0.5) );
-        filter: drop-shadow( 18px 21px 32px rgba(0,0,0,0.5) ); /* Same syntax as box-shadow, except
-                                                       for the spread property */
-    }
+    // .shadow {
+    //     -webkit-filter: drop-shadow( 18px 21px 32px rgba(0,0,0,0.5) );
+    //     filter: drop-shadow( 18px 21px 32px rgba(0,0,0,0.5) ); /* Same syntax as box-shadow, except
+    //                                                    for the spread property */
+    // }
 }

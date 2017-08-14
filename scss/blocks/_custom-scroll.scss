@@ -1,4 +1,5 @@
 .custom-scroll {
+    
     .block {
         position: fixed;
         top: 0;
@@ -8,7 +9,8 @@
         height: auto;
         font-size: 100px;
         box-sizing: border-box;
-        transition: 100ms;
+        transition: 150ms;
+        will-change: transform;
         &:after {
             content: '';
             position: absolute;
@@ -28,6 +30,6 @@
     }
     .active {
         z-index: 100 !important;
-        transition: 100ms;
+        transition: 150ms;
     }
 }
