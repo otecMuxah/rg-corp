@@ -4,14 +4,15 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        min-height: 100vh;
-        height: auto;
+        width: 100vw;
+        min-height: 100vh !important;
+        height: auto !important;
         font-size: 100px;
-        box-sizing: border-box;
-        transition: 150ms;
+        transition: 50ms;
         will-change: transform;
-        animation-timing-function:  cubic-bezier(0.42, 0, 0.58, 1.0);
+        animation-timing-function: ease-in;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
         &:after {
             content: '';
             position: absolute;
@@ -31,6 +32,6 @@
     }
     .active {
         z-index: 100 !important;
-        transition: 150ms;
+        transition: 50ms;
     }
 }

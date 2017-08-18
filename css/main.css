@@ -4658,8 +4658,7 @@ article + .social_div {
             align-items: center;
     background: url(../images/challenge-bg.jpg) no-repeat;
     background-size: cover;
-    background-position: center;
-    margin-top: -85px; }
+    background-position: center; }
     .challenge_banner .support-price_title {
       position: relative;
       z-index: 3;
@@ -4935,15 +4934,16 @@ article + .social_div {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  min-height: 100vh;
-  height: auto;
+  width: 100vw;
+  min-height: 100vh !important;
+  height: auto !important;
   font-size: 100px;
-  box-sizing: border-box;
-  transition: 150ms;
+  transition: 50ms;
   will-change: transform;
-  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
-          animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0); }
   .custom-scroll .block:after {
     content: '';
     position: absolute;
@@ -4963,4 +4963,4 @@ article + .social_div {
 
 .custom-scroll .active {
   z-index: 100 !important;
-  transition: 150ms; }
+  transition: 50ms; }
