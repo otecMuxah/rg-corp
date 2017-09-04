@@ -1,8 +1,7 @@
 .case-banner {
     background: #595959;
     margin-bottom: 0;
-    height: 100vh;
-    padding: 90px 0;
+    min-height: 100vh;
     &_inner-holder {
         flex-wrap: wrap;
         align-items: flex-start;
@@ -16,6 +15,7 @@
         flex: 0 0 100%;
     }
     &_paragraph {
+        margin-top: 15px;
         max-width: 100%;
     }
     strong {
@@ -29,6 +29,7 @@
             color: $color-white;
             background: none;
             height: auto;
+            font: 700 18px $font_light;
         }
         .benefits-section_number {
             background: $color-case-green;
@@ -36,7 +37,7 @@
             width: 45px;
             height: 45px;
             font-size: 24px;
-            // box-shadow: 0 20px 29px 0 rgba(0, 0, 0, 0.28);
+            box-shadow: 0 20px 29px 0 rgba(0, 0, 0, 0.28);
         }
         .benefits-section_item:first-child .benefits-section_number:before {
             background: $color-case-green;

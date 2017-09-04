@@ -39,6 +39,9 @@
         color: $color-black;
         margin-bottom: 7px;
     }
+    strong {
+        font-weight: 700;
+    }
     h2 {
         font-size: 24px;
     }
@@ -87,7 +90,7 @@
         font: 16px $font_light;
         color: $color-black;
         margin-bottom: 15px;
-        line-height: 22px;
+        line-height: 24px;
     }
     &_image {
         float: left;

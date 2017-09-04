@@ -4,6 +4,7 @@
     background: $color-almost-white;
     display: flex;
     flex-direction: column;
+    min-height: 25vh;
     &:after {
         content: '';
         position: absolute;
@@ -31,5 +32,8 @@
     &_text {
         font: 28px $font_light;
         color: #333;
+        p,span {
+            color: #333;
+        }
     }
 }

@@ -13,6 +13,9 @@
         animation-timing-function: ease-in;
         transform: translateZ(0);
         -webkit-transform: translateZ(0);
+        display: flex;
+        flex-direction: column;
+        padding: 60px 0 0;
         &:after {
             content: '';
             position: absolute;
@@ -33,5 +36,29 @@
     .active {
         z-index: 100 !important;
         transition: 50ms;
+    }
+    .block0 {
+        padding: 200px 0 0;
+    }
+    .js-opacity {
+        .js-opacity-layer {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            opacity: 1;
+            z-index: 20;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .shadow {
+        -webkit-filter: drop-shadow( 18px 21px 32px rgba(0,0,0,0.5) );
+        filter: drop-shadow( 18px 21px 32px rgba(0,0,0,0.5) ); /* Same syntax as box-shadow, except
+                                                       for the spread property */
+    }
+    strong {
+        font-weight: 700;
     }
 }

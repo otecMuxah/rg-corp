@@ -4,26 +4,16 @@
     background-position: center;
     height: 100vh;
     padding: {
-        top: 200px;
-        bottom: 205px;
+        top: 200px; 
     }
     position: relative;
     z-index: 0;
-    &:before {
-        content: '';
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.2);
-    }
 
     &_wrapper {
         @include wrapper-pref;
         position: relative;
         z-index: 2;
+        min-height: 90vh;
     }
     &_paragraph {
         font: 40px/52px $font_light;

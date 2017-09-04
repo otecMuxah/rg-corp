@@ -4,7 +4,6 @@
         background: none;
         flex-wrap: wrap;
         height: auto;
-        padding-top: 12px;
     }
     .benefits-section_number {
         background: $color-white;
@@ -26,7 +25,7 @@
         }
     }
     .benefits-section_link {
-        align-items: flex-start;
+        align-items: center;
     }
     ul {
         list-style: disc;
