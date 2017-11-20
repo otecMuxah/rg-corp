@@ -14,6 +14,10 @@
     @include tablet {
         display: none;
     }
+    &__fixed {
+        position: fixed;
+        top: 65px;
+    }
     &_home-icon {
         width: 15px;
         height: 14px;

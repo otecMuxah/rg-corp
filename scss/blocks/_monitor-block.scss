@@ -98,6 +98,8 @@
     &_text-wrapper {
         margin-left: 30px;
         flex: 1;
+        position: relative;
+        z-index: 5;
         .js-sliding & {
             transform: translateX(100%); 
         }

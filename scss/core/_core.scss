@@ -40,3 +40,29 @@ article + .social_div{
 }
 
 .zsiq_theme1 div.zsiq_cnt {display: none;}
+
+.black {
+  background: #333333 !important;
+}
+
+.light-grey {
+  background: #f0f0f0 !important;
+}
+
+.gradient-blue {
+  background: linear-gradient(#778fcf, #7c95d7) !important;
+}
+
+.gradient-green {
+  background: linear-gradient(#4db870, #51c778) !important;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.footer-case-studies {
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+}

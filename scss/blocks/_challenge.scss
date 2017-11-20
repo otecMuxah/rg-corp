@@ -56,6 +56,12 @@
                 transform: translateX(100%); 
             }
         }
+        .benefits-section_item:first-child .benefits-section_number::before {
+            left: 36px;
+        }
+        img {
+            box-shadow: 18px 21px 32px 0 rgba(0,0,0,0.4);
+        }
     }
     .benefits-section_list {
         max-width: 810px;
@@ -130,7 +136,7 @@
     }
     a {
         font: 24px $font_light;
-        color: #ffe42b;
+        color: #ffc823;
         
     }
     .monitor-block_text-wrapper span {

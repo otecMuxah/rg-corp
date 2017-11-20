@@ -77,4 +77,10 @@
             margin: 0 0 20px;
         }
     }
+    &_image__single,
+    &_image__single svg,
+    &_image__single img {
+        max-width: 100%;
+        width: 100%;
+    }
 }

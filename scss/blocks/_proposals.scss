@@ -2,6 +2,9 @@
     background: $color-case-blue;
     position: relative;
     padding: 80px 0 90px;
+    body .custom-scroll & {
+        display: block;
+    }
     &:after {
         content: '';
         position: absolute;
@@ -16,6 +19,7 @@
         @include wrapper-pref;
         position: relative;
         max-width: 750px;
+        z-index: 2;
         @include width-760 {
             padding: 0 20px;
         }
@@ -30,6 +34,7 @@
             border-radius: 50%;
             background: white;
             opacity: 0.102;
+            z-index: -1;
         }
     }
     &_title {
@@ -44,8 +49,8 @@
         margin-bottom: 30px;
     }
     img {
-        width: 100%;
-        // box-shadow: 18px 21px 32px 0px rgba(0,0,0,0.4);
+        width: 100% !important;
+        box-shadow: 18px 21px 32px 0px rgba(0,0,0,0.4);
         margin-bottom: 30px;
     }
 }

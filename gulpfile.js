@@ -7,8 +7,8 @@ const autoprefixer    = require('gulp-autoprefixer');
 const concat          = require('gulp-concat');
 const minify          = require('gulp-minify');
 const cleanCss        = require('gulp-clean-css');
-// const rev             = require('gulp-rev');
-// const gzip            = require('gulp-gzip');
+const rev             = require('gulp-rev');
+const gzip            = require('gulp-gzip');
 
 const root      = path.resolve(__dirname);
 const src       = path.resolve(root, 'scss');

@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 $(blocks[i]).addClass('block' + i);
                 blocksObj[i] = result;
             }
-            wrapper.css('height', result);
+            wrapper.css('height', result+200);
         };
          //calculate total height of all blocks
         totalHeight();
