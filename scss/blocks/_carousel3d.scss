@@ -1,0 +1,32 @@
+.carousel3d {
+    &__wrapper {
+        max-width: 1140px;
+    }
+    &__item {
+        width: 400px;
+        height: 100px;
+        transform: scale(0.3);
+        transition: 0.2s;
+        &:nth-child(odd) {
+            background: yellow;
+        }
+        &:nth-child(even) {
+            background: blue;
+        }
+    }
+    .slick-center {
+        transform: scale(1);
+        transition: 0.2s;
+        &:nth-child(3) {
+            transform: scale(1);
+        }
+    }
+    .slick-track {
+        height: 200px !important;
+        display: flex;
+        align-items: center;
+    }
+    .slick-prev, .slick-next {
+        background: blueviolet;
+    }
+}

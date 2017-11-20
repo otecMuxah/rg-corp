@@ -5119,3 +5119,37 @@ article + .social_div {
 
 .custom-scroll strong {
   font-weight: 700; }
+
+.carousel3d__wrapper {
+  max-width: 1140px; }
+
+.carousel3d__item {
+  width: 400px;
+  height: 100px;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  transition: 0.2s; }
+  .carousel3d__item:nth-child(odd) {
+    background: yellow; }
+  .carousel3d__item:nth-child(even) {
+    background: blue; }
+
+.carousel3d .slick-center {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  transition: 0.2s; }
+  .carousel3d .slick-center:nth-child(3) {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+
+.carousel3d .slick-track {
+  height: 200px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.carousel3d .slick-prev, .carousel3d .slick-next {
+  background: blueviolet; }
